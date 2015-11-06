@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - showError in Messages wrapper 
 - checkbox with basic functionality
+- mdTheme to checkbox
 
 ## 0.0.1 - 
 
