@@ -14,15 +14,15 @@ Package.describe({
 Package.onUse(function (api) {
 
     var packages = [
-        'standard-minifiers',
-        'es5-shim',
-        'ecmascript',
+        'standard-minifiers@1.0.2',
+        'es5-shim@4.1.14',
+        'ecmascript@0.1.6',
         'angular@1.0.0',
         'angular:angular@1.4.7',
         'angular:angular-messages@1.4.7',
         'angular:angular-material@0.11.4',
         'pbastowski:angular2-now@0.3.13',
-        'pbastowski:ecmascript-extras'
+        'pbastowski:ecmascript-extras@0.0.2'
     ];
 
     api.versionsFrom("METEOR@1.0");
