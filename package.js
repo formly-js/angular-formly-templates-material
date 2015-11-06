@@ -58,7 +58,11 @@ Package.onUse(function (api) {
 
         // checkbox
         'lib/client/types/checkbox/checkbox.js',
-        'lib/client/types/checkbox/checkbox.ng.html'
+        'lib/client/types/checkbox/checkbox.ng.html',
+
+        // switch
+        'lib/client/types/switch/switch.js',
+        'lib/client/types/switch/switch.ng.html'
 
     ], client);
 

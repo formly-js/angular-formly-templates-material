@@ -29,10 +29,12 @@ angular.module('myAppName', [
 
 # Components
 
+_rest of angular-material directive in near future_
+
 ## Fields
 
 - input
-- _rest fields in near future_
+- checkbox
 
 ## Wrappers
 
@@ -40,8 +42,11 @@ angular.module('myAppName', [
 - label
 - ngMessages
 
-##Roadmap
-- all basic fields
-- basic wrappers
+## Roadmap
+- add md-chips
+- add md-datepicker
+- add md-icon wrapper
+- add md-radio-button and md-radio-group
+- add md-select
 - e2e tests
 - Requests (?). Post an issue.
