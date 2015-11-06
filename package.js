@@ -5,7 +5,7 @@ var server = 'server';
 Package.describe({
     name: "mys:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.0.1",
+    version: "0.0.2",
 
     documentation: 'README.md',
     git: 'https://github.com/kamilkisiela/meteor-angular-formly-templates-material.git'
@@ -14,15 +14,15 @@ Package.describe({
 Package.onUse(function (api) {
 
     var packages = [
-        'standard-minifiers',
-        'es5-shim',
-        'ecmascript',
+        'standard-minifiers@1.0.2',
+        'es5-shim@4.1.14',
+        'ecmascript@0.1.6',
         'angular@1.0.0',
         'angular:angular@1.4.7',
         'angular:angular-messages@1.4.7',
         'angular:angular-material@0.11.4',
         'pbastowski:angular2-now@0.3.13',
-        'pbastowski:ecmascript-extras'
+        'pbastowski:ecmascript-extras@0.0.2'
     ];
 
     api.versionsFrom("METEOR@1.0");
@@ -54,7 +54,15 @@ Package.onUse(function (api) {
 
         // input
         'lib/client/types/input/input.js',
-        'lib/client/types/input/input.ng.html'
+        'lib/client/types/input/input.ng.html',
+
+        // checkbox
+        'lib/client/types/checkbox/checkbox.js',
+        'lib/client/types/checkbox/checkbox.ng.html',
+
+        // switch
+        'lib/client/types/switch/switch.js',
+        'lib/client/types/switch/switch.ng.html'
 
     ], client);
 
