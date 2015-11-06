@@ -3,7 +3,9 @@ FormlyMaterial
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
 
-**Angular Formly is not part of Atmosphere. You have to add it manually**
+## Add Angular Formly
+
+There is no official Angular Formly package in Atmosphere so you have to add it manually.
 
 ## Install
 
@@ -14,15 +16,12 @@ meteor add mys:angular-formly-templates-material
 
 ## Getting Started
 
-1. Add package using `meteor add`
-2. Add manually angular-formly library to your project
-3. Add the following dependencies to your Angular module:
+1. Add package using `meteor add` (see above)
+2. Add angular-formly files to your project
+3. Add the following dependencies to your AngularJS module:
 
 ```javascript
 angular.module('myAppName', [
-    'ngMessages',
-    'ngMaterial',
-    'formly',
     'formlyMaterial'
   ])
 ```
