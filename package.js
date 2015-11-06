@@ -54,7 +54,11 @@ Package.onUse(function (api) {
 
         // input
         'lib/client/types/input/input.js',
-        'lib/client/types/input/input.ng.html'
+        'lib/client/types/input/input.ng.html',
+
+        // checkbox
+        'lib/client/types/checkbox/checkbox.js',
+        'lib/client/types/checkbox/checkbox.ng.html'
 
     ], client);
 
