@@ -3,12 +3,12 @@ var client = 'client';
 var server = 'server';
 
 Package.describe({
-    name: "mys:angular-formly-templates-material",
+    name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
     version: "0.0.2",
 
     documentation: 'README.md',
-    git: 'https://github.com/kamilkisiela/meteor-angular-formly-templates-material.git'
+    git: 'https://github.com/wieldo/angular-formly-templates-material.git'
 });
 
 Package.onUse(function (api) {
