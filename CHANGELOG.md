@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.3] - 2015-11-10
+### Fixed
+- Invalid components templateUrl
+
+### Changed
+- Package name: wieldo:angular-formly-templates-material
+
 ## [0.0.2] - 2015-11-07
 ### Fixed
 - Add missing ngMessages
@@ -16,5 +23,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
-[Unreleased]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/0.2.0...HEAD
-[0.0.2]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/0.0.1...0.0.2
+[Unreleased]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.3.0...HEAD
+[0.0.3]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.1...v0.0.2
