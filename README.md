@@ -10,7 +10,7 @@ There is no official Angular Formly package in Atmosphere so you have to add it 
 ## Install
 
 ```
-meteor add mys:angular-formly-templates-material
+meteor add wieldo:angular-formly-templates-material
 ```
 
 
