@@ -49,3 +49,5 @@ _rest of angular-material directive in near future_
 - add md-select
 - e2e tests
 - Requests (?). Post an issue.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wieldo/angular-formly-templates-material/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
