@@ -15,8 +15,6 @@ Package.onUse(function (api) {
 
     var packages = {
         use: [
-            'standard-minifiers@1.0.2',
-            'es5-shim@4.1.14',
             'angular@1.0.0',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
