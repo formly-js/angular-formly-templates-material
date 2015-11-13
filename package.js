@@ -5,7 +5,7 @@ var server = 'server';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.0.3",
+    version: "0.0.4",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -15,8 +15,6 @@ Package.onUse(function (api) {
 
     var packages = {
         use: [
-            'standard-minifiers@1.0.2',
-            'es5-shim@4.1.14',
             'angular@1.0.0',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
