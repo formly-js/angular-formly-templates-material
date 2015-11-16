@@ -37,6 +37,7 @@ _rest of angular-material directive in near future_
 
 - input
 - checkbox
+- select
 
 ## Wrappers
 
@@ -45,12 +46,13 @@ _rest of angular-material directive in near future_
 - ngMessages
 
 ## Roadmap
-- add md-chips
-- add md-datepicker
-- add md-icon wrapper
-- add md-radio-button and md-radio-group
-- add md-select
-- e2e tests
-- Requests (?). Post an issue.
+- [ ] add md-chips
+- [ ] add md-datepicker
+- [ ] add md-icon wrapper
+- [ ] add md-radio-button and md-radio-group
+- [x] add md-select
+- [ ] add groups to md-select
+- [ ] add roupProp, valueProp, labelProp to md-select
+- [ ] e2e tests
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wieldo/angular-formly-templates-material/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Requests (?). Post an issue.
