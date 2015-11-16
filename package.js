@@ -65,7 +65,11 @@ Package.onUse(function (api) {
 
         // switch
         'lib/client/types/switch/switch.js',
-        'lib/client/types/switch/switch.ng.html'
+        'lib/client/types/switch/switch.ng.html',
+
+        // select
+        'lib/client/types/select/select.js',
+        'lib/client/types/select/select.ng.html'
 
     ], client);
 
