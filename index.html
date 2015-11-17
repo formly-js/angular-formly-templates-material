@@ -23,6 +23,7 @@
 <a id="formlymaterial" class="anchor" href="#formlymaterial" aria-hidden="true"><span class="octicon octicon-link"></span></a>FormlyMaterial</h1>
 
 <p><a href="https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material"><img src="https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material.svg" alt="GitHub version"></a>
+<a href="https://travis-ci.org/wieldo/angular-formly-templates-material"><img src="https://travis-ci.org/wieldo/angular-formly-templates-material.svg" alt="Build Status"></a>
 <a href="https://www.codacy.com/app/mys-sterowiec/angular-formly-templates-material"><img src="https://api.codacy.com/project/badge/grade/a2cd4c7c2d74467281e309a65be49e8f" alt="Codacy Badge"></a></p>
 
 <p>Material Design Templates for <a href="http://angular-formly.com">Angular-Formly</a>. Modern &amp; flexible forms configured easily in a JSON object.</p>
@@ -48,16 +49,158 @@
 <h1>
 <a id="components" class="anchor" href="#components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Components</h1>
 
-<p><em>rest of angular-material directive in near future</em></p>
+<p>Any requests? Add issue!</p>
+
+<h2>
+<a id="common-properties" class="anchor" href="#common-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Common properties</h2>
+
+<h3>
+<a id="label-string" class="anchor" href="#label-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>label (string)</h3>
+
+<h3>
+<a id="theme-string" class="anchor" href="#theme-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>theme (string)</h3>
+
+<p>md-theme attribute</p>
 
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields</h2>
 
-<ul>
-<li>input</li>
-<li>checkbox</li>
-<li>select</li>
-</ul>
+<h3>
+<a id="input" class="anchor" href="#input" aria-hidden="true"><span class="octicon octicon-link"></span></a>input</h3>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>input<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>First name<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<h3>
+<a id="textarea" class="anchor" href="#textarea" aria-hidden="true"><span class="octicon octicon-link"></span></a>textarea</h3>
+
+<p><strong>rows (number, optional)</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>textarea<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>bio<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Biography<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>rows<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>
+  }
+}</pre></div>
+
+<h3>
+<a id="radio" class="anchor" href="#radio" aria-hidden="true"><span class="octicon octicon-link"></span></a>radio</h3>
+
+<p><strong>options (array, requred)</strong></p>
+
+<p><strong>labelProp (string, optional)</strong></p>
+
+<p><strong>valueProp (string, optional)</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>radio<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>labelProp<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>valueProp<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span><span class="pl-k">:</span> [
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Sarah<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">1</span>},
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Jessica<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">2</span>},
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Parker<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">3</span>}
+    ]
+  }
+}</pre></div>
+
+<h3>
+<a id="select" class="anchor" href="#select" aria-hidden="true"><span class="octicon octicon-link"></span></a>select</h3>
+
+<p><strong>options (array, requred)</strong></p>
+
+<p><strong>labelProp (string, optional)</strong></p>
+
+<p><strong>valueProp (string, optional)</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>labelProp<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>valueProp<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span><span class="pl-k">:</span> [
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Sarah<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">1</span>},
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Jessica<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">2</span>},
+        {<span class="pl-s"><span class="pl-pds">"</span>firstName<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Parker<span class="pl-pds">"</span></span>, id<span class="pl-k">:</span> <span class="pl-c1">3</span>}
+    ]
+  }
+}</pre></div>
+
+<h3>
+<a id="checkbox" class="anchor" href="#checkbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>checkbox</h3>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>checkbox<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>terms<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Terms and Conditions<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<h3>
+<a id="switch" class="anchor" href="#switch" aria-hidden="true"><span class="octicon octicon-link"></span></a>switch</h3>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>switch<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>terms<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>label<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Terms and Conditions<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<h3>
+<a id="datepicker" class="anchor" href="#datepicker" aria-hidden="true"><span class="octicon octicon-link"></span></a>datepicker</h3>
+
+<p><strong>placeholder (string, optional)</strong></p>
+
+<p>md-placeholder</p>
+
+<p><strong>minDate (Date, optional)</strong></p>
+
+<p>md-min-date</p>
+
+<p><strong>maxDate (Date, optional)</strong></p>
+
+<p>md-max-date</p>
+
+<p><strong>filterDate (function, optional)</strong></p>
+
+<p>md-filter-date</p>
+
+<div class="highlight highlight-source-js"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>datepicker<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>key<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>templateOptions<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>theme<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>custom<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>placeholder<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Start date<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>minDate<span class="pl-pds">"</span></span><span class="pl-k">:</span> minDate, <span class="pl-c">// instance of Date</span>
+    <span class="pl-s"><span class="pl-pds">"</span>maxDate<span class="pl-pds">"</span></span><span class="pl-k">:</span> maxDate, <span class="pl-c">// instance of Date</span>
+    <span class="pl-s"><span class="pl-pds">"</span><span class="pl-en">filterDate</span><span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">date</span>) {
+        <span class="pl-c">// only weekends</span>
+        <span class="pl-k">var</span> day <span class="pl-k">=</span> date.<span class="pl-c1">getDay</span>();
+        <span class="pl-k">return</span> day <span class="pl-k">===</span> <span class="pl-c1">0</span> <span class="pl-k">||</span> day <span class="pl-k">===</span> <span class="pl-c1">6</span>;
+    }
+  }
+}</pre></div>
 
 <h2>
 <a id="wrappers" class="anchor" href="#wrappers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrappers</h2>
@@ -73,14 +216,15 @@
 
 <ul>
 <li>[ ] add md-chips</li>
-<li>[ ] add md-datepicker</li>
+<li>[x] add md-datepicker</li>
 <li>[ ] add md-icon wrapper</li>
-<li>[ ] add md-radio-button and md-radio-group</li>
 <li>[x] add md-select</li>
 <li>[ ] add groups to md-select</li>
 <li>[x] add valueProp, labelProp to md-select</li>
 <li>[x] add md-radio with valueProp and labelProp</li>
 <li>[ ] add groupProp to md-radio</li>
+<li>[x] add textarea with cols and rows</li>
+<li>[x] md-theme</li>
 <li>[ ] e2e tests</li>
 </ul>
 
