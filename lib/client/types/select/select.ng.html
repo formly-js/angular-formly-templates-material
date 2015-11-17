@@ -1,5 +1,5 @@
 <md-select ng-model="model[options.key]">
-    <md-option ng-repeat="item in to.options" value="{{ item.value }}">
-        {{ item.name }}
+    <md-option ng-repeat="option in to.options" ng-value="option[to.valueProp || 'value']">
+        {{ option[to.labelProp || 'name'] }}
     </md-option>
 </md-select>

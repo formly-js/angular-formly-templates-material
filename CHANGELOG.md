@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0] - 2015-11-17
+### Added
+- Support for md-select with valueProp and labelProp
+- Support for md-radio with valueProp and labelProp options
+
 ## [0.0.4] - 2015-11-13
 ### Removed
 - es5-shim package
@@ -26,6 +31,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
-[0.0.4]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.3.0...v0.0.4
+[0.1.0]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.4...v0.1.0
+[0.0.4]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.1...v0.0.2
