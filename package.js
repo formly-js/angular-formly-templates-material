@@ -69,7 +69,11 @@ Package.onUse(function (api) {
 
         // select
         'lib/client/types/select/select.js',
-        'lib/client/types/select/select.ng.html'
+        'lib/client/types/select/select.ng.html',
+        
+        // radio
+        'lib/client/types/radio/radio.js',
+        'lib/client/types/radio/radio.ng.html'
 
     ], client);
 

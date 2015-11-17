@@ -1,0 +1,7 @@
+<md-radio-group ng-model="model[options.key]">
+    <md-radio-button
+            ng-repeat="option in to.options"
+            ng-value="option[to.valueProp || 'value']">
+            {{option[to.labelProp || 'name']}}
+    </md-radio-button>
+</md-radio-group>

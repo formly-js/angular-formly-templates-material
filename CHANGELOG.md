@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Support for md-select
+- Support for md-radio with valueProp and labelProp options
 
 ## [0.0.4] - 2015-11-13
 ### Removed

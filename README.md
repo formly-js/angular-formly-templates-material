@@ -30,7 +30,6 @@ angular.module('myAppName', [
 ```
 
 # Components
-
 _rest of angular-material directive in near future_
 
 ## Fields
@@ -46,13 +45,16 @@ _rest of angular-material directive in near future_
 - ngMessages
 
 ## Roadmap
+
 - [ ] add md-chips
 - [ ] add md-datepicker
 - [ ] add md-icon wrapper
 - [ ] add md-radio-button and md-radio-group
 - [x] add md-select
 - [ ] add groups to md-select
-- [ ] add roupProp, valueProp, labelProp to md-select
+- [ ] add groupProp, valueProp, labelProp to md-select
+- [x] add md-radio with valueProp and labelProp
+- [ ] add groupProp to md-radio
 - [ ] e2e tests
 
 Requests (?). Post an issue.
