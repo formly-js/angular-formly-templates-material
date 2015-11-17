@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - md-chip with placeholder, secondary-placeholder, delete-button-label and delete-hint
 
+### Changed
+- **mdLabel** wrapper changed to **label** 
+
 ## [0.3.0] - 2015-11-17
 ### Added
 - datepicker with date range and filtering _(currently in angular-material 1.0_RC4)_

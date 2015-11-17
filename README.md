@@ -187,11 +187,11 @@ md-filter-date
 
 - mdInputContainer
 - label
-- ngMessages
+- mdMessages
 
 ## Roadmap
 
-- [ ] add md-chips
+- [x] add md-chips
 - [x] add md-datepicker
 - [ ] add md-icon wrapper
 - [x] add md-select
