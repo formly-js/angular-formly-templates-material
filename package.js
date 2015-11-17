@@ -36,6 +36,15 @@ Package.onUse(function (api) {
 
     api.addFiles([
         'lib/client/main.js',
+        // formlyMaterial prodiver
+        'lib/client/formly-material.js',
+
+        //
+        // templateManipulators
+        //
+
+        // md-theme
+        'lib/client/run/md-theme-manipulator.js',
 
         //
         // wrappers
@@ -70,7 +79,7 @@ Package.onUse(function (api) {
         // select
         'lib/client/types/select/select.js',
         'lib/client/types/select/select.ng.html',
-        
+
         // radio
         'lib/client/types/radio/radio.js',
         'lib/client/types/radio/radio.ng.html',
