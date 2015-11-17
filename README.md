@@ -44,12 +44,12 @@ _rest of angular-material directive in near future_
 - [ ] add md-chips
 - [ ] add md-datepicker
 - [ ] add md-icon wrapper
-- [ ] add md-radio-button and md-radio-group
 - [x] add md-select
 - [ ] add groups to md-select
 - [x] add valueProp, labelProp to md-select
 - [x] add md-radio with valueProp and labelProp
 - [ ] add groupProp to md-radio
+- [x] add textarea with cols and rows
 - [ ] e2e tests
 
 Requests (?). Post an issue.

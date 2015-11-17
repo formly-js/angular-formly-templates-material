@@ -73,7 +73,11 @@ Package.onUse(function (api) {
         
         // radio
         'lib/client/types/radio/radio.js',
-        'lib/client/types/radio/radio.ng.html'
+        'lib/client/types/radio/radio.ng.html',
+
+        // textarea
+        'lib/client/types/textarea/textarea.js',
+        'lib/client/types/textarea/textarea.ng.html'
 
     ], client);
 
