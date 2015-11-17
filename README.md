@@ -6,10 +6,6 @@ FormlyMaterial
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
 
-## Add Angular Formly
-
-There is no official Angular Formly package in Atmosphere so you have to add it manually.
-
 ## Install
 
 ```
@@ -20,8 +16,7 @@ meteor add wieldo:angular-formly-templates-material
 ## Getting Started
 
 1. Add package using `meteor add` (see above)
-2. Add angular-formly files to your project
-3. Add the following dependencies to your AngularJS module:
+2. Add the following dependencies to your AngularJS module:
 
 ```javascript
 angular.module('myAppName', [
