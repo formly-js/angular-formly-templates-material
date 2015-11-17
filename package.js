@@ -5,7 +5,7 @@ var server = 'server';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.1.0",
+    version: "0.2.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
