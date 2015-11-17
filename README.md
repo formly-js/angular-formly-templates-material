@@ -50,6 +50,7 @@ _rest of angular-material directive in near future_
 - [x] add md-radio with valueProp and labelProp
 - [ ] add groupProp to md-radio
 - [x] add textarea with cols and rows
+- [x] md-theme
 - [ ] e2e tests
 
 Requests (?). Post an issue.

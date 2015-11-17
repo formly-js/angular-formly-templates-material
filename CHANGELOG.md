@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Support for textarea with cols and rows
-- ApiCheck for label, radio and select 
+- ApiCheck for label, radio and select
+- Support for md-theme
 
 ## [0.1.0] - 2015-11-17
 ### Added
