@@ -157,7 +157,7 @@ md-theme attribute
 ## Roadmap
 
 - [ ] add md-chips
-- [ ] add md-datepicker
+- [x] add md-datepicker
 - [ ] add md-icon wrapper
 - [x] add md-select
 - [ ] add groups to md-select
