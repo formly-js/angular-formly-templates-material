@@ -183,6 +183,39 @@ md-filter-date
 }
 ```
 
+### chips
+
+**placeholder (string, optional)**
+
+placeholder attribute value
+
+**secondaryPlaceholder (string, optional)**
+
+secondary-placeholder attribute value
+
+**deleteButtonLabel (string, optional)**
+
+delete-button-label attribute value
+
+**deleteHint (string, optional)**
+
+delete-hint attribute value
+
+```javascript
+{
+  "type": "chips",
+  "key": "tags",
+  "templateOptions": {
+    "theme": "custom",
+    "placeholder": "+tags",
+    "secondaryPlaceholder": "Add tag",
+    "deleteButtonLabel": "Remove",
+    "deleteHint": "Remove tag"
+  }
+}
+```
+
+
 ## Wrappers
 
 - mdInputContainer
