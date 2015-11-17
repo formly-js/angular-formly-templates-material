@@ -22,7 +22,7 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'angular:angular-messages@1.4.7',
             'angular:angular-material@0.11.4',
-            'wieldo:angular-formly@7.3.2'
+            'wieldo:angular-formly'
         ]
     };
 
@@ -88,7 +88,11 @@ Package.onUse(function (api) {
         
         // datepicker
         'lib/client/types/datepicker/datepicker.js',
-        'lib/client/types/datepicker/datepicker.ng.html'
+        'lib/client/types/datepicker/datepicker.ng.html',
+
+        // chips
+        'lib/client/types/chips/chips.js',
+        'lib/client/types/chips/chips.ng.html'
 
     ], client);
 
