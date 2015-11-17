@@ -3,7 +3,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.3.0",
+    version: "0.4.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -22,7 +22,7 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'angular:angular-messages@1.4.7',
             'angular:angular-material@0.11.4',
-            'wieldo:angular-formly@7.3.2'
+            'wieldo:angular-formly'
         ]
     };
 
@@ -88,7 +88,11 @@ Package.onUse(function (api) {
         
         // datepicker
         'lib/client/types/datepicker/datepicker.js',
-        'lib/client/types/datepicker/datepicker.ng.html'
+        'lib/client/types/datepicker/datepicker.ng.html',
+
+        // chips
+        'lib/client/types/chips/chips.js',
+        'lib/client/types/chips/chips.ng.html'
 
     ], client);
 
