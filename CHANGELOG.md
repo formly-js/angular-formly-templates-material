@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - datepicker with date range and filtering _(currently in angular-material 1.0_RC4)_
+- Tests of formlyMaterial provider
 
 ## [0.2.0] - 2015-11-17
 ### Added

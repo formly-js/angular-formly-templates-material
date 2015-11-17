@@ -1,6 +1,4 @@
-var both = ['client', 'server'];
 var client = 'client';
-var server = 'server';
 
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
@@ -94,4 +92,20 @@ Package.onUse(function (api) {
 
     ], client);
 
+});
+
+Package.onTest(function(api) {
+    api.use([
+        'pbastowski:angular-babel@1.0.2',
+        'pbastowski:angular2-now@0.3.13',
+        'sanjo:jasmine@0.20.2',
+        'velocity:helpers',
+        'velocity:console-reporter',
+        'angular:angular-mocks@1.4.7',
+        'wieldo:angular-formly-templates-material'
+    ]);
+    
+    api.addFiles([
+        'tests/client/formly-material-spec.js'
+    ], client);
 });
