@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- datepicker with date range and filtering _(currently in angular-material 1.0_RC4)_
+
 ## [0.2.0] - 2015-11-17
 ### Added
 - Support for textarea with cols and rows
@@ -37,6 +41,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
+[Unreleased]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.2.0...HEAD
 [0.2.0]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.4...v0.1.0
 [0.0.4]: https://github.com/kamilkisiela/meteor-angular-formly-templates-material/compare/v0.0.3...v0.0.4

@@ -86,7 +86,11 @@ Package.onUse(function (api) {
 
         // textarea
         'lib/client/types/textarea/textarea.js',
-        'lib/client/types/textarea/textarea.ng.html'
+        'lib/client/types/textarea/textarea.ng.html',
+        
+        // datepicker
+        'lib/client/types/datepicker/datepicker.js',
+        'lib/client/types/datepicker/datepicker.ng.html'
 
     ], client);
 
