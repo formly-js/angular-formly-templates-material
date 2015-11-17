@@ -1,0 +1,10 @@
+.meteor
+tests
+**/tests
+
+**/*.md
+**/*.html
+**/*.css
+**/*.json
+**/*.yaml
+**/*.yml

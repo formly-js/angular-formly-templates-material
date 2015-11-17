@@ -1,0 +1,172 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true,
+    "meteor": true,
+    "mongo": true,
+    "jasmine": true,
+    "es6": true
+  },
+  "globals": {
+    // thrid-party packages globals
+    "angular2now": false,
+    "angular": false
+  },
+  "rules": {
+    "no-unused-vars": [
+      1,
+      {
+        "vars": "all",
+        "args": "after-used"
+      }
+    ],
+    "curly": 2,
+    // Require Following Curly Brace Conventions
+    "eqeqeq": 2,
+    // Require === and !==
+    "no-alert": 2,
+    // Disallow Use of Alert
+    "no-caller": 2,
+    // Disallow Use of caller/callee
+    "no-else-return": 2,
+    // Disallow return in else
+    "no-eval": 2,
+    // Disallow eval()
+    "no-implied-eval": 2,
+    // Disallow Implied eval()
+    "no-labels": 2,
+    // Disallow use of labeled statements
+    "no-lone-blocks": 2,
+    // Disallow Unnecessary Nested Blocks
+    "no-loop-func": 2,
+    // Disallow Functions in Loops
+    "no-magic-numbers": 1,
+    // Disallow Magic Numbers
+    "no-multi-spaces": 2,
+    // Disallow multiple spaces
+    "no-native-reassign": 2,
+    // Disallow Reassignment of Native Objects
+    "no-new-func": 2,
+    // Disallow Function Constructor
+    "no-new-wrappers": 2,
+    // Disallow Primitive Wrapper Instances
+    "no-new": 2,
+    // Disallow new For Side Effects
+    "no-param-reassign": 2,
+    // Disallow Reassignment of Function Parameters
+    "no-proto": 2,
+    // Disallow Use of __proto__
+    "no-return-assign": 2,
+    // Disallow Assignment in return Statement
+    "no-script-url": 2,
+    // Disallow use of javascript: urls
+    "no-self-compare": 2,
+    // Disallow comparisons where both sides are exactly the same
+    "no-throw-literal": 2,
+    // Restrict what can be thrown as an exception
+    "no-unused-expressions": 2,
+    // Disallow usage of expressions in statement position
+    "no-useless-call": 2,
+    // Disallow unnecessary .call() and .apply()
+    "no-useless-concat": 2,
+    // Disallow unnecessary concatenation of literals or template literals
+    "no-void": 2,
+    // Disallow use of the void operator
+    "no-with": 2,
+    // No with statements
+    "vars-on-top": 2,
+    // Require Variable Declarations to be at the top of their scope 
+    "wrap-iife": 2,
+    // Require immediate function invocation to be wrapped in parentheses
+    "array-bracket-spacing": [
+      2,
+      "never"
+    ],
+    // Disallow or enforce spaces inside of brackets
+    "block-spacing": [
+      2,
+      "always"
+    ],
+    // Disallow or enforce spaces inside of single line blocks
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    // Require Camelcase
+    "comma-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    // Enforces spacing around commas
+    "computed-property-spacing": [
+      2,
+      "never"
+    ],
+    // Disallow or enforce spaces inside of computed properties
+    "consistent-this": [
+      2,
+      "self"
+    ],
+    // Require Consistent This
+    "max-nested-callbacks": [
+      2,
+      3
+    ],
+    // Set Maximum Depth of Nested Callbacks
+    "new-parens": 2,
+    // Require Parens for Constructors
+    "newline-after-var": 2,
+    // Require or disallow an empty newline after variable declarations
+    "no-array-constructor": 2,
+    // Disallow creation of dense arrays using the Array constructor 
+    "no-inline-comments": 2,
+    // Disallows comments after code. Comments must come on their own lines
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 2
+      }
+    ],
+    // Disallows multiple blank lines
+    "no-nested-ternary": 2,
+    // Disallow Nested Ternaries
+    "no-new-object": 2,
+    // Disallow the use of the Object constructor
+    "no-unneeded-ternary": 2,
+    // Disallow conditional expressions that can be expressed with simpler constructs
+    "object-curly-spacing": [
+      2,
+      "never"
+    ],
+    // Disallow or enforce spaces inside of curly braces in objects.
+    "one-var": [
+      2,
+      "never"
+    ],
+    // Require or Disallow One Variable Declaration per Scope
+    "wrap-regex": 2,
+    // Require Regex Literals to be Wrapped
+    "arrow-parens": [
+      2,
+      "always"
+    ],
+    // Require parens in arrow function arguments
+    "constructor-super": 2,
+    // Verify calls of super() in constructors
+    "no-class-assign": 2,
+    // Disallow modifying variables of class declarations
+    "no-const-assign": 2,
+    // Disallow modifying variables that are declared using const
+    "no-dupe-class-members": 2,
+    // Disallow duplicate name in class members
+    "no-this-before-super": 2,
+    // Disallow use of this/super before calling super() in constructors
+  }
+}
