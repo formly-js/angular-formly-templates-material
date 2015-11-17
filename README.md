@@ -2,6 +2,7 @@ FormlyMaterial
 ==========
 
 [![GitHub version](https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material.svg)](https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material)
+[![Build Status](https://travis-ci.org/wieldo/angular-formly-templates-material.svg)](https://travis-ci.org/wieldo/angular-formly-templates-material)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/a2cd4c7c2d74467281e309a65be49e8f)](https://www.codacy.com/app/mys-sterowiec/angular-formly-templates-material)
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
@@ -34,15 +35,13 @@ Any requests? Add issue!
 
 ### theme (string)
 
-```
 md-theme attribute
-```
 
 ## Fields
 
 ### input
 
-```json
+```javascript
 {
   "type": "input",
   "key": "firstName",
@@ -58,7 +57,7 @@ md-theme attribute
 
 **rows (number, optional)**
 
-```json
+```javascript
 {
   "type": "textarea",
   "key": "bio",
@@ -78,7 +77,7 @@ md-theme attribute
 
 **valueProp (string, optional)**
 
-```json
+```javascript
 {
   "type": "radio",
   "key": "name",
@@ -104,7 +103,7 @@ md-theme attribute
 
 **valueProp (string, optional)**
 
-```json
+```javascript
 {
   "type": "select",
   "key": "name",
@@ -124,7 +123,7 @@ md-theme attribute
 
 ### checkbox
 
-```json
+```javascript
 {
   "type": "checkbox",
   "key": "terms",
@@ -137,13 +136,49 @@ md-theme attribute
 
 ### switch
 
-```json
+```javascript
 {
   "type": "switch",
   "key": "terms",
   "templateOptions": {
     "label": "Terms and Conditions",
     "theme": "custom"
+  }
+}
+```
+
+### datepicker
+
+**placeholder (string, optional)**
+
+md-placeholder
+
+**minDate (Date, optional)**
+
+md-min-date
+
+**maxDate (Date, optional)**
+
+md-max-date
+
+**filterDate (function, optional)**
+
+md-filter-date
+
+```javascript
+{
+  "type": "datepicker",
+  "key": "start",
+  "templateOptions": {
+    "theme": "custom",
+    "placeholder": "Start date",
+    "minDate": minDate, // instance of Date
+    "maxDate": maxDate, // instance of Date
+    "filterDate": function(date) {
+        // only weekends
+        var day = date.getDay();
+        return day === 0 || day === 6;
+    }
   }
 }
 ```
@@ -157,7 +192,7 @@ md-theme attribute
 ## Roadmap
 
 - [ ] add md-chips
-- [ ] add md-datepicker
+- [x] add md-datepicker
 - [ ] add md-icon wrapper
 - [x] add md-select
 - [ ] add groups to md-select

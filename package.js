@@ -1,11 +1,9 @@
-var both = ['client', 'server'];
 var client = 'client';
-var server = 'server';
 
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.2.0",
+    version: "0.3.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -86,8 +84,28 @@ Package.onUse(function (api) {
 
         // textarea
         'lib/client/types/textarea/textarea.js',
-        'lib/client/types/textarea/textarea.ng.html'
+        'lib/client/types/textarea/textarea.ng.html',
+        
+        // datepicker
+        'lib/client/types/datepicker/datepicker.js',
+        'lib/client/types/datepicker/datepicker.ng.html'
 
     ], client);
 
+});
+
+Package.onTest(function(api) {
+    api.use([
+        'pbastowski:angular-babel@1.0.2',
+        'pbastowski:angular2-now@0.3.13',
+        'sanjo:jasmine@0.20.2',
+        'velocity:helpers',
+        'velocity:console-reporter',
+        'angular:angular-mocks@1.4.7',
+        'wieldo:angular-formly-templates-material'
+    ]);
+    
+    api.addFiles([
+        'tests/client/formly-material-spec.js'
+    ], client);
 });
