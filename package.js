@@ -5,7 +5,7 @@ var server = 'server';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.1.0",
+    version: "0.2.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -36,6 +36,15 @@ Package.onUse(function (api) {
 
     api.addFiles([
         'lib/client/main.js',
+        // formlyMaterial prodiver
+        'lib/client/formly-material.js',
+
+        //
+        // templateManipulators
+        //
+
+        // md-theme
+        'lib/client/run/md-theme-manipulator.js',
 
         //
         // wrappers
@@ -70,10 +79,14 @@ Package.onUse(function (api) {
         // select
         'lib/client/types/select/select.js',
         'lib/client/types/select/select.ng.html',
-        
+
         // radio
         'lib/client/types/radio/radio.js',
-        'lib/client/types/radio/radio.ng.html'
+        'lib/client/types/radio/radio.ng.html',
+
+        // textarea
+        'lib/client/types/textarea/textarea.js',
+        'lib/client/types/textarea/textarea.ng.html'
 
     ], client);
 

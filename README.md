@@ -25,13 +25,128 @@ angular.module('myAppName', [
 ```
 
 # Components
-_rest of angular-material directive in near future_
+
+Any requests? Add issue!
+
+## Common properties
+
+### label (string)
+
+### theme (string)
+
+```
+md-theme attribute
+```
 
 ## Fields
 
-- input
-- checkbox
-- select
+### input
+
+```json
+{
+  "type": "input",
+  "key": "firstName",
+  "templateOptions": {
+    "type": "text",
+    "label": "First name",
+    "theme": "custom"
+  }
+}
+```
+
+### textarea
+
+**rows (number, optional)**
+
+```json
+{
+  "type": "textarea",
+  "key": "bio",
+  "templateOptions": {
+    "label": "Biography",
+    "theme": "custom",
+    "rows": 5
+  }
+}
+```
+
+### radio
+
+**options (array, requred)**
+
+**labelProp (string, optional)**
+
+**valueProp (string, optional)**
+
+```json
+{
+  "type": "radio",
+  "key": "name",
+  "templateOptions": {
+    "label": "Name",
+    "theme": "custom",
+    "labelProp": "firstName",
+    "valueProp": "id",
+    "options": [
+        {"firstName": "Sarah", id: 1},
+        {"firstName": "Jessica", id: 2},
+        {"firstName": "Parker", id: 3}
+    ]
+  }
+}
+```
+
+### select
+
+**options (array, requred)**
+
+**labelProp (string, optional)**
+
+**valueProp (string, optional)**
+
+```json
+{
+  "type": "select",
+  "key": "name",
+  "templateOptions": {
+    "label": "Name",
+    "theme": "custom",
+    "labelProp": "firstName",
+    "valueProp": "id",
+    "options": [
+        {"firstName": "Sarah", id: 1},
+        {"firstName": "Jessica", id: 2},
+        {"firstName": "Parker", id: 3}
+    ]
+  }
+}
+```
+
+### checkbox
+
+```json
+{
+  "type": "checkbox",
+  "key": "terms",
+  "templateOptions": {
+    "label": "Terms and Conditions",
+    "theme": "custom"
+  }
+}
+```
+
+### switch
+
+```json
+{
+  "type": "switch",
+  "key": "terms",
+  "templateOptions": {
+    "label": "Terms and Conditions",
+    "theme": "custom"
+  }
+}
+```
 
 ## Wrappers
 
@@ -44,12 +159,13 @@ _rest of angular-material directive in near future_
 - [ ] add md-chips
 - [ ] add md-datepicker
 - [ ] add md-icon wrapper
-- [ ] add md-radio-button and md-radio-group
 - [x] add md-select
 - [ ] add groups to md-select
 - [x] add valueProp, labelProp to md-select
 - [x] add md-radio with valueProp and labelProp
 - [ ] add groupProp to md-radio
+- [x] add textarea with cols and rows
+- [x] md-theme
 - [ ] e2e tests
 
 Requests (?). Post an issue.
