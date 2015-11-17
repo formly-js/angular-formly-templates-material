@@ -218,9 +218,9 @@ delete-hint attribute value
 
 ## Wrappers
 
-- mdInputContainer
+- inputContainer (md-input-container)
 - label
-- mdMessages
+- messages (ng-messages)
 
 ## Roadmap
 

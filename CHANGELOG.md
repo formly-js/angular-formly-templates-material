@@ -5,9 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.4.0] - 2015-11-17
 ### Added
 - **md-chip** with placeholder, secondary-placeholder, delete-button-label and delete-hint
-
-### Changed
-- **mdLabel** wrapper changed to **label** 
+ 
+### Deprecated
+- **mdInputContainer** wrapper. Use **inputContainer**
+- **mdMessages** wrapper. Use **messages**
+- **mdLabel** wrapper. Use **label**
 
 ## [0.3.0] - 2015-11-17
 ### Added
