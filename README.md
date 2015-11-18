@@ -103,6 +103,8 @@ md-theme attribute
 
 **valueProp (string, optional)**
 
+**multiple (boolean, optional**
+
 ```javascript
 {
   "type": "select",
@@ -110,6 +112,7 @@ md-theme attribute
   "templateOptions": {
     "label": "Name",
     "theme": "custom",
+    "multiple": true,
     "labelProp": "firstName",
     "valueProp": "id",
     "options": [
@@ -228,6 +231,7 @@ delete-hint attribute value
 - [x] add md-datepicker
 - [ ] add md-icon wrapper
 - [x] add md-select
+- [x] multiple in md-select
 - [ ] add groups to md-select
 - [x] add valueProp, labelProp to md-select
 - [x] add md-radio with valueProp and labelProp

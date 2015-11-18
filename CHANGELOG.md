@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- multiple support for select field
+
 ## [0.4.0] - 2015-11-17
 ### Added
 - **md-chip** with placeholder, secondary-placeholder, delete-button-label and delete-hint
@@ -51,10 +55,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
-[0.4.0]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.3.0...v0.4.0
-[0.3.0]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.0.4...v0.1.0
-[0.0.4]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.0.3...v0.0.4
-[0.0.3]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.0.2...v0.0.3
-[0.0.2]: https://github.com/wieldo/meteor-angular-formly-templates-material/compare/v0.0.1...v0.0.2
+[Unreleased]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.0.4...v0.1.0
+[0.0.4]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.0.3...v0.0.4
+[0.0.3]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.0.1...v0.0.2
