@@ -230,6 +230,7 @@ delete-hint attribute value
 - [x] add md-chips
 - [x] add md-datepicker
 - [ ] add md-icon wrapper
+- [x] add md-slider with min, max, step and discrete options
 - [x] add md-select
 - [x] multiple in md-select
 - [ ] add groups to md-select
