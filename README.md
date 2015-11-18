@@ -103,7 +103,7 @@ md-theme attribute
 
 **valueProp (string, optional)**
 
-**multiple (boolean, optional**
+**multiple (boolean, optional)**
 
 ```javascript
 {
