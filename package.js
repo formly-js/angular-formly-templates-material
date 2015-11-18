@@ -92,7 +92,11 @@ Package.onUse(function (api) {
 
         // chips
         'lib/client/types/chips/chips.js',
-        'lib/client/types/chips/chips.ng.html'
+        'lib/client/types/chips/chips.ng.html',
+
+        // slider
+        'lib/client/types/slider/slider.js',
+        'lib/client/types/slider/slider.ng.html'
 
     ], client);
 
