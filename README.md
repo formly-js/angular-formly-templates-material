@@ -218,6 +218,38 @@ delete-hint attribute value
 }
 ```
 
+### slider
+
+**min (number, optional)**
+
+default 1
+
+**max (number, optional)**
+
+default 100
+
+**step (number, optional)**
+
+default 1
+
+**discrete (boolean, optional)**
+
+default false (md-discrete)
+
+```javascript
+{
+    "type": "slider",
+    "key": "rate",
+    "templateOptions": {
+        "theme": "custom",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "discrete": true
+    }
+}
+```
+
 
 ## Wrappers
 
