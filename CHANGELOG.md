@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - multiple support for select field
+- slider field with min, max, step and discrete options
 
 ## [0.4.0] - 2015-11-17
 ### Added
