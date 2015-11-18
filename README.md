@@ -235,7 +235,6 @@ delete-hint attribute value
 - [ ] add groups to md-select
 - [x] add valueProp, labelProp to md-select
 - [x] add md-radio with valueProp and labelProp
-- [ ] add groupProp to md-radio
 - [x] add textarea with cols and rows
 - [x] md-theme
 - [ ] e2e tests
