@@ -103,6 +103,8 @@ md-theme attribute
 
 **valueProp (string, optional)**
 
+**multiple (boolean, optional)**
+
 ```javascript
 {
   "type": "select",
@@ -110,6 +112,7 @@ md-theme attribute
   "templateOptions": {
     "label": "Name",
     "theme": "custom",
+    "multiple": true,
     "labelProp": "firstName",
     "valueProp": "id",
     "options": [
@@ -215,6 +218,38 @@ delete-hint attribute value
 }
 ```
 
+### slider
+
+**min (number, optional)**
+
+default 1
+
+**max (number, optional)**
+
+default 100
+
+**step (number, optional)**
+
+default 1
+
+**discrete (boolean, optional)**
+
+default false (md-discrete)
+
+```javascript
+{
+    "type": "slider",
+    "key": "rate",
+    "templateOptions": {
+        "theme": "custom",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "discrete": true
+    }
+}
+```
+
 
 ## Wrappers
 
@@ -227,11 +262,12 @@ delete-hint attribute value
 - [x] add md-chips
 - [x] add md-datepicker
 - [ ] add md-icon wrapper
+- [x] add md-slider with min, max, step and discrete options
 - [x] add md-select
+- [x] multiple in md-select
 - [ ] add groups to md-select
 - [x] add valueProp, labelProp to md-select
 - [x] add md-radio with valueProp and labelProp
-- [ ] add groupProp to md-radio
 - [x] add textarea with cols and rows
 - [x] md-theme
 - [ ] e2e tests

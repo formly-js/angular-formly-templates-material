@@ -3,7 +3,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.4.0",
+    version: "0.5.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -92,7 +92,11 @@ Package.onUse(function (api) {
 
         // chips
         'lib/client/types/chips/chips.js',
-        'lib/client/types/chips/chips.ng.html'
+        'lib/client/types/chips/chips.ng.html',
+
+        // slider
+        'lib/client/types/slider/slider.js',
+        'lib/client/types/slider/slider.ng.html'
 
     ], client);
 
