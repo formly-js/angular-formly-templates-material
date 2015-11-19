@@ -121,6 +121,7 @@ Package.onTest(function(api) {
         // wrappers
         'tests/client/wrappers/input-container-spec.js',
         'tests/client/wrappers/label-spec.js',
+        'tests/client/wrappers/messages-spec.js',
         // types
         'tests/client/types/checkbox-spec.js',
         'tests/client/types/chips-spec.js',
