@@ -109,11 +109,13 @@ Package.onTest(function(api) {
         'sanjo:jasmine@0.20.2',
         'velocity:helpers',
         'velocity:console-reporter',
+        'jquery',
         'angular:angular-mocks@1.4.7',
         'wieldo:angular-formly-templates-material'
     ]);
     
     api.addFiles([
+        'tests/client/test-utils.js',
         'tests/client/formly-material-spec.js'
     ], client);
 });
