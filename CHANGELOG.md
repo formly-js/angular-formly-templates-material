@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- missing md-theme attribute when using templateOptions.theme 
+
 ## [0.5.1] - 2015-11-18
 ### Changed
 - Refactor all files to use Strict Dependency Injection
@@ -60,6 +64,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
+[Unreleased]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.1...HEAD
 [0.5.1]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.3.0...v0.4.0
