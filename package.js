@@ -119,6 +119,7 @@ Package.onTest(function(api) {
         'tests/client/formly-material-spec.js',
         // types
         'tests/client/types/checkbox-spec.js',
-        'tests/client/types/chips-spec.js'
+        'tests/client/types/chips-spec.js',
+        'tests/client/types/datepicker-spec.js'
     ], client);
 });
