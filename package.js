@@ -116,12 +116,14 @@ Package.onTest(function(api) {
     
     api.addFiles([
         'tests/client/test-utils.js',
+        'tests/client/angular-material-mocks.js',
         'tests/client/formly-material-spec.js',
         // types
         'tests/client/types/checkbox-spec.js',
         'tests/client/types/chips-spec.js',
         'tests/client/types/datepicker-spec.js',
         'tests/client/types/input-spec.js',
-        'tests/client/types/radio-spec.js'
+        'tests/client/types/radio-spec.js',
+        'tests/client/types/select-spec.js'
     ], client);
 });
