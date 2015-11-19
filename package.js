@@ -118,6 +118,8 @@ Package.onTest(function(api) {
         'tests/client/test-utils.js',
         'tests/client/angular-material-mocks.js',
         'tests/client/formly-material-spec.js',
+        // wrappers
+        'tests/client/wrappers/input-container-spec.js',
         // types
         'tests/client/types/checkbox-spec.js',
         'tests/client/types/chips-spec.js',
