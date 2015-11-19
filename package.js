@@ -120,6 +120,7 @@ Package.onTest(function(api) {
         'tests/client/formly-material-spec.js',
         // wrappers
         'tests/client/wrappers/input-container-spec.js',
+        'tests/client/wrappers/label-spec.js',
         // types
         'tests/client/types/checkbox-spec.js',
         'tests/client/types/chips-spec.js',
