@@ -121,6 +121,7 @@ Package.onTest(function(api) {
         'tests/client/types/checkbox-spec.js',
         'tests/client/types/chips-spec.js',
         'tests/client/types/datepicker-spec.js',
-        'tests/client/types/input-spec.js'
+        'tests/client/types/input-spec.js',
+        'tests/client/types/radio-spec.js'
     ], client);
 });
