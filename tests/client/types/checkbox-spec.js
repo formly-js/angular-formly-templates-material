@@ -8,6 +8,7 @@ describe("formlyMaterial - checkbox type", () => {
     let $rootScope;
     let $scope;
     let element;
+    
     //
     // helpers
     //
@@ -55,7 +56,6 @@ describe("formlyMaterial - checkbox type", () => {
     });
     
     it("should have label", () => {
-        console.log(angular.element(element));
         expect(element.innerText).toContain("test field");
     });
     
