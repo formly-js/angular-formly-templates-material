@@ -2,9 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.5.2] - 2015-11-19
 ### Fixed
-- missing md-theme attribute when using templateOptions.theme 
+- missing md-theme attribute when using templateOptions.theme
+
+### Added
+- Tests of all currently available functionality
+
+### Removed
+- deprecated **mdInputContainer** wrapper. Use **inputContainer**
+- deprecated **mdMessages** wrapper. Use **messages**
 
 ## [0.5.1] - 2015-11-18
 ### Changed
@@ -22,7 +29,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Deprecated
 - **mdInputContainer** wrapper. Use **inputContainer**
 - **mdMessages** wrapper. Use **messages**
-- **mdLabel** wrapper. Use **label**
 
 ## [0.3.0] - 2015-11-17
 ### Added
@@ -64,7 +70,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
-[Unreleased]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.1...HEAD
+[0.5.2]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.3.0...v0.4.0
