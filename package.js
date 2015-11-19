@@ -118,6 +118,8 @@ Package.onTest(function(api) {
         'tests/client/test-utils.js',
         'tests/client/angular-material-mocks.js',
         'tests/client/formly-material-spec.js',
+        // run
+        'tests/client/run/md-theme-manipulator-spec.js',
         // wrappers
         'tests/client/wrappers/input-container-spec.js',
         'tests/client/wrappers/label-spec.js',
