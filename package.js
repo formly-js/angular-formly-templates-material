@@ -116,6 +116,8 @@ Package.onTest(function(api) {
     
     api.addFiles([
         'tests/client/test-utils.js',
-        'tests/client/formly-material-spec.js'
+        'tests/client/formly-material-spec.js',
+        // types
+        'tests/client/types/checkbox-spec.js'
     ], client);
 });
