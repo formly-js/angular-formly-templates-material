@@ -125,6 +125,7 @@ Package.onTest(function(api) {
         'tests/client/types/input-spec.js',
         'tests/client/types/radio-spec.js',
         'tests/client/types/select-spec.js',
-        'tests/client/types/slider-spec.js'
+        'tests/client/types/slider-spec.js',
+        'tests/client/types/switch-spec.js'
     ], client);
 });
