@@ -3,7 +3,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.5.1",
+    version: "0.5.2",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -109,11 +109,30 @@ Package.onTest(function(api) {
         'sanjo:jasmine@0.20.2',
         'velocity:helpers',
         'velocity:console-reporter',
+        'jquery',
         'angular:angular-mocks@1.4.7',
         'wieldo:angular-formly-templates-material'
     ]);
     
     api.addFiles([
-        'tests/client/formly-material-spec.js'
+        'tests/client/test-utils.js',
+        'tests/client/angular-material-mocks.js',
+        'tests/client/formly-material-spec.js',
+        // run
+        'tests/client/run/md-theme-manipulator-spec.js',
+        // wrappers
+        'tests/client/wrappers/input-container-spec.js',
+        'tests/client/wrappers/label-spec.js',
+        'tests/client/wrappers/messages-spec.js',
+        // types
+        'tests/client/types/checkbox-spec.js',
+        'tests/client/types/chips-spec.js',
+        'tests/client/types/datepicker-spec.js',
+        'tests/client/types/input-spec.js',
+        'tests/client/types/radio-spec.js',
+        'tests/client/types/select-spec.js',
+        'tests/client/types/slider-spec.js',
+        'tests/client/types/switch-spec.js',
+        'tests/client/types/textarea-spec.js'
     ], client);
 });
