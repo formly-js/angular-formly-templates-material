@@ -118,6 +118,7 @@ Package.onTest(function(api) {
         'tests/client/test-utils.js',
         'tests/client/formly-material-spec.js',
         // types
-        'tests/client/types/checkbox-spec.js'
+        'tests/client/types/checkbox-spec.js',
+        'tests/client/types/chips-spec.js'
     ], client);
 });
