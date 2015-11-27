@@ -3,7 +3,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.5.2",
+    version: "0.6.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/angular-formly-templates-material.git'
@@ -14,11 +14,13 @@ Package.onUse(function (api) {
     var packages = {
         use: [
             'angular@1.0.0',
+            'mys:angular-template-url@0.0.1',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
             'wieldo:angular-formly@7.3.2'
         ],
         imply: [
+            'mys:angular-template-url',
             'angular:angular@1.4.7',
             'angular:angular-messages@1.4.7',
             'angular:angular-material@0.11.4',
@@ -110,6 +112,7 @@ Package.onTest(function(api) {
         'velocity:helpers',
         'velocity:console-reporter',
         'jquery',
+        'mys:version-compare',
         'angular:angular-mocks@1.4.7',
         'wieldo:angular-formly-templates-material'
     ]);
