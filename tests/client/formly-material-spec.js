@@ -4,18 +4,19 @@ describe('formlyMaterial', () => {
     //
     let formlyMaterial;
     let formlyMaterialPr;
+    let prefix;
 
     //
     // tests
     //
-
+    
     beforeEach(() => {
         angular.module('formlyMaterialMock', [])
             .config((formlyMaterialProvider) => {
                 formlyMaterialPr = formlyMaterialProvider
             });
         module('formlyMaterial', 'formlyMaterialMock');
-        
+
         angular.module('testApp', ['angular-meteor', 'formly', 'formlyMaterial', 'ngMock']);
         module('testApp');
 
@@ -23,6 +24,12 @@ describe('formlyMaterial', () => {
             $httpBackend.whenGET(/\.html$/i).respond((method, url) => $templateCache.get(url));
             formlyMaterial = _formlyMaterial_;
         });
+
+        if (meteorVersionCompare.lt('1.2')) {
+            prefix = "/packages/wieldo_angular-formly-templates-material_";
+        } else {
+            prefix = "/packages/wieldo:angular-formly-templates-material/";
+        }
     });
 
     it("should be injectable", () => {
@@ -30,19 +37,15 @@ describe('formlyMaterial', () => {
     });
 
     it("should be able to add prefix to templateUrl using factory", () => {
-        const prefix = "/packages/wieldo:angular-formly-templates-material/";
-
-        expect(formlyMaterial.templateUrl("test.html")).toBe(prefix + "test.html");
-        expect(formlyMaterial.templateUrl("/test.html")).toBe(prefix + "test.html");
-        expect(formlyMaterial.templateUrl("/test/test.html")).toBe(prefix + "test/test.html");
+        expect(formlyMaterial.templateUrl("client/test.html")).toBe(prefix + "client/test.html");
+        expect(formlyMaterial.templateUrl("/client/test.html")).toBe(prefix + "client/test.html");
+        expect(formlyMaterial.templateUrl("/client/test/test.html")).toBe(prefix + "client/test/test.html");
     });
 
     it("should be able to add prefix to templateUrl using provider", () => {
-        const prefix = "/packages/wieldo:angular-formly-templates-material/";
-
-        expect(formlyMaterialPr.templateUrl("test.html")).toBe(prefix + "test.html");
-        expect(formlyMaterialPr.templateUrl("/test.html")).toBe(prefix + "test.html");
-        expect(formlyMaterialPr.templateUrl("/test/test.html")).toBe(prefix + "test/test.html");
+        expect(formlyMaterialPr.templateUrl("client/test.html")).toBe(prefix + "client/test.html");
+        expect(formlyMaterialPr.templateUrl("/client/test.html")).toBe(prefix + "client/test.html");
+        expect(formlyMaterialPr.templateUrl("/client/test/test.html")).toBe(prefix + "client/test/test.html");
     });
 
 });
