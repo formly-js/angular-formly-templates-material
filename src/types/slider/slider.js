@@ -1,7 +1,9 @@
+import template from './slider.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'slider',
-        template: `<md-slider ng-model="model[options.key]"></md-slider>`,
+        template: template,
         defaultOptions: {
             ngModelAttrs: {
                 min: {

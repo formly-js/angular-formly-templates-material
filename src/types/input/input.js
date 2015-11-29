@@ -1,7 +1,9 @@
+import template from './input.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'input',
-        template: `<input ng-model="model[options.key]">`,
+        template: template,
         wrapper: ['label', 'messages', 'inputContainer'],
         defaultOptions: {
             ngModelAttrs: {

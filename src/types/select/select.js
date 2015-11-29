@@ -1,13 +1,9 @@
+import template from './select.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'select',
-        template: `
-        <md-select ng-model="model[options.key]">
-    <md-option ng-repeat="option in to.options" ng-value="option[to.valueProp || 'value']">
-        {{ option[to.labelProp || 'name'] }}
-    </md-option>
-</md-select>
-        `,
+        template: template,
         wrapper: ['label', 'messages', 'inputContainer'],
         defaultOptions: {
             ngModelAttrs: {

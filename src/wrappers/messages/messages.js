@@ -1,13 +1,8 @@
+import template from './messages.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setWrapper({
         name: 'messages',
-        template: `
-        <formly-transclude></formly-transclude>
-            <div ng-messages="fc.$error">
-                <div ng-repeat="(name, message) in ::options.validation.messages" ng-message-exp="name">
-                {{message(fc.$viewValue, fc.$modelValue, this)}}
-                </div>
-            </div>
-        `
+        template: template
     });
 }

@@ -1,7 +1,9 @@
+import template from './chips.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'chips',
-        template: `<md-chips ng-model="model[options.key]"></md-chips>`,
+        template: template,
         defaultOptions: {
             defaultValue: [],
             ngModelAttrs: {

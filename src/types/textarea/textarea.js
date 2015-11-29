@@ -1,7 +1,9 @@
+import template from './textarea.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'textarea',
-        template: `<textarea ng-model="model[options.key]"></textarea>`,
+        template: template,
         wrapper: ['label', 'messages', 'inputContainer'],
         defaultOptions: {
             ngModelAttrs: {

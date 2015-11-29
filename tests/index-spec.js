@@ -1,4 +1,3 @@
-import 'api-check';
 import './../src';
 
 import './runs';

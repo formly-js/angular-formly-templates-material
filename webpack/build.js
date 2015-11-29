@@ -1,5 +1,3 @@
-var _ = require('underscore');
-
 module.exports = function (type) {
     return {
         entry: './src/index.js',
@@ -16,10 +14,12 @@ module.exports = function (type) {
     }
 
     function loaders() {
-        return [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel'
-        }];
+        return [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            }
+        ];
     }
 };

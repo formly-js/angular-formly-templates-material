@@ -1,10 +1,9 @@
+import template from './datepicker.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: 'datepicker',
-        template: `
-        <div>
-            <md-datepicker ng-model="model[options.key]"></md-datepicker>
-        </div>`,
+        template: template,
         wrapper: ['messages'],
         defaultOptions: {
             ngModelAttrs: {

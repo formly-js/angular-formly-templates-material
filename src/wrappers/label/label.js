@@ -1,9 +1,9 @@
+import template from './label.html';
+
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setWrapper({
         name: 'label',
-        template: `
-        <label for="{{id}}">{{to.label}}{{to.required ? '*' : ''}}</label>
-        <formly-transclude></formly-transclude>`,
+        template: template,
         apiCheck: (check) => ({
             templateOptions: {
                 label: check.string

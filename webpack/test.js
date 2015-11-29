@@ -4,14 +4,20 @@ module.exports = {
         loaders: [
             // transpile all files except testing sources with babel as usual
             {
-                test: /\-spec.js$/,
+                test: /\.js$/,
+                include: [
+                    /tests/
+                ],
                 exclude: /node_modules/,
                 loader: 'babel'
             },
             // transpile and instrument only testing sources with isparta
             {
                 test: /\.js$/,
-                exclude: /node_modules|\-spec.js$/,
+                exclude: /node_modules/,
+                include: [
+                    /src/
+                ],
                 loader: 'isparta'
             }
         ]

@@ -1,28 +1,21 @@
-var _ = require('underscore');
+var _ = require('lodash');
 var test = require('./test');
 var dist = require('./dist');
 var prod = require('./prod');
-var common = {
-    stats: {
-        colors: true,
-        reasons: true
-    },
-    resolve: {
-        extensions: ["", ".js"]
-    },
-    externals: [
-        'angular'
-    ]
-    /*externals: {
-     angular: 'angular',
-     'angular-messages': 'ngMessages',
-     'angular-material': 'ngMaterial',
-     'angular-formly': 'formly'
-     }*/
-};
+var common = require('./common');
 
 module.exports = {
-    test: _.extend({}, common, test),
-    dist: _.extend({}, common, dist),
-    prod: _.extend({}, common, prod)
+    test: extend(test),
+    dist: extend(dist),
+    prod: extend(prod)
 };
+
+function extend(cfg) {
+    var config = _.merge({}, common, cfg);
+    
+    // push common module loaders
+    _.each(common.module.loaders, function (loader) {
+        config.module.loaders.push(loader);
+    });
+    return config;
+}
