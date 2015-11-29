@@ -1,8 +1,7 @@
 {
-  "name": "formly-material",
-  "version": "1.0.0",
-  "description": "Compare two versions. Convert them to integer format",
-  "private": true,
+  "name": "angular-formly-material",
+  "version": "0.6.0",
+  "description": "Material design templates for angular-formly",
   "main": "dist/formly-material.js",
   "scripts": {
     "build:dist": "webpack --progress --colors --set-env-NODE_ENV=development",
@@ -15,15 +14,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kamilkisiela/version-compare.git"
+    "url": "git+https://github.com/wieldo/angular-formly-templates-material.git"
   },
-  "keywords": [],
+  "keywords": [
+    "AngularJs",
+    "form",
+    "formly",
+    "json",
+    "html",
+    "material"
+  ],
   "author": "Kamil Kisiela <mys.sterowiec@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kamilkisiela/version-compare/issues"
+    "url": "https://github.com/wieldo/angular-formly-templates-material/issues"
   },
-  "homepage": "https://github.com/kamilkisiela/version-compare#readme",
+  "homepage": "https://github.com/wieldo/angular-formly-templates-material#readme",
   "dependencies": {
     "angular": "^1.4.0",
     "angular-messages": "^1.4.0",
