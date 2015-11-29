@@ -1,0 +1,67 @@
+{
+  "name": "angular-formly-material",
+  "version": "0.7.0",
+  "description": "Material design templates for angular-formly",
+  "main": "dist/formly-material.js",
+  "scripts": {
+    "build:dist": "webpack --progress --colors --set-env-NODE_ENV=development",
+    "build:prod": "webpack --progress --colors --set-env-NODE_ENV=production",
+    "build": "npm run build:dist & npm run build:prod",
+    "coverage:codecov": "cat ./coverage/lcov.info | node_modules/.bin/codecov",
+    "coverage:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage:codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
+    "test": "karma start karma.conf.js --set-env-NODE_ENV=ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wieldo/angular-formly-templates-material.git"
+  },
+  "keywords": [
+    "AngularJs",
+    "form",
+    "formly",
+    "json",
+    "html",
+    "material"
+  ],
+  "author": "Kamil Kisiela <mys.sterowiec@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wieldo/angular-formly-templates-material/issues"
+  },
+  "homepage": "https://github.com/wieldo/angular-formly-templates-material#readme",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-animate": "^1.4.0",
+    "angular-aria": "^1.4.0",
+    "angular-material": "^0.11.0",
+    "angular-formly": ">=7.3.0",
+    "api-check": ">=7.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0",
+    "argv-set-env": "^1.0.0",
+    "babel": "^5.8.3",
+    "babel-core": "^5.0.0",
+    "babel-loader": "^5.3.2",
+    "codacy-coverage": "^1.1.3",
+    "codecov.io": "^0.1.6",
+    "coveralls": "^2.11.4",
+    "html-loader": "^0.4.0",
+    "isparta": "^4.0.0",
+    "isparta-loader": "1.0.0",
+    "jasmine-core": "^2.3.4",
+    "jquery": "^2.1.4",
+    "karma": "^0.13.15",
+    "karma-babel-preprocessor": "^5.2.2",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.6",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "lodash": "^3.10.1",
+    "webpack": "^1.12.9"
+  }
+}

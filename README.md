@@ -10,13 +10,21 @@ Material Design Templates for [Angular-Formly](http://angular-formly.com). Moder
 ## Install
 
 ```
+npm install angular-formly-material
+```
+
+```
+bower install angular-formly-material
+```
+
+```
 meteor add wieldo:angular-formly-templates-material
 ```
 
 
 ## Getting Started
 
-1. Add package using `meteor add` (see above)
+1. Add package using one of methods above
 2. Add the following dependencies to your AngularJS module:
 
 ```javascript
@@ -24,6 +32,13 @@ angular.module('myAppName', [
     'formlyMaterial'
   ])
 ```
+
+## Requirements
+
+- angular ~ 1.4.0
+- angular-messages ~ 1.4.0
+- angular-material ~ 0.11.0
+- angular-formly ~ 7.3.0
 
 # Components
 

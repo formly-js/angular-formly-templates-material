@@ -1,10 +1,20 @@
 language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
 node_js:
-  - "0.12"
+  - iojs
 before_install:
-  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-meteor-packages/master/configure.sh | /bin/sh"
-  - "npm install -g velocity-cli"
+  - "npm install"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 before_script:
-  - "export PATH=$HOME/.meteor:$PATH"
+  - "npm prune"
 script:
-  - "velocity test-package ./ --ci"
+  - "npm run test"
+after_success:
+  - "npm run coverage:codecov"
+  - "npm run coverage:coveralls"
+  - "npm run coverage:codacy"
