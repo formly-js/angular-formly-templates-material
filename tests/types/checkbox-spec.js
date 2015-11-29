@@ -27,7 +27,7 @@ describe("formlyMaterial - checkbox type", () => {
 
         let form = $compile(testUtils.getFormTemplate())($scope);
         $scope.$digest();
-        element = form.find('[ng-model]')[0];
+        element = form.find('[ng-model]');
     }
     
     //
@@ -47,11 +47,11 @@ describe("formlyMaterial - checkbox type", () => {
     });
     
     it('should be md-checkbox element', () => {
-        expect(element.nodeName).toBe('MD-CHECKBOX');
+        expect(element[0].nodeName).toBe('MD-CHECKBOX');
     });
     
     it("should have label", () => {
-        expect(element.innerText).toContain("test field");
+        expect(element.html()).toContain("test field");
     });
     
 });
