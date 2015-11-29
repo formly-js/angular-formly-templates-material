@@ -1,6 +1,6 @@
 var _ = require('underscore');
 
-module.exports = (type) => {
+module.exports = function (type) {
     return {
         entry: './src/index.js',
         output: output,
