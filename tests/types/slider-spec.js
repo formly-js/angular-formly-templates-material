@@ -12,23 +12,24 @@ describe("formlyMaterial - slider type", () => {
     let form;
     let element;
     let field;
+    const fieldConfig = {
+        key: 'testField',
+        type: 'slider',
+        templateOptions: {
+            label: 'test field',
+            min: 1,
+            max: 5,
+            step: 0.5,
+            discrete: true
+        }
+    };
     //
     // helpers
     //
 
     function compile(options) {
         $scope = $rootScope.$new();
-        $scope.fields = [angular.merge({}, {
-            key: 'testField',
-            type: 'slider',
-            templateOptions: {
-                label: 'test field',
-                min: 1,
-                max: 5,
-                step: 0.5,
-                discrete: true
-            }
-        }, options)];
+        $scope.fields = [angular.merge({}, fieldConfig, options)];
 
         form = $compile(testUtils.getFormTemplate())($scope);
         $scope.$digest();
@@ -57,19 +58,22 @@ describe("formlyMaterial - slider type", () => {
     });
 
     it('should support min option', () => {
-        expect(parseFloat(element.attr('min'))).toEqual(field.templateOptions.min);
+        expect(parseFloat(element.attr('min'))).toEqual(fieldConfig.templateOptions.min);
     });
 
     it('should support max option', () => {
-        expect(parseFloat(element.attr('max'))).toEqual(field.templateOptions.max);
+        expect(parseFloat(element.attr('max'))).toEqual(fieldConfig.templateOptions.max);
     });
 
     it('should support step option', () => {
-        expect(parseFloat(element.attr('step'))).toEqual(field.templateOptions.step);
+        expect(parseFloat(element.attr('step'))).toEqual(fieldConfig.templateOptions.step);
     });
 
     it('should support discrete option', () => {
+        const scope = angular.element(element).scope();
+
         expect(element.attr('md-discrete')).toEqual("options.templateOptions['discrete']");
+        expect(scope.options.templateOptions.discrete).toBe(fieldConfig.templateOptions.discrete);
     });
 
 });

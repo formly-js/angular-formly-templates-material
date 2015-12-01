@@ -7,15 +7,12 @@ export default (formlyConfigProvider) => {
         defaultOptions: {
             ngModelAttrs: {
                 min: {
-                    bound: 'min',
                     attribute: 'min'
                 },
                 max: {
-                    bound: 'max',
                     attribute: 'max'
                 },
                 step: {
-                    bound: 'step',
                     attribute: 'step'
                 },
                 discrete: {
