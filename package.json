@@ -1,6 +1,6 @@
 {
   "name": "angular-formly-material",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Material design templates for angular-formly",
   "main": "dist/formly-material.js",
   "scripts": {
