@@ -7,7 +7,18 @@ export default (formlyConfigProvider) => {
         wrapper: ['messages'],
         defaultOptions: {
             ngModelAttrs: {
-                placeholder: {attribute: 'md-placeholder'}
+                placeholder: {
+                    attribute: 'md-placeholder'
+                },
+                minDate: {
+                    bound: 'md-min-date'
+                },
+                maxDate: {
+                    bound: 'md-max-date'
+                },
+                filterDate: {
+                    bound: 'md-date-filter'
+                }
             }
         },
         apiCheck: (check) => ({
@@ -18,38 +29,5 @@ export default (formlyConfigProvider) => {
                 filterDate: check.func.optional
             }
         })
-    });
-
-    formlyConfigProvider.templateManipulators.preWrapper.push((template, options) => {
-        if (angular.isDefined(options.templateOptions.minDate)
-            || angular.isDefined(options.templateOptions.maxDate)
-            || angular.isDefined(options.templateOptions.filterDate)) {
-
-            const dateConfig = {
-                min: options.templateOptions.minDate || undefined,
-                max: options.templateOptions.maxDate || undefined,
-                filter: options.templateOptions.filterDate || undefined
-            };
-            const node = document.createElement('div');
-
-            node.innerHTML = template;
-            const datepickerNode = node.querySelector('md-datepicker');
-
-            if (datepickerNode) {
-                if (dateConfig.min) {
-                    datepickerNode.setAttribute('md-min-date', 'to.minDate');
-                }
-                if (dateConfig.max) {
-                    datepickerNode.setAttribute('md-max-date', 'to.maxDate');
-                }
-                if (dateConfig.filter) {
-                    datepickerNode.setAttribute('md-date-filter', 'to.filterDate');
-                }
-            }
-            return node.innerHTML;
-        }
-
-
-        return template;
     });
 }

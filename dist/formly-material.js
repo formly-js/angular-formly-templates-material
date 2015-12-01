@@ -452,7 +452,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        wrapper: ['messages'],
 	        defaultOptions: {
 	            ngModelAttrs: {
-	                placeholder: { attribute: 'md-placeholder' }
+	                placeholder: {
+	                    attribute: 'md-placeholder'
+	                },
+	                minDate: {
+	                    bound: 'md-min-date'
+	                },
+	                maxDate: {
+	                    bound: 'md-max-date'
+	                },
+	                filterDate: {
+	                    bound: 'md-date-filter'
+	                }
 	            }
 	        },
 	        apiCheck: function apiCheck(check) {
@@ -465,36 +476,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            };
 	        }
-	    });
-
-	    formlyConfigProvider.templateManipulators.preWrapper.push(function (template, options) {
-	        if (angular.isDefined(options.templateOptions.minDate) || angular.isDefined(options.templateOptions.maxDate) || angular.isDefined(options.templateOptions.filterDate)) {
-
-	            var dateConfig = {
-	                min: options.templateOptions.minDate || undefined,
-	                max: options.templateOptions.maxDate || undefined,
-	                filter: options.templateOptions.filterDate || undefined
-	            };
-	            var node = document.createElement('div');
-
-	            node.innerHTML = template;
-	            var datepickerNode = node.querySelector('md-datepicker');
-
-	            if (datepickerNode) {
-	                if (dateConfig.min) {
-	                    datepickerNode.setAttribute('md-min-date', 'to.minDate');
-	                }
-	                if (dateConfig.max) {
-	                    datepickerNode.setAttribute('md-max-date', 'to.maxDate');
-	                }
-	                if (dateConfig.filter) {
-	                    datepickerNode.setAttribute('md-date-filter', 'to.filterDate');
-	                }
-	            }
-	            return node.innerHTML;
-	        }
-
-	        return template;
 	    });
 	};
 
@@ -655,15 +636,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        defaultOptions: {
 	            ngModelAttrs: {
 	                min: {
-	                    bound: 'min',
 	                    attribute: 'min'
 	                },
 	                max: {
-	                    bound: 'max',
 	                    attribute: 'max'
 	                },
 	                step: {
-	                    bound: 'step',
 	                    attribute: 'step'
 	                },
 	                discrete: {
