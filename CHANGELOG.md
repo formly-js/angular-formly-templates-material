@@ -2,7 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.7.1] - 2015-12-01
+### Changed
+- use bound for datepicker's minDate, maxDate and filterDate instead of template manipulator
+- remove bound from slider's min, max and step attributes
 
 ## [0.7.0] - 2015-11-29
 ### Added
@@ -83,7 +86,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-06
 
-[Unreleased]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.7.0...HEAD
+[0.7.1]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/wieldo/angular-formly-templates-material/compare/v0.5.1...v0.5.2
