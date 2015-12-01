@@ -12,6 +12,10 @@ describe("formlyMaterial - datepicker type", () => {
     let form;
     let element;
     let field;
+    const minDate = new Date(2015, 10, 19);
+    const maxDate = new Date(2015, 11, 20);
+    const filterDate = () => true;
+
     //
     // helpers
     //
@@ -24,11 +28,9 @@ describe("formlyMaterial - datepicker type", () => {
             templateOptions: {
                 label: 'test field',
                 placeholder: "Pick a date",
-                minDate: new Date(2015, 11, 19),
-                maxDate: new Date(2015, 12, 20),
-                filterDate: (date) => {
-                    return true;
-                }
+                minDate: minDate,
+                maxDate: maxDate,
+                filterDate: filterDate
             }
         }, options)];
 
@@ -63,15 +65,24 @@ describe("formlyMaterial - datepicker type", () => {
     });
 
     it('should have min date', () => {
-        expect(element.attr('md-min-date')).toBe('to.minDate');
+        const scope = angular.element(element).scope();
+
+        expect(element.attr('md-min-date')).toBe("options.templateOptions['minDate']");
+        expect(scope.options.templateOptions.minDate.toDateString()).toBe(minDate.toDateString());
     });
 
     it('should have max date', () => {
-        expect(element.attr('md-max-date')).toBe('to.maxDate');
+        const scope = angular.element(element).scope();
+
+        expect(element.attr('md-max-date')).toBe("options.templateOptions['maxDate']");
+        expect(scope.options.templateOptions.maxDate.toDateString()).toBe(maxDate.toDateString());
     });
 
     it('should have date filter', () => {
-        expect(element.attr('md-date-filter')).toBe('to.filterDate');
+        const scope = angular.element(element).scope();
+
+        expect(element.attr('md-date-filter')).toBe("options.templateOptions['filterDate']");
+        expect(scope.options.templateOptions.filterDate).toBe(filterDate);
     });
 
 });
