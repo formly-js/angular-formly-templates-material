@@ -98,7 +98,7 @@ Requests (?). Post an issue.
 [types.select]: docs/types/select.md
 [types.slider]: docs/types/slider.md
 [types.switch]: docs/types/switch.md
-[types.textarea]: docs/types/textare.md
+[types.textarea]: docs/types/textarea.md
 
 [wrappers.input-container]: docs/wrappers/input-container.md
 [wrappers.label]: docs/wrappers/label.md

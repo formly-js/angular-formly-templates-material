@@ -1,22 +1,6 @@
 # datepicker
 ## md-datepicker
 
-**placeholder (string, optional)**
-
-md-placeholder
-
-**minDate (Date, optional)**
-
-md-min-date
-
-**maxDate (Date, optional)**
-
-md-max-date
-
-**filterDate (function, optional)**
-
-md-filter-date
-
 ### Example
 
 ```javascript
