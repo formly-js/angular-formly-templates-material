@@ -6,7 +6,7 @@ Package.describe({
     version: "0.7.1",
 
     documentation: 'README.md',
-    git: 'https://github.com/wieldo/angular-formly-templates-material.git'
+    git: 'https://github.com/formly-js/angular-formly-templates-material.git'
 });
 
 Package.onUse(function (api) {

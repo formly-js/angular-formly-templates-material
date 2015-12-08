@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wieldo/angular-formly-templates-material.git"
+    "url": "git+https://github.com/formly-js/angular-formly-templates-material.git"
   },
   "keywords": [
     "AngularJs",
@@ -27,9 +27,9 @@
   "author": "Kamil Kisiela <mys.sterowiec@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wieldo/angular-formly-templates-material/issues"
+    "url": "https://github.com/formly-js/angular-formly-templates-material/issues"
   },
-  "homepage": "https://github.com/wieldo/angular-formly-templates-material#readme",
+  "homepage": "https://github.com/formly-js/angular-formly-templates-material#readme",
   "dependencies": {
     "angular": "^1.4.0",
     "angular-messages": "^1.4.0",
