@@ -1,9 +1,9 @@
 FormlyMaterial
 ==========
 
-[![GitHub version](https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material.svg)](https://badge.fury.io/gh/wieldo%2Fangular-formly-templates-material)
-[![Build Status](https://travis-ci.org/wieldo/angular-formly-templates-material.svg)](https://travis-ci.org/wieldo/angular-formly-templates-material)
-[![Coverage Status](https://coveralls.io/repos/wieldo/angular-formly-templates-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/wieldo/angular-formly-templates-material?branch=master)
+[![GitHub version](https://badge.fury.io/gh/formly-js%2Fangular-formly-templates-material.svg)](https://badge.fury.io/gh/formly-js%2Fangular-formly-templates-material)
+[![Build Status](https://travis-ci.org/formly-js/angular-formly-templates-material.svg)](https://travis-ci.org/formly-js/angular-formly-templates-material)
+[![Coverage Status](https://coveralls.io/repos/formly-js/angular-formly-templates-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/formly-js/angular-formly-templates-material?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/a2cd4c7c2d74467281e309a65be49e8f)](https://www.codacy.com/app/mys-sterowiec/angular-formly-templates-material)
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
@@ -45,233 +45,33 @@ angular.module('myAppName', [
 
 Any requests? Add issue!
 
-## Common properties
-
-### label (string)
-
-### theme (string)
-
-md-theme attribute
-
 ## Fields
 
-### input
-
-```javascript
-{
-  "type": "input",
-  "key": "firstName",
-  "templateOptions": {
-    "type": "text",
-    "label": "First name",
-    "theme": "custom"
-  }
-}
-```
-
-### textarea
-
-**rows (number, optional)**
-
-```javascript
-{
-  "type": "textarea",
-  "key": "bio",
-  "templateOptions": {
-    "label": "Biography",
-    "theme": "custom",
-    "rows": 5
-  }
-}
-```
-
-### radio
-
-**options (array, requred)**
-
-**labelProp (string, optional)**
-
-**valueProp (string, optional)**
-
-```javascript
-{
-  "type": "radio",
-  "key": "name",
-  "templateOptions": {
-    "label": "Name",
-    "theme": "custom",
-    "labelProp": "firstName",
-    "valueProp": "id",
-    "options": [
-        {"firstName": "Sarah", id: 1},
-        {"firstName": "Jessica", id: 2},
-        {"firstName": "Parker", id: 3}
-    ]
-  }
-}
-```
-
-### select
-
-**options (array, requred)**
-
-**labelProp (string, optional)**
-
-**valueProp (string, optional)**
-
-**multiple (boolean, optional)**
-
-```javascript
-{
-  "type": "select",
-  "key": "name",
-  "templateOptions": {
-    "label": "Name",
-    "theme": "custom",
-    "multiple": true,
-    "labelProp": "firstName",
-    "valueProp": "id",
-    "options": [
-        {"firstName": "Sarah", id: 1},
-        {"firstName": "Jessica", id: 2},
-        {"firstName": "Parker", id: 3}
-    ]
-  }
-}
-```
-
-### checkbox
-
-```javascript
-{
-  "type": "checkbox",
-  "key": "terms",
-  "templateOptions": {
-    "label": "Terms and Conditions",
-    "theme": "custom"
-  }
-}
-```
-
-### switch
-
-```javascript
-{
-  "type": "switch",
-  "key": "terms",
-  "templateOptions": {
-    "label": "Terms and Conditions",
-    "theme": "custom"
-  }
-}
-```
-
-### datepicker
-
-**placeholder (string, optional)**
-
-md-placeholder
-
-**minDate (Date, optional)**
-
-md-min-date
-
-**maxDate (Date, optional)**
-
-md-max-date
-
-**filterDate (function, optional)**
-
-md-filter-date
-
-```javascript
-{
-  "type": "datepicker",
-  "key": "start",
-  "templateOptions": {
-    "theme": "custom",
-    "placeholder": "Start date",
-    "minDate": minDate, // instance of Date
-    "maxDate": maxDate, // instance of Date
-    "filterDate": function(date) {
-        // only weekends
-        var day = date.getDay();
-        return day === 0 || day === 6;
-    }
-  }
-}
-```
-
-### chips
-
-**placeholder (string, optional)**
-
-placeholder attribute value
-
-**secondaryPlaceholder (string, optional)**
-
-secondary-placeholder attribute value
-
-**deleteButtonLabel (string, optional)**
-
-delete-button-label attribute value
-
-**deleteHint (string, optional)**
-
-delete-hint attribute value
-
-```javascript
-{
-  "type": "chips",
-  "key": "tags",
-  "templateOptions": {
-    "theme": "custom",
-    "placeholder": "+tags",
-    "secondaryPlaceholder": "Add tag",
-    "deleteButtonLabel": "Remove",
-    "deleteHint": "Remove tag"
-  }
-}
-```
-
-### slider
-
-**min (number, optional)**
-
-default 1
-
-**max (number, optional)**
-
-default 100
-
-**step (number, optional)**
-
-default 1
-
-**discrete (boolean, optional)**
-
-default false (md-discrete)
-
-```javascript
-{
-    "type": "slider",
-    "key": "rate",
-    "templateOptions": {
-        "theme": "custom",
-        "min": 1,
-        "max": 5,
-        "step": 0.5,
-        "discrete": true
-    }
-}
-```
-
+* [checkbox][types.checkbox]
+* [chips][types.chips]
+* [datepicker][types.datepicker]
+* [input][types.input]
+* [radio][types.radio]
+* [select][types.select]
+* [slider][types.slider]
+* [switch][types.switch]
+* [textarea][types.textarea]
 
 ## Wrappers
 
-- inputContainer (md-input-container)
-- label
-- messages (ng-messages)
+* [input-container][wrappers.input-container]
+* [label][wrappers.label]
+* [messages][wrappers.messages]
+
+## Common settings
+
+### label (string)
+
+Text used as a field's label
+
+### theme (string)
+
+Value of md-theme used on field
 
 ## Roadmap
 
@@ -289,3 +89,17 @@ default false (md-discrete)
 - [ ] e2e tests
 
 Requests (?). Post an issue.
+
+[types.checkbox]: docs/types/checkbox.md
+[types.chips]: docs/types/chips.md
+[types.datepicker]: docs/types/datepicker.md
+[types.input]: docs/types/input.md
+[types.radio]: docs/types/radio.md
+[types.select]: docs/types/select.md
+[types.slider]: docs/types/slider.md
+[types.switch]: docs/types/switch.md
+[types.textarea]: docs/types/textarea.md
+
+[wrappers.input-container]: docs/wrappers/input-container.md
+[wrappers.label]: docs/wrappers/label.md
+[wrappers.messages]: docs/wrappers/messages.md

@@ -1,3 +1,10 @@
+/*!
+ * angular-formly-material JavaScript Library v0.7.2
+ * 
+ * @license MIT (http://license.angular-formly.com)
+ * 
+ * built with ♥ by Kamil Kisiela <mys.sterowiec@gmail.com>
+ */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("angular"));
