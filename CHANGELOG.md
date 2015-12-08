@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.7.2] - 2015-12-08
 ### Added
 - Documentation for all fields and wrappers
+- Banner with version in dist files
 
 ### Changed
 - Links to repository after transfer from wieldo to formly-js
