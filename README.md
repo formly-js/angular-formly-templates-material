@@ -1,6 +1,8 @@
 FormlyMaterial
 ==========
 
+[![Join the chat at https://gitter.im/formly-js/angular-formly-templates-material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/formly-js/angular-formly-templates-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![GitHub version](https://badge.fury.io/gh/formly-js%2Fangular-formly-templates-material.svg)](https://badge.fury.io/gh/formly-js%2Fangular-formly-templates-material)
 [![Build Status](https://travis-ci.org/formly-js/angular-formly-templates-material.svg)](https://travis-ci.org/formly-js/angular-formly-templates-material)
 [![Coverage Status](https://coveralls.io/repos/formly-js/angular-formly-templates-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/formly-js/angular-formly-templates-material?branch=master)
