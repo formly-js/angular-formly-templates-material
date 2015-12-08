@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var build = require('./build')('prod');
+var pkg = require('../package.json');
 
 module.exports = {
     entry: build.entry,
@@ -9,6 +10,7 @@ module.exports = {
         loaders: build.loaders()
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.BannerPlugin(pkg.name + " JavaScript Library v" + pkg.version + " | MIT | built with ♥ by " + pkg.author)
     ]
 };
