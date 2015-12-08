@@ -3,7 +3,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:angular-formly-templates-material",
     summary: "Material design templates for angular-formly",
-    version: "0.7.1",
+    version: "0.7.2",
 
     documentation: 'README.md',
     git: 'https://github.com/formly-js/angular-formly-templates-material.git'
