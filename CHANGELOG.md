@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased](https://github.com/wieldo/angular-formly-templates-material/compare/v0.7.2...HEAD)
+
+### Changed
+
+-	Package name in AtmosphereJS (formly:angular-formly-templates-material)
+
 [0.7.2](https://github.com/wieldo/angular-formly-templates-material/compare/v0.7.1...v0.7.2) - 2015-12-08
 ---------------------------------------------------------------------------------------------------------
 
