@@ -1,11 +1,10 @@
 // package metadata file for AtmosphereJS
 'use strict';
 
-var packageName = 'formly:angular-formly-templates-material';
 var packageJson = JSON.parse(Npm.require("fs").readFileSync('package.json'));
 
 Package.describe({
-  name: packageName,
+  name: 'formly:angular-formly-templates-material',
   summary: '(official): Material design templates for angular-formly',
   version: packageJson.version,
   documentation: 'README.md',
