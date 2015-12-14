@@ -4,7 +4,7 @@
 Package.describe({
   name: 'formly:angular-formly-templates-material',
   summary: '(official): Material design templates for angular-formly',
-  version: '0.7.2',
+  version: '0.7.3',
   documentation: 'README.md',
   git: 'https://github.com/formly-js/angular-formly-templates-material.git'
 });
