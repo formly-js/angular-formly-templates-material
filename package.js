@@ -15,13 +15,13 @@ Package.onUse(function (api) {
           'angular@1.0.0',
           'angular:angular-messages@1.4.7',
           'angular:angular-material@0.11.4',
-          'wieldo:angular-formly@7.3.2'
+          'formly:angular-formly@7.3.9'
       ],
       imply: [
           'angular:angular@1.4.7',
           'angular:angular-messages',
           'angular:angular-material',
-          'wieldo:angular-formly'
+          'formly:angular-formly'
       ]
   };
 
