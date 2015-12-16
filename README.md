@@ -37,7 +37,7 @@ Requirements
 
 -	angular ~ 1.4.0
 -	angular-messages ~ 1.4.0
--	angular-material ~ 0.11.0
+-	angular-material ~ 1.0.0
 -	angular-formly ~ 7.3.0
 
 Components

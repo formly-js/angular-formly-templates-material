@@ -1,5 +1,5 @@
 /*!
- * angular-formly-material JavaScript Library v0.7.2
+ * angular-formly-material JavaScript Library v0.8.0
  * 
  * @license MIT (http://license.angular-formly.com)
  * 

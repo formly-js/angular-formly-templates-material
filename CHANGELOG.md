@@ -3,6 +3,13 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[0.8.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.3...v0.8.0)
+
+### Changed
+
+-	BREAKING CHANGE: requires now **angular-material v1.0.0**
+-	BREAKING CHANGE: for meteor package uses now **formly:angular-formly** instead of wieldo:angular-formly
+
 [0.7.3](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.2...v0.7.3)
 
 ### Changed
@@ -148,5 +155,4 @@ All notable changes to this project will be documented in this file. This projec
 -	mdTheme to checkbox, switch
 -	md-switch
 
-0.0.1 - 2015-11-06
-------------------
+0.0.1 - 2015-11-06 ------------------.
