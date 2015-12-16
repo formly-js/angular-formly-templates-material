@@ -14,7 +14,7 @@ Package.onUse(function (api) {
       use: [
           'angular@1.0.0',
           'angular:angular-messages@1.4.7',
-          'angular:angular-material@0.11.4',
+          'angular:angular-material@1.0.0',
           'formly:angular-formly@7.3.9'
       ],
       imply: [
