@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 ### Added
 
 -	(textarea) **grow** option (equivalent to md-no-autogrow)
+-	**divider** wrapper ([see documentation](docs/wrappers/divider.md)\)
 
 [0.9.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.8.0...v0.9.0)
 
