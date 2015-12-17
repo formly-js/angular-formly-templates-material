@@ -1,2 +1,7 @@
-# label
-## label
+label
+=====
+
+label
+-----
+
+### templateOptions.label *{String}*
