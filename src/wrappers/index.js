@@ -4,8 +4,8 @@ import messagesWrapper from './messages/messages';
 import dividerWrapper from './divider/divider';
 
 export default [
-    inputContainerWrapper,
-    labelWrapper,
-    messagesWrapper,
-    dividerWrapper
+  inputContainerWrapper,
+  labelWrapper,
+  messagesWrapper,
+  dividerWrapper
 ];

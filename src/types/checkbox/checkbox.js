@@ -1,8 +1,8 @@
 import template from './checkbox.html';
 
 export default (formlyConfigProvider) => {
-    formlyConfigProvider.setType({
-        name: 'checkbox',
-        template: template
-    });
+  formlyConfigProvider.setType({
+    name: 'checkbox',
+    template: template
+  });
 }

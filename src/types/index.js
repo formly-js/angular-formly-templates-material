@@ -9,13 +9,13 @@ import switchType from './switch/switch';
 import textareaType from './textarea/textarea';
 
 export default [
-    checkboxType,
-    chipsType,
-    datepickerType,
-    inputType,
-    radioType,
-    selectType,
-    sliderType,
-    switchType,
-    textareaType
+  checkboxType,
+  chipsType,
+  datepickerType,
+  inputType,
+  radioType,
+  selectType,
+  sliderType,
+  switchType,
+  textareaType
 ];
