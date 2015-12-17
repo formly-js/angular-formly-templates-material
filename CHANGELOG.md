@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. This projec
 
 -	(chips) onAdd callback (equivalent to md-on-add)
 -	(chips) onRemove callback (equivalent to md-on-remove)
+-	(chips) onSelect callback (equivalent to md-on-select)
 
 [0.10.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.9.0...v0.10.0)
 
