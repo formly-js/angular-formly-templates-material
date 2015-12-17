@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.10.0...HEAD)
+
+### Added
+
+-	(chips) onAdd callback (equivalent to md-on-add)
+
 [0.10.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.9.0...v0.10.0)
 
 ### Added
