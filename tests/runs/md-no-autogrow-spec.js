@@ -55,11 +55,9 @@ describe("formlyMaterial - textarea no autogrow manipulator", () => {
         expect(element.attr('md-no-autogrow')).toBeDefined();
     });
 
-    it("should be able to skip md-no-autogrow", () => {
+    it("should not add md-no-autogrow on non textarea type", () => {
         compile({
-            extras: {
-                skipNgModelAttrsManipulator: true
-            }
+            type: 'input'
         });
         expect(element.attr('md-no-autogrow')).toBeUndefined();
     });
