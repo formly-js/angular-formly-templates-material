@@ -1,5 +1,5 @@
 /*!
- * angular-formly-material JavaScript Library v0.10.0
+ * angular-formly-material JavaScript Library v0.11.0
  * 
  * @license MIT (http://license.angular-formly.com)
  * 
@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -88,14 +88,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ngModuleName = 'formlyMaterial';
 
 	_angular2['default'].module(ngModuleName, ['ngMessages', 'ngMaterial', 'formly']).config(['formlyConfigProvider', function (formlyConfigProvider) {
-	    var configs = [_runs2['default'], _wrappers2['default'], _types2['default']];
+	  var configs = [_runs2['default'], _wrappers2['default'], _types2['default']];
 
-	    configs.forEach(function (config) {
-	        var i = 0;
-	        for (; i < config.length; i++) {
-	            config[i](formlyConfigProvider);
-	        }
-	    });
+	  configs.forEach(function (config) {
+	    var i = 0;
+	    for (; i < config.length; i++) {
+	      config[i](formlyConfigProvider);
+	    }
+	  });
 	}]);
 
 	exports['default'] = ngModuleName;
@@ -240,7 +240,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -271,7 +271,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -281,10 +281,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inputContainerHtml2 = _interopRequireDefault(_inputContainerHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setWrapper({
-	        name: 'inputContainer',
-	        template: _inputContainerHtml2['default']
-	    });
+	  formlyConfigProvider.setWrapper({
+	    name: 'inputContainer',
+	    template: _inputContainerHtml2['default']
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -302,7 +302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -312,17 +312,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _labelHtml2 = _interopRequireDefault(_labelHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setWrapper({
-	        name: 'label',
-	        template: _labelHtml2['default'],
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    label: check.string
-	                }
-	            };
+	  formlyConfigProvider.setWrapper({
+	    name: 'label',
+	    template: _labelHtml2['default'],
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          label: check.string
 	        }
-	    });
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -340,7 +340,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -350,10 +350,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _messagesHtml2 = _interopRequireDefault(_messagesHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setWrapper({
-	        name: 'messages',
-	        template: _messagesHtml2['default']
-	    });
+	  formlyConfigProvider.setWrapper({
+	    name: 'messages',
+	    template: _messagesHtml2['default']
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -371,7 +371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -381,17 +381,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _dividerHtml2 = _interopRequireDefault(_dividerHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setWrapper({
-	        name: 'divider',
-	        template: _dividerHtml2['default'],
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    divider: check.oneOf(['before', 'after']).optional
-	                }
-	            };
+	  formlyConfigProvider.setWrapper({
+	    name: 'divider',
+	    template: _dividerHtml2['default'],
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          divider: check.oneOf(['before', 'after']).optional
 	        }
-	    });
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -409,7 +409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -460,7 +460,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -470,10 +470,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _checkboxHtml2 = _interopRequireDefault(_checkboxHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'checkbox',
-	        template: _checkboxHtml2['default']
-	    });
+	  formlyConfigProvider.setType({
+	    name: 'checkbox',
+	    template: _checkboxHtml2['default']
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -491,7 +491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -501,29 +501,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _chipsHtml2 = _interopRequireDefault(_chipsHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'chips',
-	        template: _chipsHtml2['default'],
-	        defaultOptions: {
-	            defaultValue: [],
-	            ngModelAttrs: {
-	                placeholder: { attribute: 'placeholder' },
-	                secondaryPlaceholder: { attribute: 'secondary-placeholder' },
-	                deleteButtonLabel: { attribute: 'delete-button-label' },
-	                deleteHint: { attribute: 'delete-hint' }
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'chips',
+	    template: _chipsHtml2['default'],
+	    defaultOptions: {
+	      defaultValue: [],
+	      ngModelAttrs: {
+	        placeholder: {
+	          attribute: 'placeholder'
 	        },
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    placeholder: check.string.optional,
-	                    secondaryPlaceholder: check.string.optional,
-	                    deleteButtonLabel: check.string.optional,
-	                    deleteHint: check.string.optional
-	                }
-	            };
+	        secondaryPlaceholder: {
+	          attribute: 'secondary-placeholder'
+	        },
+	        deleteButtonLabel: {
+	          attribute: 'delete-button-label'
+	        },
+	        deleteHint: {
+	          attribute: 'delete-hint'
+	        },
+	        onAdd: {
+	          bound: 'md-on-add'
+	        },
+	        onRemove: {
+	          bound: 'md-on-remove'
+	        },
+	        onSelect: {
+	          bound: 'md-on-select'
 	        }
-	    });
+	      }
+	    },
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          placeholder: check.string.optional,
+	          secondaryPlaceholder: check.string.optional,
+	          deleteButtonLabel: check.string.optional,
+	          deleteHint: check.string.optional,
+	          onAdd: check.func.optional,
+	          onRemove: check.func.optional,
+	          onSelect: check.func.optional
+	        }
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -541,7 +561,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -551,37 +571,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _datepickerHtml2 = _interopRequireDefault(_datepickerHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'datepicker',
-	        template: _datepickerHtml2['default'],
-	        wrapper: ['messages'],
-	        defaultOptions: {
-	            ngModelAttrs: {
-	                placeholder: {
-	                    attribute: 'md-placeholder'
-	                },
-	                minDate: {
-	                    bound: 'md-min-date'
-	                },
-	                maxDate: {
-	                    bound: 'md-max-date'
-	                },
-	                filterDate: {
-	                    bound: 'md-date-filter'
-	                }
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'datepicker',
+	    template: _datepickerHtml2['default'],
+	    wrapper: ['messages'],
+	    defaultOptions: {
+	      ngModelAttrs: {
+	        placeholder: {
+	          attribute: 'md-placeholder'
 	        },
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    placeholder: check.string.optional,
-	                    minDate: check.instanceOf(Date).optional,
-	                    maxDate: check.instanceOf(Date).optional,
-	                    filterDate: check.func.optional
-	                }
-	            };
+	        minDate: {
+	          bound: 'md-min-date'
+	        },
+	        maxDate: {
+	          bound: 'md-max-date'
+	        },
+	        filterDate: {
+	          bound: 'md-date-filter'
 	        }
-	    });
+	      }
+	    },
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          placeholder: check.string.optional,
+	          minDate: check.instanceOf(Date).optional,
+	          maxDate: check.instanceOf(Date).optional,
+	          filterDate: check.func.optional
+	        }
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -599,7 +619,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -609,18 +629,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _inputHtml2 = _interopRequireDefault(_inputHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'input',
-	        template: _inputHtml2['default'],
-	        wrapper: ['label', 'messages', 'inputContainer'],
-	        defaultOptions: {
-	            ngModelAttrs: {
-	                mdMaxlength: {
-	                    bound: 'md-maxlength'
-	                }
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'input',
+	    template: _inputHtml2['default'],
+	    wrapper: ['label', 'messages', 'inputContainer'],
+	    defaultOptions: {
+	      ngModelAttrs: {
+	        mdMaxlength: {
+	          bound: 'md-maxlength'
 	        }
-	    });
+	      }
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -638,7 +658,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -648,19 +668,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _radioHtml2 = _interopRequireDefault(_radioHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'radio',
-	        template: _radioHtml2['default'],
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    options: check.arrayOf(check.object),
-	                    labelProp: check.string.optional,
-	                    valueProp: check.string.optional
-	                }
-	            };
+	  formlyConfigProvider.setType({
+	    name: 'radio',
+	    template: _radioHtml2['default'],
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          options: check.arrayOf(check.object),
+	          labelProp: check.string.optional,
+	          valueProp: check.string.optional
 	        }
-	    });
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -678,7 +698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -688,30 +708,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _selectHtml2 = _interopRequireDefault(_selectHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'select',
-	        template: _selectHtml2['default'],
-	        wrapper: ['label', 'messages', 'inputContainer'],
-	        defaultOptions: {
-	            ngModelAttrs: {
-	                multiple: { bound: 'multiple' },
-	                onClose: { bound: 'md-on-close' },
-	                onOpen: { bound: 'md-on-open' }
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'select',
+	    template: _selectHtml2['default'],
+	    wrapper: ['label', 'messages', 'inputContainer'],
+	    defaultOptions: {
+	      ngModelAttrs: {
+	        multiple: {
+	          bound: 'multiple'
 	        },
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    options: check.arrayOf(check.object),
-	                    multiple: check.bool.optional,
-	                    labelProp: check.string.optional,
-	                    valueProp: check.string.optional,
-	                    onClose: check.func.optional,
-	                    onOpen: check.func.optional
-	                }
-	            };
+	        onClose: {
+	          bound: 'md-on-close'
+	        },
+	        onOpen: {
+	          bound: 'md-on-open'
 	        }
-	    });
+	      }
+	    },
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          options: check.arrayOf(check.object),
+	          multiple: check.bool.optional,
+	          labelProp: check.string.optional,
+	          valueProp: check.string.optional,
+	          onClose: check.func.optional,
+	          onOpen: check.func.optional
+	        }
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -729,7 +755,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -739,36 +765,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _sliderHtml2 = _interopRequireDefault(_sliderHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'slider',
-	        template: _sliderHtml2['default'],
-	        defaultOptions: {
-	            ngModelAttrs: {
-	                min: {
-	                    attribute: 'min'
-	                },
-	                max: {
-	                    attribute: 'max'
-	                },
-	                step: {
-	                    attribute: 'step'
-	                },
-	                discrete: {
-	                    bound: 'md-discrete'
-	                }
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'slider',
+	    template: _sliderHtml2['default'],
+	    defaultOptions: {
+	      ngModelAttrs: {
+	        min: {
+	          attribute: 'min'
 	        },
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    min: check.number.optional,
-	                    max: check.number.optional,
-	                    step: check.number.optional,
-	                    discrete: check.bool.optional
-	                }
-	            };
+	        max: {
+	          attribute: 'max'
+	        },
+	        step: {
+	          attribute: 'step'
+	        },
+	        discrete: {
+	          bound: 'md-discrete'
 	        }
-	    });
+	      }
+	    },
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          min: check.number.optional,
+	          max: check.number.optional,
+	          step: check.number.optional,
+	          discrete: check.bool.optional
+	        }
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -786,7 +812,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -796,10 +822,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _switchHtml2 = _interopRequireDefault(_switchHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'switch',
-	        template: _switchHtml2['default']
-	    });
+	  formlyConfigProvider.setType({
+	    name: 'switch',
+	    template: _switchHtml2['default']
+	  });
 	};
 
 	module.exports = exports['default'];
@@ -817,7 +843,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -827,29 +853,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _textareaHtml2 = _interopRequireDefault(_textareaHtml);
 
 	exports['default'] = function (formlyConfigProvider) {
-	    formlyConfigProvider.setType({
-	        name: 'textarea',
-	        template: _textareaHtml2['default'],
-	        wrapper: ['label', 'messages', 'inputContainer'],
-	        defaultOptions: {
-	            ngModelAttrs: {
-	                rows: { attribute: 'rows' },
-	                cols: { attribute: 'cols' }
-	            },
-	            templateOptions: {
-	                grow: true
-	            }
+	  formlyConfigProvider.setType({
+	    name: 'textarea',
+	    template: _textareaHtml2['default'],
+	    wrapper: ['label', 'messages', 'inputContainer'],
+	    defaultOptions: {
+	      ngModelAttrs: {
+	        rows: {
+	          attribute: 'rows'
 	        },
-	        apiCheck: function apiCheck(check) {
-	            return {
-	                templateOptions: {
-	                    rows: check.number.optional,
-	                    cols: check.number.optional,
-	                    grow: check.bool.optional
-	                }
-	            };
+	        cols: {
+	          attribute: 'cols'
 	        }
-	    });
+	      },
+	      templateOptions: {
+	        grow: true
+	      }
+	    },
+	    apiCheck: function apiCheck(check) {
+	      return {
+	        templateOptions: {
+	          rows: check.number.optional,
+	          cols: check.number.optional,
+	          grow: check.bool.optional
+	        }
+	      };
+	    }
+	  });
 	};
 
 	module.exports = exports['default'];
