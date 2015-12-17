@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.8.0...HEAD)
+
+### Added
+
+-	(select) **onClose** and **onOpen** options (equivalent to md-on-close and md-on-open)
+
 [0.8.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.3...v0.8.0)
 
 ### Changed
