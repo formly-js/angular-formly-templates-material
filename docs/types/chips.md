@@ -55,3 +55,7 @@ An expression which will be called when a chip has been added.
 #### templateOptions.onRemove *: function*
 
 An expression which will be called when a chip has been removed.
+
+#### templateOptions.onSelect *: function*
+
+An expression which will be called when a chip has been selected.
