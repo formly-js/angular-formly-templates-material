@@ -3,7 +3,8 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-[0.11.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.10.0...v0.11.0)
+## [0.11.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.10.0...v0.11.0) - 2015-12-18
+------------------------------------------------------------------------------------------------------------------
 
 ### Added
 
@@ -11,27 +12,31 @@ All notable changes to this project will be documented in this file. This projec
 -	(chips) onRemove callback (equivalent to md-on-remove)
 -	(chips) onSelect callback (equivalent to md-on-select)
 
-[0.10.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.9.0...v0.10.0)
+[0.10.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.9.0...v0.10.0) - 2015-12-17
+--------------------------------------------------------------------------------------------------------------
 
 ### Added
 
 -	(textarea) **grow** option (equivalent to md-no-autogrow)
 -	**divider** wrapper ([see documentation](docs/wrappers/divider.md)\)
 
-[0.9.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.8.0...v0.9.0)
+[0.9.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.8.0...v0.9.0) - 2015-12-17
+------------------------------------------------------------------------------------------------------------
 
 ### Added
 
 -	(select) **onClose** and **onOpen** options (equivalent to md-on-close and md-on-open)
 
-[0.8.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.3...v0.8.0)
+[0.8.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.3...v0.8.0) - 2015-12-16
+------------------------------------------------------------------------------------------------------------
 
 ### Changed
 
 -	BREAKING CHANGE: requires now **angular-material v1.0.0**
 -	BREAKING CHANGE: for meteor package uses now **formly:angular-formly** instead of wieldo:angular-formly
 
-[0.7.3](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.2...v0.7.3)
+[0.7.3](https://github.com/formly-js/angular-formly-templates-material/compare/v0.7.2...v0.7.3) - 2015-12-14
+------------------------------------------------------------------------------------------------------------
 
 ### Changed
 
