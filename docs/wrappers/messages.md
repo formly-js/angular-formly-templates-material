@@ -1,2 +1,5 @@
-# messages
-## ng-messages
+messages
+========
+
+ng-messages
+-----------
