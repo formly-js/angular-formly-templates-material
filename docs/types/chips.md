@@ -18,6 +18,9 @@ md-chips
     deleteHint: "Remove tag",
     onAdd: function() {
       console.log('new chip');
+    },
+    onRemove: function() {
+      console.log('chip removed');
     }
   }
 }
@@ -48,3 +51,7 @@ A string read by screen readers instructing users that pressing the delete key w
 #### templateOptions.onAdd *: function*
 
 An expression which will be called when a chip has been added.
+
+#### templateOptions.onRemove *: function*
+
+An expression which will be called when a chip has been removed.
