@@ -15,7 +15,10 @@ md-chips
     placeholder: "+tags",
     secondaryPlaceholder: "Add tag",
     deleteButtonLabel: "Remove",
-    deleteHint: "Remove tag"
+    deleteHint: "Remove tag",
+    onAdd: function() {
+      console.log('new chip');
+    }
   }
 }
 ```
@@ -41,3 +44,7 @@ A label for the delete button. Also hidden and read by screen readers.
 #### templateOptions.deleteHint *: string*
 
 A string read by screen readers instructing users that pressing the delete key will remove the chip.
+
+#### templateOptions.onAdd *: function*
+
+An expression which will be called when a chip has been added.
