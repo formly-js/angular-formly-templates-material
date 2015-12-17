@@ -24,6 +24,9 @@ export default (formlyConfigProvider) => {
         },
         onRemove: {
           bound: 'md-on-remove'
+        },
+        onSelect: {
+          bound: 'md-on-select'
         }
       }
     },
@@ -34,7 +37,8 @@ export default (formlyConfigProvider) => {
         deleteButtonLabel: check.string.optional,
         deleteHint: check.string.optional,
         onAdd: check.func.optional,
-        onRemove: check.func.optional
+        onRemove: check.func.optional,
+        onSelect: check.func.optional
       }
     })
   });
