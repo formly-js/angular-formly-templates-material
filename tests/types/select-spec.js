@@ -28,6 +28,8 @@ describe("formlyMaterial - select type", () => {
             templateOptions: {
                 label: 'test field',
                 multiple: true,
+                onClose: () => true,
+                onOpen: () => true,
                 options: [
                     {name: 'first', nameUp: 'FIRST', value: 'f', valueUp: 'F'},
                     {name: 'second', nameUp: 'SECOND', value: 's', valueUp: 'S'}
@@ -87,6 +89,16 @@ describe("formlyMaterial - select type", () => {
     it('should be able to pick multiple options', () => {
         compile();
         expect(element.attr('multiple')).toBeDefined();
+    });
+
+    it('should be able to bind md-on-close', () => {
+        compile();
+        expect(element.attr('md-on-close')).toBe("options.templateOptions['onClose']");
+    });
+
+    it('should be able to bind md-on-open', () => {
+        compile();
+        expect(element.attr('md-on-open')).toBe("options.templateOptions['onOpen']");
     });
 
     describe("check options", () => {
