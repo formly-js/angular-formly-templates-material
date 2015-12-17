@@ -18,6 +18,9 @@ export default (formlyConfigProvider) => {
         },
         deleteHint: {
           attribute: 'delete-hint'
+        },
+        onAdd: {
+          bound: 'md-on-add'
         }
       }
     },
@@ -26,7 +29,8 @@ export default (formlyConfigProvider) => {
         placeholder: check.string.optional,
         secondaryPlaceholder: check.string.optional,
         deleteButtonLabel: check.string.optional,
-        deleteHint: check.string.optional
+        deleteHint: check.string.optional,
+        onAdd: check.func.optional
       }
     })
   });
