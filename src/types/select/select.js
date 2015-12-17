@@ -7,7 +7,9 @@ export default (formlyConfigProvider) => {
         wrapper: ['label', 'messages', 'inputContainer'],
         defaultOptions: {
             ngModelAttrs: {
-                multiple: {bound: 'multiple'}
+                multiple: {bound: 'multiple'},
+                onClose: {bound: 'md-on-close'},
+                onOpen: {bound: 'md-on-open'}
             }
         },
         apiCheck: (check) => ({
@@ -15,7 +17,9 @@ export default (formlyConfigProvider) => {
                 options: check.arrayOf(check.object),
                 multiple: check.bool.optional,
                 labelProp: check.string.optional,
-                valueProp: check.string.optional
+                valueProp: check.string.optional,
+                onClose: check.func.optional,
+                onOpen: check.func.optional
             }
         })
     });
