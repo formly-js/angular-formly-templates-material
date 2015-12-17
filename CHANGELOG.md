@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.9.0...HEAD)
+
+### Added
+
+-	(textarea) **grow** option (equivalent to md-no-autogrow)
+
 [0.9.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.8.0...v0.9.0)
 
 ### Added
