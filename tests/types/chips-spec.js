@@ -19,6 +19,10 @@ describe("formlyMaterial - chips type", () => {
   function onRemove() {
     return true;
   }
+
+  function onSelect() {
+    return true;
+  }
   //
   // helpers
   //
@@ -35,7 +39,8 @@ describe("formlyMaterial - chips type", () => {
         deleteButtonLabel: "Remove",
         deleteHint: "Remove tag",
         onAdd: onAdd,
-        onRemove: onRemove
+        onRemove: onRemove,
+        onSelect: onSelect
       }
     }, options)];
 
@@ -94,6 +99,13 @@ describe("formlyMaterial - chips type", () => {
 
     expect(element.attr('md-on-remove')).toBe("options.templateOptions['onRemove']");
     expect(scope.options.templateOptions.onRemove).toBe(onRemove);
+  });
+
+  it('should have onSelect callback', () => {
+    const scope = angular.element(element).scope();
+
+    expect(element.attr('md-on-select')).toBe("options.templateOptions['onSelect']");
+    expect(scope.options.templateOptions.onSelect).toBe(onSelect);
   });
 
 });
