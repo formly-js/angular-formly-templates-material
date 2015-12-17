@@ -28,7 +28,7 @@ describe("formlyMaterial - theme manipulator", () => {
         }, options)];
 
         let form = $compile(testUtils.getFormTemplate())($scope);
-        
+
         $scope.$digest();
         element = form.find('[ng-model]');
         field = $scope.fields[0];
@@ -53,15 +53,6 @@ describe("formlyMaterial - theme manipulator", () => {
     it('should be able to add md-theme attribute', () => {
         compile();
         expect(element.attr('md-theme')).toBe('custom');
-    });
-
-    it("should be able to skip md-theme", () => {
-        compile({
-            extras: {
-                skipNgModelAttrsManipulator: true
-            }
-        });
-        expect(element.attr('md-theme')).toBeUndefined();
     });
 
 });
