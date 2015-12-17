@@ -72,6 +72,7 @@ Wrappers
 -	[input-container](docs/wrappers/input-container.md)
 -	[label](docs/wrappers/label.md)
 -	[messages](docs/wrappers/messages.md)
+-	[divider](docs/wrappers/divider.md)
 
 Common settings
 ---------------
