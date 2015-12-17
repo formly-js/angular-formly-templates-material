@@ -55,7 +55,8 @@ describe("formlyMaterial - messages wrapper", () => {
 
     it("should be after the field", () => {
         expect(element.find('md-checkbox').length).toBe(0);
-        expect(element.before('[ng-messages]').length).toBe(1);
+        // expect(element.before('[ng-messages]').length).toBe(1);
+        expect(element.prev('.ng-scope').children('md-checkbox').length).toBe(1);
     });
 
 });
