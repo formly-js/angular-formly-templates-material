@@ -1,5 +1,5 @@
 /*!
- * angular-formly-material JavaScript Library v0.8.0
+ * angular-formly-material JavaScript Library v0.9.0
  * 
  * @license MIT (http://license.angular-formly.com)
  * 
@@ -596,7 +596,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        wrapper: ['label', 'messages', 'inputContainer'],
 	        defaultOptions: {
 	            ngModelAttrs: {
-	                multiple: { bound: 'multiple' }
+	                multiple: { bound: 'multiple' },
+	                onClose: { bound: 'md-on-close' },
+	                onOpen: { bound: 'md-on-open' }
 	            }
 	        },
 	        apiCheck: function apiCheck(check) {
@@ -605,7 +607,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    options: check.arrayOf(check.object),
 	                    multiple: check.bool.optional,
 	                    labelProp: check.string.optional,
-	                    valueProp: check.string.optional
+	                    valueProp: check.string.optional,
+	                    onClose: check.func.optional,
+	                    onOpen: check.func.optional
 	                }
 	            };
 	        }
