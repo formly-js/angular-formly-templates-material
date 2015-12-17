@@ -99,6 +99,9 @@ Roadmap
 -	[x] add md-radio with valueProp and labelProp
 -	[x] add textarea with cols and rows
 -	[x] md-theme
+-	[x] add md-on-close and md-on-open to md-select
+-	[x] add divider wrapper (md-divider)
+-	[x] add md-no-autogrow to textare
 -	[ ] e2e tests
 
 Requests (?). Post an issue.
