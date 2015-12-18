@@ -2,8 +2,8 @@ import template from './slider.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
+    template,
     name: 'slider',
-    template: template,
     defaultOptions: {
       ngModelAttrs: {
         min: {
@@ -29,4 +29,4 @@ export default (formlyConfigProvider) => {
       }
     })
   });
-}
+};

@@ -2,8 +2,8 @@ import template from './chips.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
+    template,
     name: 'chips',
-    template: template,
     defaultOptions: {
       defaultValue: [],
       ngModelAttrs: {
@@ -42,4 +42,4 @@ export default (formlyConfigProvider) => {
       }
     })
   });
-}
+};

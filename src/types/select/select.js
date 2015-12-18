@@ -2,8 +2,8 @@ import template from './select.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
+    template,
     name: 'select',
-    template: template,
     wrapper: ['label', 'messages', 'inputContainer'],
     defaultOptions: {
       ngModelAttrs: {
@@ -29,4 +29,4 @@ export default (formlyConfigProvider) => {
       }
     })
   });
-}
+};

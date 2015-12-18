@@ -2,8 +2,8 @@ import template from './datepicker.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
+    template,
     name: 'datepicker',
-    template: template,
     wrapper: ['messages'],
     defaultOptions: {
       ngModelAttrs: {
@@ -30,4 +30,4 @@ export default (formlyConfigProvider) => {
       }
     })
   });
-}
+};

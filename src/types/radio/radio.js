@@ -2,8 +2,8 @@ import template from './radio.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
+    template,
     name: 'radio',
-    template: template,
     apiCheck: (check) => ({
       templateOptions: {
         options: check.arrayOf(check.object),
@@ -12,4 +12,4 @@ export default (formlyConfigProvider) => {
       }
     })
   });
-}
+};
