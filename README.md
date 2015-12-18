@@ -40,6 +40,13 @@ angular.module('myAppName', [
   ])
 ```
 
+Requests?
+---------
+
+Maybe you need some new feature? Go here:
+
+https://github.com/formly-js/angular-formly-templates-material/issues/4
+
 Requirements
 ------------
 
