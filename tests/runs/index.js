@@ -1,2 +1,2 @@
-import './md-theme-manipulator-spec';
-import './md-no-autogrow-spec';
+import './theme-spec';
+import './grow-spec';

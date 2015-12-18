@@ -1,77 +1,73 @@
 import testUtils from './../test-utils';
 
-describe("formlyMaterial - input type", () => {
+describe('formlyMaterial - input type', () => {
+  //
+  // vars
+  //
 
-    //
-    // vars
-    //
-    
-    let formlyConfig;
-    let $compile;
-    let $rootScope;
-    let $scope;
-    let form;
-    let element;
-    let field;
-    
-    //
-    // helpers
-    //
+  let $compile;
+  let $rootScope;
+  let $scope;
+  let form;
+  let element;
+  let field;
 
-    function compile(options) {
-        $scope = $rootScope.$new();
-        $scope.fields = [angular.merge({}, {
-            key: 'testField',
-            type: 'input',
-            templateOptions: {
-                type: 'email',
-                label: 'test field'
-            }
-        }, options)];
+  //
+  // helpers
+  //
 
-        form = $compile(testUtils.getFormTemplate())($scope);
-        $scope.$digest();
-        field = $scope.fields[0];
-        element = form.find('[ng-model]');
-    }
+  function compile(options) {
+    $scope = $rootScope.$new();
+    $scope.fields = [angular.merge({}, {
+      key: 'testField',
+      type: 'input',
+      templateOptions: {
+        type: 'email',
+        label: 'test field'
+      }
+    }, options)];
 
-    //
-    // tests
-    //
+    form = $compile(testUtils.getFormTemplate())($scope);
+    $scope.$digest();
+    field = $scope.fields[0];
+    element = form.find('[ng-model]');
+  }
 
-    beforeEach(() => {
-        window.module('formlyMaterial');
+  //
+  // tests
+  //
 
-        inject((_$compile_, _$rootScope_, _formlyConfig_) => {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
-            formlyConfig = _formlyConfig_;
-        });
+  beforeEach(() => {
+    window.module('formlyMaterial');
 
-        compile();
+    inject((_$compile_, _$rootScope_) => {
+      $compile = _$compile_;
+      $rootScope = _$rootScope_;
     });
 
-    it('should be input element', () => {
-        expect(element[0].nodeName).toBe('INPUT');
-    });
+    compile();
+  });
 
-    it('should have proper type attribute', () => {
-        expect(element.attr('type')).toBe(field.templateOptions.type);
-    });
+  it('should be input element', () => {
+    expect(element[0].nodeName).toBe('INPUT');
+  });
 
-    it('should have messages wrapper', () => {
-        expect(form.find('[ng-messages]').length).toBe(1);
-    });
+  it('should have proper type attribute', () => {
+    expect(element.attr('type')).toBe(field.templateOptions.type);
+  });
 
-    it('should have label wrapper', () => {
-        let label = form.find('label');
+  it('should have messages wrapper', () => {
+    expect(form.find('[ng-messages]').length).toBe(1);
+  });
 
-        expect(label.length).toBe(1);
-        expect(label.html()).toContain(field.templateOptions.label);
-    });
+  it('should have label wrapper', () => {
+    const label = form.find('label');
 
-    it('should have inputContainer wrapper', () => {
-        expect(form.find('md-input-container').length).toBe(1);
-    });
+    expect(label.length).toBe(1);
+    expect(label.html()).toContain(field.templateOptions.label);
+  });
 
+  it('should have inputContainer wrapper', () => {
+    expect(form.find('md-input-container').length).toBe(1);
+  });
 });

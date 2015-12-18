@@ -1,57 +1,54 @@
 import testUtils from './../test-utils';
 
-describe("formlyMaterial - checkbox type", () => {
-    
-    //
-    // vars
-    //
-    let formlyConfig;
-    let $compile;
-    let $rootScope;
-    let $scope;
-    let element;
-    
-    //
-    // helpers
-    //
+describe('formlyMaterial - checkbox type', () => {
+  //
+  // vars
+  //
+  let $compile;
+  let $rootScope;
+  let $scope;
+  let element;
 
-    function compile(options) {
-        $scope = $rootScope.$new();
-        $scope.fields = [angular.merge({}, {
-            key: 'testField',
-            type: 'checkbox',
-            templateOptions: {
-                label: 'test field'
-            }
-        }, options)];
+  //
+  // helpers
+  //
 
-        let form = $compile(testUtils.getFormTemplate())($scope);
-        $scope.$digest();
-        element = form.find('[ng-model]');
-    }
-    
-    //
-    // tests
-    //
+  function compile(options) {
+    $scope = $rootScope.$new();
+    $scope.fields = [angular.merge({}, {
+      key: 'testField',
+      type: 'checkbox',
+      templateOptions: {
+        label: 'test field'
+      }
+    }, options)];
 
-    beforeEach(() => {
-        window.module('formlyMaterial');
+    const form = $compile(testUtils.getFormTemplate())($scope);
 
-        inject((_$compile_, _$rootScope_, _formlyConfig_) => {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
-            formlyConfig = _formlyConfig_;
-        });
-        
-        compile();
+    $scope.$digest();
+    element = form.find('[ng-model]');
+  }
+
+  //
+  // tests
+  //
+
+  beforeEach(() => {
+    window.module('formlyMaterial');
+
+    inject((_$compile_, _$rootScope_) => {
+      $compile = _$compile_;
+      $rootScope = _$rootScope_;
     });
-    
-    it('should be md-checkbox element', () => {
-        expect(element[0].nodeName).toBe('MD-CHECKBOX');
-    });
-    
-    it("should have label", () => {
-        expect(element.html()).toContain("test field");
-    });
-    
+
+    compile();
+  });
+
+  it('should be md-checkbox element', () => {
+    expect(element[0].nodeName).toBe('MD-CHECKBOX');
+  });
+
+  it('should have label', () => {
+    expect(element.html()).toContain('test field');
+  });
 });

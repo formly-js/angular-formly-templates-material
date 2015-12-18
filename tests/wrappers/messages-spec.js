@@ -1,62 +1,56 @@
 import testUtils from './../test-utils';
 
-describe("formlyMaterial - messages wrapper", () => {
+describe('formlyMaterial - messages wrapper', () => {
+  //
+  // vars
+  //
+  let $compile;
+  let $rootScope;
+  let $scope;
+  let element;
 
-    //
-    // vars
-    //
-    let formlyConfig;
-    let $compile;
-    let $rootScope;
-    let $scope;
-    let element;
-    let field;
+  //
+  // helpers
+  //
 
-    //
-    // helpers
-    //
+  function compile() {
+    $scope = $rootScope.$new();
+    $scope.fields = [{
+      key: 'testField',
+      type: 'checkbox',
+      wrapper: ['messages'],
+      templateOptions: {
+        label: 'test field'
+      }
+    }];
 
-    function compile() {
-        $scope = $rootScope.$new();
-        $scope.fields = [{
-            key: 'testField',
-            type: 'checkbox',
-            wrapper: ['messages'],
-            templateOptions: {
-                label: 'test field'
-            }
-        }];
+    const form = $compile(testUtils.getFormTemplate())($scope);
 
-        let form = $compile(testUtils.getFormTemplate())($scope);
-        $scope.$digest();
-        element = form.find('[ng-messages]');
-        field = $scope.fields[0];
-    }
+    $scope.$digest();
+    element = form.find('[ng-messages]');
+  }
 
-    //
-    // tests
-    //
+  //
+  // tests
+  //
 
-    beforeEach(() => {
-        window.module('formlyMaterial');
+  beforeEach(() => {
+    window.module('formlyMaterial');
 
-        inject((_$compile_, _$rootScope_, _formlyConfig_) => {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
-            formlyConfig = _formlyConfig_;
-        });
-
-        compile();
+    inject((_$compile_, _$rootScope_) => {
+      $compile = _$compile_;
+      $rootScope = _$rootScope_;
     });
 
-    it('should exist', () => {
-        expect(element.length).toBe(1);
-    });
+    compile();
+  });
 
-    it("should be after the field", () => {
-        expect(element.find('md-checkbox').length).toBe(0);
-        // expect(element.before('[ng-messages]').length).toBe(1);
-        expect(element.prev('.ng-scope').children('md-checkbox').length).toBe(1);
-    });
+  it('should exist', () => {
+    expect(element.length).toBe(1);
+  });
 
+  it('should be after the field', () => {
+    expect(element.find('md-checkbox').length).toBe(0);
+    expect(element.prev('.ng-scope').children('md-checkbox').length).toBe(1);
+  });
 });

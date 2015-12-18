@@ -1,6 +1,6 @@
 import testUtils from './../test-utils';
 
-describe('formlyMaterial - switch type', () => {
+describe('formlyMaterial - textarea no autogrow manipulator', () => {
   //
   // vars
   //
@@ -8,7 +8,6 @@ describe('formlyMaterial - switch type', () => {
   let $rootScope;
   let $scope;
   let element;
-  let field;
 
   //
   // helpers
@@ -18,9 +17,10 @@ describe('formlyMaterial - switch type', () => {
     $scope = $rootScope.$new();
     $scope.fields = [angular.merge({}, {
       key: 'testField',
-      type: 'switch',
+      type: 'textarea',
       templateOptions: {
-        label: 'test field'
+        label: 'test field',
+        grow: false
       }
     }, options)];
 
@@ -28,7 +28,6 @@ describe('formlyMaterial - switch type', () => {
 
     $scope.$digest();
     element = form.find('[ng-model]');
-    field = $scope.fields[0];
   }
 
   //
@@ -46,11 +45,15 @@ describe('formlyMaterial - switch type', () => {
     compile();
   });
 
-  it('should be md-switch element', () => {
-    expect(element[0].nodeName).toBe('MD-SWITCH');
+  it('should be able to add md-no-autogrow attribute when grow equals false', () => {
+    compile();
+    expect(element.attr('md-no-autogrow')).toBeDefined();
   });
 
-  it('should have label', () => {
-    expect(element.find('.md-label > span').html()).toContain(field.templateOptions.label);
+  it('should not add md-no-autogrow on non textarea type', () => {
+    compile({
+      type: 'input'
+    });
+    expect(element.attr('md-no-autogrow')).toBeUndefined();
   });
 });

@@ -1,65 +1,62 @@
 import testUtils from './../test-utils';
 
-describe("formlyMaterial - label wrapper", () => {
+describe('formlyMaterial - label wrapper', () => {
+  //
+  // vars
+  //
+  let $compile;
+  let $rootScope;
+  let $scope;
+  let element;
+  let field;
 
-    //
-    // vars
-    //
-    let formlyConfig;
-    let $compile;
-    let $rootScope;
-    let $scope;
-    let element;
-    let field;
+  //
+  // helpers
+  //
 
-    //
-    // helpers
-    //
+  function compile() {
+    $scope = $rootScope.$new();
+    $scope.fields = [{
+      key: 'testField',
+      type: 'checkbox',
+      wrapper: ['label'],
+      templateOptions: {
+        label: 'test field'
+      }
+    }];
 
-    function compile() {
-        $scope = $rootScope.$new();
-        $scope.fields = [{
-            key: 'testField',
-            type: 'checkbox',
-            wrapper: ['label'],
-            templateOptions: {
-                label: 'test field'
-            }
-        }];
+    const form = $compile(testUtils.getFormTemplate())($scope);
 
-        let form = $compile(testUtils.getFormTemplate())($scope);
-        $scope.$digest();
-        element = form.find('label');
-        field = $scope.fields[0];
-    }
+    $scope.$digest();
+    element = form.find('label');
+    field = $scope.fields[0];
+  }
 
-    //
-    // tests
-    //
+  //
+  // tests
+  //
 
-    beforeEach(() => {
-        window.module('formlyMaterial');
+  beforeEach(() => {
+    window.module('formlyMaterial');
 
-        inject((_$compile_, _$rootScope_, _formlyConfig_) => {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
-            formlyConfig = _formlyConfig_;
-        });
-
-        compile();
+    inject((_$compile_, _$rootScope_) => {
+      $compile = _$compile_;
+      $rootScope = _$rootScope_;
     });
 
-    it('should exist', () => {
-        expect(element.length).toBe(1);
-    });
+    compile();
+  });
 
-    it('should have proper value', () => {
-        expect(element.html()).toContain(field.templateOptions.label);
-    });
+  it('should exist', () => {
+    expect(element.length).toBe(1);
+  });
 
-    it("should be before the field", () => {
-        expect(element.find('md-checkbox').length).toBe(0);
-        expect(element.next().children()[0].nodeName).toBe('MD-CHECKBOX');
-    });
+  it('should have proper value', () => {
+    expect(element.html()).toContain(field.templateOptions.label);
+  });
 
+  it('should be before the field', () => {
+    expect(element.find('md-checkbox').length).toBe(0);
+    expect(element.next().children()[0].nodeName).toBe('MD-CHECKBOX');
+  });
 });

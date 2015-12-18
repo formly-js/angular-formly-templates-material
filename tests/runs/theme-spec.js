@@ -1,6 +1,6 @@
 import testUtils from './../test-utils';
 
-describe('formlyMaterial - inputContainer wrapper', () => {
+describe('formlyMaterial - theme manipulator', () => {
   //
   // vars
   //
@@ -13,20 +13,21 @@ describe('formlyMaterial - inputContainer wrapper', () => {
   // helpers
   //
 
-  function compile() {
+  function compile(options) {
     $scope = $rootScope.$new();
-    $scope.fields = [{
+    $scope.fields = [angular.merge({}, {
       key: 'testField',
-      type: 'checkbox',
-      wrapper: ['inputContainer'],
+      type: 'switch',
       templateOptions: {
+        theme: 'custom',
         label: 'test field'
       }
-    }];
+    }, options)];
 
     const form = $compile(testUtils.getFormTemplate())($scope);
+
     $scope.$digest();
-    element = form.find('md-input-container');
+    element = form.find('[ng-model]');
   }
 
   //
@@ -44,11 +45,8 @@ describe('formlyMaterial - inputContainer wrapper', () => {
     compile();
   });
 
-  it('should exist', () => {
-    expect(element.length).toBe(1);
-  });
-
-  it('should contain field', () => {
-    expect(element.find('md-checkbox').length).toBe(1);
+  it('should be able to add md-theme attribute', () => {
+    compile();
+    expect(element.attr('md-theme')).toBe('custom');
   });
 });
