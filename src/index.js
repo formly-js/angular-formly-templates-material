@@ -6,11 +6,7 @@ import types from './types';
 
 const ngModuleName = 'formlyMaterial';
 
-angular.module(ngModuleName, [
-    'ngMessages',
-    'ngMaterial',
-    'formly'
-  ])
+angular.module(ngModuleName, ['ngMessages', 'ngMaterial', 'formly'])
   .config(['formlyConfigProvider', (formlyConfigProvider) => {
     const configs = [runs, wrappers, types];
 
