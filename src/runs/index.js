@@ -1,4 +1,4 @@
-import mdThemeManipulator from './md-theme-manipulator';
-import mdNoAutogrow from './md-no-autogrow';
+import theme from './theme';
+import grow from './grow';
 
-export default [mdThemeManipulator, mdNoAutogrow];
+export default [theme, grow];

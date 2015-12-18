@@ -5,6 +5,9 @@ from './../helpers/index.js';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.templateManipulators.preWrapper.push((template, options) => {
+    // adds md-no-autogrow only when:
+    // type === textarea
+    // templateOptions.grow === false
     if (!angular.isDefined(options.templateOptions.grow)) {
       return template;
     }
@@ -14,7 +17,6 @@ export default (formlyConfigProvider) => {
     if (!angular.isDefined(options.type) || options.type !== 'textarea') {
       return template;
     }
-
     return ngModelAttrsManipulator(template, options, 'md-no-autogrow');
   });
-}
+};
