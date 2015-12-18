@@ -2,12 +2,12 @@ import template from './label.html';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setWrapper({
+    template,
     name: 'label',
-    template: template,
     apiCheck: (check) => ({
       templateOptions: {
         label: check.string
       }
     })
   });
-}
+};
