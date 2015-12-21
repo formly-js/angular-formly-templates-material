@@ -3,6 +3,8 @@ FormlyMaterial
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
 
+---
+
 **Chat**
 
 [![Join the chat at https://gitter.im/formly-js/angular-formly-templates-material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/formly-js/angular-formly-templates-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -19,6 +21,11 @@ Material Design Templates for [Angular-Formly](http://angular-formly.com). Moder
 [![Coverage Status](https://coveralls.io/repos/formly-js/angular-formly-templates-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/formly-js/angular-formly-templates-material?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/a2cd4c7c2d74467281e309a65be49e8f)](https://www.codacy.com/app/mys-sterowiec/angular-formly-templates-material)
 
+---
+
+Table of contents
+-----------------
+
 - [Install](#install)
 - [Getting Started](#getting-started)
 - [Requests?](#requests)
@@ -28,6 +35,8 @@ Material Design Templates for [Angular-Formly](http://angular-formly.com). Moder
   - [Wrappers](#wrappers)
 - [Common settings](#common-settings)
   - [Theme](#theme-string)
+
+---  
 
 Install
 -------
@@ -103,5 +112,7 @@ Common settings
 ### theme (string)
 
 Value of md-theme used on field
+
+---
 
 Requests (?). Post an issue.
