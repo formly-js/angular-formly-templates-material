@@ -44,30 +44,122 @@ describe('formlyMaterial - input type', () => {
       $compile = _$compile_;
       $rootScope = _$rootScope_;
     });
-
-    compile();
   });
 
-  it('should be input element', () => {
-    expect(element[0].nodeName).toBe('INPUT');
+  describe('basics', () => {
+    beforeEach(() => {
+      compile();
+    });
+
+    it('should be input element', () => {
+      expect(element[0].nodeName).toBe('INPUT');
+    });
+
+    it('should have proper type attribute', () => {
+      expect(element.attr('type')).toBe(field.templateOptions.type);
+    });
+
+    it('should have messages wrapper', () => {
+      expect(form.find('[ng-messages]').length).toBe(1);
+    });
+
+    it('should have label wrapper', () => {
+      const label = form.find('label');
+
+      expect(label.length).toBe(1);
+      expect(label.html()).toContain(field.templateOptions.label);
+    });
+
+    it('should have inputContainer wrapper', () => {
+      expect(form.find('md-input-container').length).toBe(1);
+    });
   });
 
-  it('should have proper type attribute', () => {
-    expect(element.attr('type')).toBe(field.templateOptions.type);
-  });
+  describe('number type specific', () => {
+    describe('step attribute', () => {
+      it('should fail on non number type', () => {
+        expect(() => {
+          compile({
+            templateOptions: {
+              type: 'text',
+              step: 2
+            },
+            apiCheckFunction: 'throw'
+          });
+        }).toThrowError(Error, /step/i);
+      });
 
-  it('should have messages wrapper', () => {
-    expect(form.find('[ng-messages]').length).toBe(1);
-  });
+      it('should not be available on non number type', () => {
+        compile({
+          templateOptions: {
+            type: 'text',
+            step: 2
+          }
+        });
 
-  it('should have label wrapper', () => {
-    const label = form.find('label');
+        expect(element.attr('step')).toBeUndefined();
+      });
 
-    expect(label.length).toBe(1);
-    expect(label.html()).toContain(field.templateOptions.label);
-  });
+      it('should be available on number type', () => {
+        compile({
+          templateOptions: {
+            type: 'number',
+            step: 2
+          }
+        });
 
-  it('should have inputContainer wrapper', () => {
-    expect(form.find('md-input-container').length).toBe(1);
+        expect(parseInt(element.attr('step'))).toEqual(field.templateOptions.step);
+      });
+    });
+
+    describe('min attribute', () => {
+      it('should fail on non number type', () => {
+        expect(() => {
+          compile({
+            templateOptions: {
+              type: 'text',
+              min: 2
+            },
+            apiCheckFunction: 'throw'
+          });
+        }).toThrowError(Error, /min/i);
+      });
+
+      it('should be available on number type', () => {
+        compile({
+          templateOptions: {
+            type: 'number',
+            min: 2
+          }
+        });
+
+        expect(parseInt(element.attr('min'))).toEqual(field.templateOptions.min);
+      });
+    });
+
+    describe('max attribute', () => {
+      it('should fail on non number type', () => {
+        expect(() => {
+          compile({
+            templateOptions: {
+              type: 'text',
+              max: 2
+            },
+            apiCheckFunction: 'throw'
+          });
+        }).toThrowError(Error, /max/i);
+      });
+
+      it('should be available on number type', () => {
+        compile({
+          templateOptions: {
+            type: 'number',
+            max: 2
+          }
+        });
+
+        expect(parseInt(element.attr('max'))).toEqual(field.templateOptions.max);
+      });
+    });
   });
 });
