@@ -1,5 +1,4 @@
 // package metadata file for AtmosphereJS
-'use strict';
 
 Package.describe({
   name: 'formly:angular-formly-templates-material',
@@ -9,20 +8,20 @@ Package.describe({
   git: 'https://github.com/formly-js/angular-formly-templates-material.git'
 });
 
-Package.onUse(function (api) {
+Package.onUse(function formlyMaterialOnUse(api) {
   var packages = {
-      use: [
-          'angular@1.0.0',
-          'angular:angular-messages@1.4.7',
-          'angular:angular-material@1.0.0',
-          'formly:angular-formly@7.3.9_3'
-      ],
-      imply: [
-          'angular:angular@1.4.7',
-          'angular:angular-messages',
-          'angular:angular-material',
-          'formly:angular-formly'
-      ]
+    use: [
+      'angular@1.0.0',
+      'angular:angular-messages@1.4.7',
+      'angular:angular-material@1.0.0',
+      'formly:angular-formly@7.3.9_3'
+    ],
+    imply: [
+      'angular:angular@1.4.7',
+      'angular:angular-messages',
+      'angular:angular-material',
+      'formly:angular-formly'
+    ]
   };
 
   api.versionsFrom(['METEOR@1.0']);
