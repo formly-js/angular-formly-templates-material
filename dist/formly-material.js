@@ -1,5 +1,5 @@
 /*!
- * angular-formly-material JavaScript Library v0.11.0
+ * angular-formly-material JavaScript Library v0.12.0
  * 
  * @license MIT (http://license.angular-formly.com)
  * 
@@ -647,10 +647,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _helpers = __webpack_require__(4);
 
 	exports['default'] = function (formlyConfigProvider) {
-	  function onlyNumberType(check) {
-	    return check.shape.onlyIf(['type'], check.oneOf(['number'])).optional;
-	  }
-
 	  formlyConfigProvider.setType({
 	    template: _inputHtml2['default'],
 	    name: 'input',
@@ -668,9 +664,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    apiCheck: function apiCheck(check) {
 	      return {
 	        templateOptions: {
-	          step: onlyNumberType(check),
-	          min: onlyNumberType(check),
-	          max: onlyNumberType(check)
+	          type: check.string,
+	          step: check.number.optional
 	        }
 	      };
 	    }

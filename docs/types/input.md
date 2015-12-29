@@ -35,8 +35,4 @@ only if templateOptions.type is 'number'
 
 #### templateOptions.min *: number*
 
-only if templateOptions.type is 'number'
-
 #### templateOptions.max *: number*
-
-only if templateOptions.type is 'number'
