@@ -58,6 +58,8 @@ describe('formlyMaterial - select type', () => {
 
   function closeSelect() {
     $document.find('md-select-menu').parent().remove();
+    $document.find('body').attr('style', '');
+    $document.find('md-backdrop').remove();
   }
 
   function selectOptions() {
