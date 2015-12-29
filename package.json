@@ -13,7 +13,9 @@
     "coverage:codecov": "cat ./coverage/lcov.info | node_modules/.bin/codecov",
     "coverage:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "coverage:codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
-    "test": "karma start karma.conf.js --set-env-NODE_ENV=ci"
+    "test": "karma start karma.conf.js --set-env-NODE_ENV=ci",
+    "publish:meteor": "meteor publish",
+    "publish": "npm run publish:meteor"
   },
   "repository": {
     "type": "git",
