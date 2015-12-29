@@ -1,7 +1,11 @@
-# input
-## md-input
+input
+=====
 
-## Example
+md-input
+--------
+
+Example
+-------
 
 ```javascript
 {
@@ -17,10 +21,22 @@
 
 ### Configuration
 
-#### templateOptions.type _: string_
+#### templateOptions.type *: string*
 
-#### templateOptions.label _: string_
+#### templateOptions.label *: string*
 
-#### templateOptions.theme _: string_
+#### templateOptions.theme *: string*
 
 Value of md-theme directive
+
+#### templateOptions.step *: number*
+
+only if templateOptions.type is 'number'
+
+#### templateOptions.min *: number*
+
+only if templateOptions.type is 'number'
+
+#### templateOptions.max *: number*
+
+only if templateOptions.type is 'number'
