@@ -64,11 +64,11 @@ describe('formlyMaterial - textarea type', () => {
     expect(label.html()).toContain(field.templateOptions.label);
   });
 
-  it('should not auto grow', function() {
+  it('should not auto grow', () => {
     expect(element.attr('md-no-autogrow')).toBeUndefined();
   });
 
-  it('should be able to disable autogrowing', function() {
+  it('should be able to disable autogrowing', () => {
     compile({
       templateOptions: {
         grow: false

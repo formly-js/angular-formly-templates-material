@@ -108,7 +108,7 @@ describe('formlyMaterial - input type', () => {
           }
         });
 
-        expect(parseInt(element.attr('step'))).toEqual(field.templateOptions.step);
+        expect(parseInt(element.attr('step'), 10)).toEqual(field.templateOptions.step);
       });
     });
 
@@ -133,7 +133,7 @@ describe('formlyMaterial - input type', () => {
           }
         });
 
-        expect(parseInt(element.attr('min'))).toEqual(field.templateOptions.min);
+        expect(parseInt(element.attr('min'), 10)).toEqual(field.templateOptions.min);
       });
     });
 
@@ -158,7 +158,7 @@ describe('formlyMaterial - input type', () => {
           }
         });
 
-        expect(parseInt(element.attr('max'))).toEqual(field.templateOptions.max);
+        expect(parseInt(element.attr('max'), 10)).toEqual(field.templateOptions.max);
       });
     });
   });
