@@ -53,3 +53,27 @@ export function ngModelAttrsManipulator(template, options, attrName, attrValue) 
 
   return node.innerHTML;
 }
+
+/**
+ * Adds ngModelAttr to the field when specified condition is true.
+ * @param  {Array} fields    fields provided by formly's fieldTranform
+ * @param  {Funcion} condition with field as only parameter
+ * @param  {String} name      ngModelAttr's name
+ * @param  {Object} settings  ngModelAttr's settings
+ * @return {Array}           returns fields
+ */
+export function ngModelAttrsTransformer(fields, condition, name, settings) {
+  (fields || []).forEach((field) => {
+    if (condition(field) === true) {
+      if (!field.ngModelAttrs) {
+        field.ngModelAttrs = {};
+      }
+
+      if (typeof field.templateOptions[name] !== 'undefined') {
+        field.ngModelAttrs[name] = settings;
+      }
+    }
+  });
+
+  return fields;
+}
