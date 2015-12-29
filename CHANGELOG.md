@@ -8,10 +8,10 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Added
 
--	(messages) support for `errorExistsAndShouldBeVisible`
--	(input) support for **min** attribute of 'number' type
--	(input) support for **max** attribute of 'number' type
--	(input) support for **step** attribute of 'number' type
+-	(messages) support for `errorExistsAndShouldBeVisible` (#7)
+-	(input) support for **min** attribute of 'number' type (#6)
+-	(input) support for **max** attribute of 'number' type (#6)
+-	(input) support for **step** attribute of 'number' type (#6)
 
 [0.11.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.10.0...v0.11.0) - 2015-12-18
 ---------------------------------------------------------------------------------------------------------------
