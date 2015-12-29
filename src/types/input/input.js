@@ -31,11 +31,6 @@ export default (formlyConfigProvider) => {
     }
   });
 
-
-  if (!angular.isArray(formlyConfigProvider.extras.fieldTransform)) {
-    formlyConfigProvider.extras.fieldTransform = [];
-  }
-
   // add only step attribute because min and max are both built-in
   formlyConfigProvider.extras.fieldTransform.push((fields) => {
     return ngModelAttrsTransformer(fields, (field) => (
