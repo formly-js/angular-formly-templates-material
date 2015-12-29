@@ -64,6 +64,19 @@ describe('formlyMaterial - textarea type', () => {
     expect(label.html()).toContain(field.templateOptions.label);
   });
 
+  it('should not auto grow', function() {
+    expect(element.attr('md-no-autogrow')).toBeUndefined();
+  });
+
+  it('should be able to disable autogrowing', function() {
+    compile({
+      templateOptions: {
+        grow: false
+      }
+    });
+    expect(element.attr('md-no-autogrow')).toBeDefined();
+  });
+
   it('should have inputContainer wrapper', () => {
     expect(form.find('md-input-container').length).toBe(1);
   });

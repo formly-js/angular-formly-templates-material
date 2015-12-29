@@ -1,4 +1,5 @@
 import template from './textarea.html';
+import { ngModelAttrsTransformer } from './../../helpers';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
@@ -25,5 +26,18 @@ export default (formlyConfigProvider) => {
         grow: check.bool.optional
       }
     })
+  });
+
+  if (!angular.isArray(formlyConfigProvider.extras.fieldTransform)) {
+    formlyConfigProvider.extras.fieldTransform = [];
+  }
+
+  formlyConfigProvider.extras.fieldTransform.push((fields) => {
+    return ngModelAttrsTransformer(fields, (field) => (
+      field.type === 'textarea' &&
+      field.templateOptions.grow === false
+    ), 'grow', {
+      attribute: 'md-no-autogrow'
+    });
   });
 };
