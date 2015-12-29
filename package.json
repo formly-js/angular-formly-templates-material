@@ -15,7 +15,8 @@
     "coverage:codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
     "test": "karma start karma.conf.js --set-env-NODE_ENV=ci",
     "publish:meteor": "meteor publish",
-    "publish": "npm run publish:meteor"
+    "publish:npm": "npm publish",
+    "publish": "npm run publish:meteor & npm run publish:npm"
   },
   "repository": {
     "type": "git",
