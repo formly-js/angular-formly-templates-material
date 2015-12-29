@@ -28,10 +28,6 @@ export default (formlyConfigProvider) => {
     })
   });
 
-  if (!angular.isArray(formlyConfigProvider.extras.fieldTransform)) {
-    formlyConfigProvider.extras.fieldTransform = [];
-  }
-
   formlyConfigProvider.extras.fieldTransform.push((fields) => {
     return ngModelAttrsTransformer(fields, (field) => (
       field.type === 'textarea' &&
