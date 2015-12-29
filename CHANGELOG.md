@@ -4,12 +4,14 @@ Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.11.0...HEAD)
+---------------------------------------------------------------------------------------------------
 
 ### Added
 
--	(input) min support for 'number' type
--	(input) max support for 'number' type
--	(input) step support for 'number' type
+-	(messages) support for `errorExistsAndShouldBeVisible`
+-	(input) support for **min** attribute of 'number' type
+-	(input) support for **max** attribute of 'number' type
+-	(input) support for **step** attribute of 'number' type
 
 [0.11.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.10.0...v0.11.0) - 2015-12-18
 ---------------------------------------------------------------------------------------------------------------
