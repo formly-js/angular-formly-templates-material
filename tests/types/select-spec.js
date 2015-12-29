@@ -1,4 +1,5 @@
 import testUtils from './../test-utils';
+import angular from 'angular';
 
 describe('formlyMaterial - select type', () => {
   //

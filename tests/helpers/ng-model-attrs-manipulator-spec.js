@@ -3,6 +3,8 @@ import {
 }
 from './../../src/helpers';
 
+import angular from 'angular';
+
 describe('formlyMaterial - ngModelAttrsManipulator', () => {
   it('should skip on skipNgModelAttrsManipulator', () => {
     const tpl = 'test';
