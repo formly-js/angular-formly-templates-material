@@ -78,18 +78,6 @@ describe('formlyMaterial - input type', () => {
 
   describe('number type specific', () => {
     describe('step attribute', () => {
-      it('should fail on non number type', () => {
-        expect(() => {
-          compile({
-            templateOptions: {
-              type: 'text',
-              step: 2
-            },
-            apiCheckFunction: 'throw'
-          });
-        }).toThrowError(Error, /step/i);
-      });
-
       it('should not be available on non number type', () => {
         compile({
           templateOptions: {
@@ -114,18 +102,6 @@ describe('formlyMaterial - input type', () => {
     });
 
     describe('min attribute', () => {
-      it('should fail on non number type', () => {
-        expect(() => {
-          compile({
-            templateOptions: {
-              type: 'text',
-              min: 2
-            },
-            apiCheckFunction: 'throw'
-          });
-        }).toThrowError(Error, /min/i);
-      });
-
       it('should be available on number type', () => {
         compile({
           templateOptions: {
@@ -139,18 +115,6 @@ describe('formlyMaterial - input type', () => {
     });
 
     describe('max attribute', () => {
-      it('should fail on non number type', () => {
-        expect(() => {
-          compile({
-            templateOptions: {
-              type: 'text',
-              max: 2
-            },
-            apiCheckFunction: 'throw'
-          });
-        }).toThrowError(Error, /max/i);
-      });
-
       it('should be available on number type', () => {
         compile({
           templateOptions: {

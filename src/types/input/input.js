@@ -2,10 +2,6 @@ import template from './input.html';
 import { ngModelAttrsTransformer } from './../../helpers';
 
 export default (formlyConfigProvider) => {
-  function onlyNumberType(check) {
-    return check.shape.onlyIf(['type'], check.oneOf(['number'])).optional;
-  }
-
   formlyConfigProvider.setType({
     template,
     name: 'input',
@@ -23,9 +19,8 @@ export default (formlyConfigProvider) => {
     apiCheck: (check) => {
       return {
         templateOptions: {
-          step: onlyNumberType(check),
-          min: onlyNumberType(check),
-          max: onlyNumberType(check)
+          type: check.string,
+          step: check.number.optional
         }
       };
     }
