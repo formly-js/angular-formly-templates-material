@@ -9,12 +9,13 @@ Example
 
 ```javascript
 {
-  "type": "input",
-  "key": "firstName",
-  "templateOptions": {
-    "type": "text",
-    "label": "First name",
-    "theme": "custom"
+  type: "input",
+  key: "firstName",
+  templateOptions: {
+    type: "text",
+    label: "First name",
+    pattern: "[a-zA-Z]+"
+    theme: "custom"
   }
 }
 ```
@@ -36,3 +37,7 @@ only if templateOptions.type is 'number'
 #### templateOptions.min *: number*
 
 #### templateOptions.max *: number*
+
+#### templateOptions.pattern *: string | RegExp*
+
+Value of ng-pattern directive

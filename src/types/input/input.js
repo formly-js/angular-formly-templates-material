@@ -13,6 +13,9 @@ export default (formlyConfigProvider) => {
       ngModelAttrs: {
         mdMaxlength: {
           bound: 'md-maxlength'
+        },
+        pattern: {
+          bound: 'ng-pattern'
         }
       }
     },
@@ -20,7 +23,11 @@ export default (formlyConfigProvider) => {
       return {
         templateOptions: {
           type: check.string,
-          step: check.number.optional
+          step: check.number.optional,
+          pattern: check.oneOfType([
+            check.string,
+            check.instanceOf(RegExp)
+          ]).optional
         }
       };
     }

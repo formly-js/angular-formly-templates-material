@@ -76,6 +76,32 @@ describe('formlyMaterial - input type', () => {
     });
   });
 
+  describe('pattern', () => {
+    it('should accept string', () => {
+      const pattern = '[a-z]+';
+
+      compile({
+        templateOptions: {
+          pattern
+        }
+      });
+
+      expect(element.attr('ng-pattern')).toEqual(field.templateOptions.pattern);
+    });
+
+    it('should accept RegExp', () => {
+      const pattern = /[a-z]+/;
+
+      compile({
+        templateOptions: {
+          pattern
+        }
+      });
+
+      expect(element.attr('ng-pattern')).toEqual(`${field.templateOptions.pattern}`);
+    });
+  });
+
   describe('number type specific', () => {
     describe('step attribute', () => {
       it('should not be available on non number type', () => {
