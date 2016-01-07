@@ -4,6 +4,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
     template,
     name: 'chips',
+    wrapper: ['label'],
     defaultOptions: {
       defaultValue: [],
       ngModelAttrs: {

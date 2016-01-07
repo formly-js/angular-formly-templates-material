@@ -4,6 +4,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
     template,
     name: 'radio',
+    wrapper: ['label'],
     apiCheck: (check) => ({
       templateOptions: {
         options: check.arrayOf(check.object),

@@ -4,6 +4,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
     template,
     name: 'slider',
+    wrapper: ['label'],
     defaultOptions: {
       ngModelAttrs: {
         min: {

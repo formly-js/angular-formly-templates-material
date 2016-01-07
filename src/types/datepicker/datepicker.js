@@ -4,7 +4,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
     template,
     name: 'datepicker',
-    wrapper: ['messages'],
+    wrapper: ['label', 'messages'],
     defaultOptions: {
       ngModelAttrs: {
         placeholder: {
