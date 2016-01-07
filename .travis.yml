@@ -7,15 +7,21 @@ notifications:
 node_js:
   - iojs
 before_install:
-  - "npm install"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  - npm install
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 before_script:
-  - "npm prune"
+  - npm prune
 script:
-  - "npm run test"
-  - "npm run lint"
+  - npm run test
+  - npm run lint
 after_success:
-  - "npm run coverage:codecov"
-  - "npm run coverage:coveralls"
-  - "npm run coverage:codacy"
+  - npm run coverage:codecov
+  - npm run coverage:coveralls
+  - npm run coverage:codacy
+deploy:
+  provider: npm
+  api_key:
+    secure: in2pTjQm665cn37CW0Y4VuHkoXvZMmXRMRSmUCP2SUcTrbd69g7Sql+Y0o5RKv97cEGv53StZCWIcXwLMKxnTOTMvzztnvQjB4QhrVifS3/YmNTPTrFrjQDa+2SEpVqDk9lbl98KXwespN4lEG1OmooZrQjD7QXQjjQgkpG/zAzhn/8gaeGZgMumrg4/y5MDv2XhyJUnc4pwc6ZxsHKjjfhvsqPR87v5smxuCOXz3Pibtn88rohQE/Pjz/qqXyPvtzeEG84mTgqviP+r4R68IUWUT26uqp0l1QwwHbJspH7s/J+1VGinYJuA+AIafuoOII1Sm+wgM5hsl4MaF2AjCkYD8B03O80pDiSabwTJS14tXiFK5fF4uNVn8KQROjNkKAqNf49vjOQF2oo5G/GZCK4dLEnkU1Vj7WlRTm+0afD0qGsYfdCuKjU2PtFWt3adW5fBLmshsHQKNKd35tvRWiqvXkF3uGb2xqTUgRcgsvy1Gm3u/kzQncU4JtMh9EA0kyOhpaZstCu1tvkWvXhkQou5yo1aM1986ZsZKhqRkfaE3NCQTpd4cOn+o9H8BLWVaTvX5X2UBOmAjnjRQGSin8NG9ELRxZzj2M46G/R9sD1yqK5bW4lC8bHIp/5dE9YeGQ0DM9Ht/hnf7XoeI40ikKA699A9zq0MRXdsEcHEYSw=
+  on:
+    tags: true
