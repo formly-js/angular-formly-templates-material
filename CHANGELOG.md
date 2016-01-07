@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.12.0...HEAD)
+## [0.13.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.12.0...v0.13.0)
 
 ### Added
 
 - (input) support for **ng-pattern** as **templateOptions.pattern** (#10)
 - (chips) has now **label** wrapper
 - (datepicker) has now **label** wrapper
-- (radio) has now **label** wrapper
+- (radio) has now **label** wrapper (#9)
 - (slider) has now **label** wrapper
 
 ## [0.12.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.11.0...v0.12.0) - 2015-12-30

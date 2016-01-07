@@ -1,5 +1,5 @@
 /*!
- * angular-formly-material JavaScript Library v0.12.0
+ * angular-formly-material JavaScript Library v0.13.0
  * 
  * @license MIT (http://license.angular-formly.com)
  * 
@@ -347,7 +347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<label for=\"{{id}}\">\r\n    {{to.label}}\r\n</label>\r\n<formly-transclude></formly-transclude>\r\n";
+	module.exports = "<label for=\"{{id}}\" ng-style=\"['input', 'textarea', 'select'].indexOf(options.type) === -1 && {'font-size':'12px', 'color': 'rgb(117, 117, 117)'}\">\n  {{to.label}}\n</label>\n<formly-transclude></formly-transclude>\n";
 
 /***/ },
 /* 10 */
@@ -378,7 +378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<formly-transclude></formly-transclude>\n<div ng-messages=\"fc.$error\" ng-show=\"showError\">\n    <div ng-repeat=\"(name, message) in ::options.validation.messages\"\n         ng-message-exp=\"name\">\n        {{message(fc.$viewValue, fc.$modelValue, this)}}\n    </div>\n</div>\n";
+	module.exports = "<formly-transclude></formly-transclude>\r\n<div ng-messages=\"fc.$error\" ng-show=\"showError\">\r\n    <div ng-repeat=\"(name, message) in ::options.validation.messages\"\r\n         ng-message-exp=\"name\">\r\n        {{message(fc.$viewValue, fc.$modelValue, this)}}\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 12 */
@@ -520,6 +520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  formlyConfigProvider.setType({
 	    template: _chipsHtml2['default'],
 	    name: 'chips',
+	    wrapper: ['label'],
 	    defaultOptions: {
 	      defaultValue: [],
 	      ngModelAttrs: {
@@ -590,7 +591,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  formlyConfigProvider.setType({
 	    template: _datepickerHtml2['default'],
 	    name: 'datepicker',
-	    wrapper: ['messages'],
+	    wrapper: ['label', 'messages'],
 	    defaultOptions: {
 	      ngModelAttrs: {
 	        placeholder: {
@@ -658,6 +659,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      ngModelAttrs: {
 	        mdMaxlength: {
 	          bound: 'md-maxlength'
+	        },
+	        pattern: {
+	          bound: 'ng-pattern'
 	        }
 	      }
 	    },
@@ -665,7 +669,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return {
 	        templateOptions: {
 	          type: check.string,
-	          step: check.number.optional
+	          step: check.number.optional,
+	          pattern: check.oneOfType([check.string, check.instanceOf(RegExp)]).optional
 	        }
 	      };
 	    }
@@ -709,6 +714,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  formlyConfigProvider.setType({
 	    template: _radioHtml2['default'],
 	    name: 'radio',
+	    wrapper: ['label'],
 	    apiCheck: function apiCheck(check) {
 	      return {
 	        templateOptions: {
@@ -806,6 +812,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  formlyConfigProvider.setType({
 	    template: _sliderHtml2['default'],
 	    name: 'slider',
+	    wrapper: ['label'],
 	    defaultOptions: {
 	      ngModelAttrs: {
 	        min: {
