@@ -24,7 +24,7 @@
     "tests",
     "webpack",
     "karma.conf.js",
-    "package.js"
+    "package.js",
     "webpack.config.js"
   ],
   "dependencies": {
