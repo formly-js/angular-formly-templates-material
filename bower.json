@@ -23,7 +23,7 @@
     "src",
     "tests",
     "webpack",
-    "karma.conf.js",,
+    "karma.conf.js",
     "package.js"
     "webpack.config.js"
   ],
