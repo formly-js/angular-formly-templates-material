@@ -10,6 +10,7 @@ describe('formlyMaterial - datepicker type', () => {
   let $scope;
   let form;
   let element;
+  let elementScope;
   const minDate = new Date(2015, 10, 19);
   const maxDate = new Date(2015, 11, 20);
   const filterDate = () => true;
@@ -27,6 +28,7 @@ describe('formlyMaterial - datepicker type', () => {
         minDate,
         maxDate,
         filterDate,
+        disabled: true,
         label: 'test field',
         placeholder: 'Pick a date'
       }
@@ -35,6 +37,7 @@ describe('formlyMaterial - datepicker type', () => {
     form = $compile(testUtils.getFormTemplate())($scope);
     $scope.$digest();
     element = form.find('[ng-model]');
+    elementScope = angular.element(element).scope();
   }
 
   //
@@ -61,23 +64,22 @@ describe('formlyMaterial - datepicker type', () => {
   });
 
   it('should have min date', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-min-date')).toBe(`options.templateOptions['minDate']`);
-    expect(scope.options.templateOptions.minDate.toDateString()).toBe(minDate.toDateString());
+    expect(elementScope.options.templateOptions.minDate.toDateString()).toBe(minDate.toDateString());
   });
 
   it('should have max date', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-max-date')).toBe(`options.templateOptions['maxDate']`);
-    expect(scope.options.templateOptions.maxDate.toDateString()).toBe(maxDate.toDateString());
+    expect(elementScope.options.templateOptions.maxDate.toDateString()).toBe(maxDate.toDateString());
   });
 
   it('should have date filter', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-date-filter')).toBe(`options.templateOptions['filterDate']`);
-    expect(scope.options.templateOptions.filterDate).toBe(filterDate);
+    expect(elementScope.options.templateOptions.filterDate).toBe(filterDate);
+  });
+
+  it('should be disabled', () => {
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 });
