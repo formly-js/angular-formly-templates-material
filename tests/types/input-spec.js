@@ -23,6 +23,7 @@ describe('formlyMaterial - input type', () => {
       key: 'testField',
       type: 'input',
       templateOptions: {
+        disabled: true,
         type: 'email',
         label: 'test field'
       }
@@ -74,6 +75,13 @@ describe('formlyMaterial - input type', () => {
     it('should have inputContainer wrapper', () => {
       expect(form.find('md-input-container').length).toBe(1);
     });
+  });
+
+  it('should be disabled', () => {
+    const scope = element.scope();
+
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(scope.options.templateOptions.disabled).toBe(true);
   });
 
   describe('pattern', () => {
