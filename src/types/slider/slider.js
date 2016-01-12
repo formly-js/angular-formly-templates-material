@@ -6,7 +6,13 @@ export default (formlyConfigProvider) => {
     name: 'slider',
     wrapper: ['label'],
     defaultOptions: {
+      templateOptions: {
+        disabled: false
+      },
       ngModelAttrs: {
+        disabled: {
+          bound: 'ng-disabled'
+        },
         min: {
           attribute: 'min'
         },
@@ -23,6 +29,7 @@ export default (formlyConfigProvider) => {
     },
     apiCheck: (check) => ({
       templateOptions: {
+        disabled: check.bool.optional,
         min: check.number.optional,
         max: check.number.optional,
         step: check.number.optional,
