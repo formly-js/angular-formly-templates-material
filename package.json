@@ -6,10 +6,10 @@
   "scripts": {
     "build:dist": "webpack --progress --colors --set-env-NODE_ENV=development",
     "build:prod": "webpack --progress --colors --set-env-NODE_ENV=production",
-    "build": "npm run build:dist & npm run build:prod",
+    "build": "npm run build:dist && npm run build:prod",
     "lint:src": "eslint src/**/*.js",
     "lint:tests": "eslint tests/**/*.js --no-ignore",
-    "lint": "npm run lint:src & npm run lint:tests",
+    "lint": "npm run lint:src && npm run lint:tests",
     "coverage:codecov": "cat ./coverage/lcov.info | node_modules/.bin/codecov",
     "coverage:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "coverage:codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
