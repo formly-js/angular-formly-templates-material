@@ -10,6 +10,7 @@ describe('formlyMaterial - chips type', () => {
   let $scope;
   let element;
   let field;
+  let fieldScope;
 
   function onAdd() {
     return true;
@@ -39,7 +40,8 @@ describe('formlyMaterial - chips type', () => {
         placeholder: '+tags',
         secondaryPlaceholder: 'Add tag',
         deleteButtonLabel: 'Remove',
-        deleteHint: 'Remove tag'
+        deleteHint: 'Remove tag',
+        disabled: true
       }
     }, options)];
 
@@ -48,6 +50,7 @@ describe('formlyMaterial - chips type', () => {
     $scope.$digest();
     field = $scope.fields[0];
     element = form.find('[ng-model]');
+    fieldScope = angular.element(element).scope();
   }
 
   //
@@ -86,23 +89,22 @@ describe('formlyMaterial - chips type', () => {
   });
 
   it('should have onAdd callback', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-on-add')).toBe(`options.templateOptions['onAdd']`);
-    expect(scope.options.templateOptions.onAdd).toBe(onAdd);
+    expect(fieldScope.options.templateOptions.onAdd).toBe(onAdd);
   });
 
   it('should have onRemove callback', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-on-remove')).toBe(`options.templateOptions['onRemove']`);
-    expect(scope.options.templateOptions.onRemove).toBe(onRemove);
+    expect(fieldScope.options.templateOptions.onRemove).toBe(onRemove);
   });
 
   it('should have onSelect callback', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-on-select')).toBe(`options.templateOptions['onSelect']`);
-    expect(scope.options.templateOptions.onSelect).toBe(onSelect);
+    expect(fieldScope.options.templateOptions.onSelect).toBe(onSelect);
+  });
+
+  it('should be disabled and have readonly attribute', () => {
+    expect(element[0].attributes.readonly.value).toBe('to.disabled');
+    expect(fieldScope.options.templateOptions.disabled).toBe(true);
   });
 });
