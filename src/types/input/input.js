@@ -8,11 +8,15 @@ export default (formlyConfigProvider) => {
     wrapper: ['label', 'messages', 'inputContainer'],
     defaultOptions: {
       templateOptions: {
-        type: 'text'
+        type: 'text',
+        disabled: false
       },
       ngModelAttrs: {
         mdMaxlength: {
           bound: 'md-maxlength'
+        },
+        disabled: {
+          bound: 'ng-disabled'
         },
         pattern: {
           bound: 'ng-pattern'
@@ -22,6 +26,7 @@ export default (formlyConfigProvider) => {
     apiCheck: (check) => {
       return {
         templateOptions: {
+          disabled: check.bool.optional,
           type: check.string,
           step: check.number.optional,
           pattern: check.oneOfType([
