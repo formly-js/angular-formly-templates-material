@@ -99,9 +99,17 @@ Any requests? Add issue!
 
 ### Common settings
 
-#### theme (string)
+#### templateOptions.label *: string*
+
+#### templateOptions.theme *: string*
 
 Value of md-theme used on field
+
+#### templateOptions.disabled _: boolean_
+
+#### templateOptions.className _: expression_
+
+equivalent to ng-class on ng-model
 
 ---
 
