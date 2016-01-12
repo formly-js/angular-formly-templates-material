@@ -21,3 +21,5 @@
 #### templateOptions.theme _: string_
 
 #### templateOptions.disabled _: boolean_
+
+#### templateOptions.className _: string | expression | array_

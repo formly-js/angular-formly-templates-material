@@ -29,6 +29,8 @@
 
 #### templateOptions.disabled _: boolean_
 
+#### templateOptions.className _: string | expression | array_
+
 #### templateOptions.options _: array_
 
 Array with available options

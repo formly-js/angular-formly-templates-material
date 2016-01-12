@@ -30,6 +30,8 @@ Example
 
 Value of md-theme directive
 
+#### templateOptions.className _: string | expression | array_
+
 #### templateOptions.disabled _: boolean_
 
 #### templateOptions.step *: number*

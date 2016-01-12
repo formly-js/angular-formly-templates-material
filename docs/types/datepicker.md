@@ -29,6 +29,8 @@
 
 #### templateOptions.disabled _: boolean_
 
+#### templateOptions.className _: string | expression | array_
+
 #### templateOptions.placeholder _: string_
 The date input placeholder value
 

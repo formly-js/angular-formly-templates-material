@@ -25,6 +25,8 @@
 
 #### templateOptions.disabled _: boolean_
 
+#### templateOptions.className _: string | expression | array_
+
 #### templateOptions.min _: number (default: 0)_
 The minimum value the user is allowed to pick.
 

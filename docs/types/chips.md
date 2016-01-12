@@ -34,6 +34,8 @@ md-chips
 
 #### templateOptions.disabled _: boolean_
 
+#### templateOptions.className _: string | expression | array_
+
 #### templateOptions.placeholder *: string*
 
 Placeholder text that will be forwarded to the input.
