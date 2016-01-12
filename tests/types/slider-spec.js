@@ -10,11 +10,13 @@ describe('formlyMaterial - slider type', () => {
   let $scope;
   let form;
   let element;
+  let elementScope;
   const fieldConfig = {
     key: 'testField',
     type: 'slider',
     templateOptions: {
       label: 'test field',
+      disabled: true,
       min: 1,
       max: 5,
       step: 0.5,
@@ -32,6 +34,7 @@ describe('formlyMaterial - slider type', () => {
     form = $compile(testUtils.getFormTemplate())($scope);
     $scope.$digest();
     element = form.find('[ng-model]');
+    elementScope = element.scope();
   }
 
   //
@@ -66,9 +69,12 @@ describe('formlyMaterial - slider type', () => {
   });
 
   it('should support discrete option', () => {
-    const scope = angular.element(element).scope();
-
     expect(element.attr('md-discrete')).toEqual(`options.templateOptions['discrete']`);
-    expect(scope.options.templateOptions.discrete).toBe(fieldConfig.templateOptions.discrete);
+    expect(elementScope.options.templateOptions.discrete).toBe(fieldConfig.templateOptions.discrete);
+  });
+
+  it('should be able to be disabled', () => {
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 });
