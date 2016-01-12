@@ -25,6 +25,8 @@ textarea
 
 #### templateOptions.theme *: string*
 
+#### templateOptions.disabled _: boolean_
+
 #### templateOptions.rows *: integer*
 
 Number of rows

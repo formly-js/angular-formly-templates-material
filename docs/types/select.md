@@ -37,6 +37,8 @@ md-select
 
 #### templateOptions.theme *: string*
 
+#### templateOptions.disabled _: boolean_
+
 #### templateOptions.options *: array*
 
 Array with available options

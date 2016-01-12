@@ -30,6 +30,8 @@ Example
 
 Value of md-theme directive
 
+#### templateOptions.disabled _: boolean_
+
 #### templateOptions.step *: number*
 
 only if templateOptions.type is 'number'

@@ -5,14 +5,14 @@
 
 ```javascript
 {
-    "type": "slider",
-    "key": "rate",
-    "templateOptions": {
-        "theme": "custom",
-        "min": 1,
-        "max": 5,
-        "step": 0.5,
-        "discrete": true
+    type: "slider",
+    key: "rate",
+    templateOptions: {
+        theme: "custom",
+        min: 1,
+        max: 5,
+        step: 0.5,
+        discrete: true
     }
 }
 ```
@@ -22,6 +22,8 @@
 #### templateOptions.label _: string_
 
 #### templateOptions.theme _: string_
+
+#### templateOptions.disabled _: boolean_
 
 #### templateOptions.min _: number (default: 0)_
 The minimum value the user is allowed to pick.

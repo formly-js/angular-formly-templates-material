@@ -5,11 +5,11 @@
 
 ```javascript
 {
-  "type": "checkbox",
-  "key": "terms",
-  "templateOptions": {
-    "label": "Terms and Conditions",
-    "theme": "custom"
+  type: "checkbox",
+  key: "terms",
+  templateOptions: {
+    label: "Terms and Conditions",
+    theme: "custom"
   }
 }
 ```
@@ -19,3 +19,5 @@
 #### templateOptions.label _: string_
 
 #### templateOptions.theme _: string_
+
+#### templateOptions.disabled _: boolean_

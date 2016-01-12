@@ -32,6 +32,8 @@ md-chips
 
 #### templateOptions.theme *: string*
 
+#### templateOptions.disabled _: boolean_
+
 #### templateOptions.placeholder *: string*
 
 Placeholder text that will be forwarded to the input.
