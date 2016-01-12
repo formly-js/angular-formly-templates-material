@@ -6,7 +6,13 @@ export default (formlyConfigProvider) => {
     name: 'datepicker',
     wrapper: ['label', 'messages'],
     defaultOptions: {
+      templateOptions: {
+        disabled: false
+      },
       ngModelAttrs: {
+        disabled: {
+          bound: 'ng-disabled'
+        },
         placeholder: {
           attribute: 'md-placeholder'
         },
@@ -23,6 +29,7 @@ export default (formlyConfigProvider) => {
     },
     apiCheck: (check) => ({
       templateOptions: {
+        disabled: check.bool.optional,
         placeholder: check.string.optional,
         minDate: check.instanceOf(Date).optional,
         maxDate: check.instanceOf(Date).optional,
