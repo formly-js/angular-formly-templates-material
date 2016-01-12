@@ -6,7 +6,13 @@ export default (formlyConfigProvider) => {
     name: 'select',
     wrapper: ['label', 'messages', 'inputContainer'],
     defaultOptions: {
+      templateOptions: {
+        disabled: false
+      },
       ngModelAttrs: {
+        disabled: {
+          bound: 'ng-disabled'
+        },
         multiple: {
           bound: 'multiple'
         },
@@ -20,6 +26,7 @@ export default (formlyConfigProvider) => {
     },
     apiCheck: (check) => ({
       templateOptions: {
+        disabled: check.bool.optional,
         options: check.arrayOf(check.object),
         multiple: check.bool.optional,
         labelProp: check.string.optional,
