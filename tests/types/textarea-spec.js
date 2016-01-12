@@ -11,6 +11,7 @@ describe('formlyMaterial - textarea type', () => {
   let $scope;
   let form;
   let element;
+  let elementScope;
   let field;
 
   //
@@ -24,6 +25,7 @@ describe('formlyMaterial - textarea type', () => {
       type: 'textarea',
       templateOptions: {
         label: 'test field',
+        disabled: true,
         rows: 5,
         cols: 6
       }
@@ -33,6 +35,7 @@ describe('formlyMaterial - textarea type', () => {
     $scope.$digest();
     field = $scope.fields[0];
     element = form.find('[ng-model]');
+    elementScope = element.scope();
   }
 
   //
@@ -88,5 +91,10 @@ describe('formlyMaterial - textarea type', () => {
 
   it('should be able to set cols', () => {
     expect(parseInt(element.attr('cols'), 10)).toEqual(field.templateOptions.cols);
+  });
+
+  it('should be able to be disabled', () => {
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 });
