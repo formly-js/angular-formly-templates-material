@@ -9,6 +9,7 @@ describe('formlyMaterial - switch type', () => {
   let $rootScope;
   let $scope;
   let element;
+  let elementScope;
   let field;
 
   //
@@ -21,7 +22,8 @@ describe('formlyMaterial - switch type', () => {
       key: 'testField',
       type: 'switch',
       templateOptions: {
-        label: 'test field'
+        label: 'test field',
+        disabled: true
       }
     }, options)];
 
@@ -29,6 +31,7 @@ describe('formlyMaterial - switch type', () => {
 
     $scope.$digest();
     element = form.find('[ng-model]');
+    elementScope = element.scope();
     field = $scope.fields[0];
   }
 
@@ -53,5 +56,10 @@ describe('formlyMaterial - switch type', () => {
 
   it('should have label', () => {
     expect(element.find('.md-label > span').html()).toContain(field.templateOptions.label);
+  });
+
+  it('should be able to be disabled', () => {
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 });
