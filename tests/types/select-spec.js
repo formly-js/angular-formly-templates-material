@@ -13,6 +13,7 @@ describe('formlyMaterial - select type', () => {
   let $material;
   let form;
   let element;
+  let elementScope;
   let field;
 
   //
@@ -47,6 +48,7 @@ describe('formlyMaterial - select type', () => {
     $scope.$digest();
     field = $scope.fields[0];
     element = form.find('[ng-model]');
+    elementScope = element.scope();
   }
 
   function waitForSelectOpen() {
@@ -107,6 +109,17 @@ describe('formlyMaterial - select type', () => {
   it('should be able to bind md-on-open', () => {
     compile();
     expect(element.attr('md-on-open')).toBe(`options.templateOptions['onOpen']`);
+  });
+
+  it('should be able to be disabled', () => {
+    compile({
+      templateOptions: {
+        disabled: true
+      }
+    });
+
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 
   describe('check options', () => {
