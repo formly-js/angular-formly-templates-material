@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file. This projec
 - (slider) support for **templateOptions.disabled** (27d1d2a, f6b5890)
 - (switch) support for **templateOptions.disabled** (7c1865c, 178ac76)
 - (textarea) support for **templateOptions.disabled** (858f9fa, 8a246f5)
+- **templateOptions.className** option (equivalent to ng-class) (#15, #16) (718c172, d656b4c)
 
 ## [0.13.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.12.0...v0.13.0)
 
