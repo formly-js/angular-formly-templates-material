@@ -70,6 +70,7 @@ describe('formlyMaterial - radio type', () => {
 
     field.templateOptions.options.forEach((option, key) => {
       const el = angular.element(optionsElements[key]);
+
       expect(el.attr('value')).toBe(option.value);
       expect(el.find('.md-label > span').html()).toContain(option.name);
     });
@@ -104,6 +105,23 @@ describe('formlyMaterial - radio type', () => {
 
       expect(el.attr('value')).toBe(option.value);
       expect(el.find('.md-label > span').html()).toContain(option.nameUp);
+    });
+  });
+
+  it('should has disabled options', () => {
+    compile({
+      templateOptions: {
+        disabled: true
+      }
+    });
+
+    expect(optionsElements.length).toBe(field.templateOptions.options.length);
+
+    field.templateOptions.options.forEach((option, key) => {
+      const el = angular.element(optionsElements[key]);
+
+      expect(el.attr('ng-disabled')).toBe('to.disabled');
+      expect(el.scope().to.disabled).toBe(true);
     });
   });
 });
