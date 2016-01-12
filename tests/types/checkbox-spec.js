@@ -9,6 +9,7 @@ describe('formlyMaterial - checkbox type', () => {
   let $rootScope;
   let $scope;
   let element;
+  let elementScope;
 
   //
   // helpers
@@ -20,7 +21,8 @@ describe('formlyMaterial - checkbox type', () => {
       key: 'testField',
       type: 'checkbox',
       templateOptions: {
-        label: 'test field'
+        label: 'test field',
+        disabled: true
       }
     }, options)];
 
@@ -28,6 +30,7 @@ describe('formlyMaterial - checkbox type', () => {
 
     $scope.$digest();
     element = form.find('[ng-model]');
+    elementScope = angular.element(element).scope();
   }
 
   //
@@ -51,5 +54,10 @@ describe('formlyMaterial - checkbox type', () => {
 
   it('should have label', () => {
     expect(element.html()).toContain('test field');
+  });
+
+  it('should be disabled', () => {
+    expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
+    expect(elementScope.options.templateOptions.disabled).toBe(true);
   });
 });
