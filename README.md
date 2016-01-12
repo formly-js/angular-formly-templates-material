@@ -1,5 +1,4 @@
-FormlyMaterial
-==============
+# FormlyMaterial
 
 Material Design Templates for [Angular-Formly](http://angular-formly.com). Modern & flexible forms configured easily in a JSON object.
 
@@ -23,8 +22,7 @@ Material Design Templates for [Angular-Formly](http://angular-formly.com). Moder
 
 ---
 
-Table of contents
------------------
+## Table of contents
 
 - [Install](#install)
 - [Getting Started](#getting-started)
@@ -38,8 +36,7 @@ Table of contents
 
 ---  
 
-Install
--------
+## Install
 
 ```
 npm install angular-formly-material
@@ -53,8 +50,7 @@ bower install angular-formly-material
 meteor add formly:angular-formly-templates-material
 ```
 
-Getting Started
----------------
+## Getting Started
 
 1.	Add package using one of methods above
 2.	Add the following dependencies to your AngularJS module:
@@ -65,28 +61,24 @@ angular.module('myAppName', [
   ])
 ```
 
-Requests?
----------
+## Requests?
 
 Maybe you need some new feature? Go here:
 
 https://github.com/formly-js/angular-formly-templates-material/issues/4
 
-Requirements
-------------
+## Requirements
 
 -	angular ~ 1.4.0
 -	angular-messages ~ 1.4.0
 -	angular-material ~ 1.0.0
 -	angular-formly ~ 7.3.0
 
-Components
-==========
+## Components
 
 Any requests? Add issue!
 
-Fields
-------
+### Fields
 
 -	[checkbox](docs/types/checkbox.md)
 -	[chips](docs/types/chips.md)
@@ -98,18 +90,16 @@ Fields
 -	[switch](docs/types/switch.md)
 -	[textarea](docs/types/textarea.md)
 
-Wrappers
---------
+### Wrappers
 
 -	[divider](docs/wrappers/divider.md)
 -	[inputContainer](docs/wrappers/input-container.md)
 -	[label](docs/wrappers/label.md)
 -	[messages](docs/wrappers/messages.md)
 
-Common settings
----------------
+### Common settings
 
-### theme (string)
+#### theme (string)
 
 Value of md-theme used on field
 
