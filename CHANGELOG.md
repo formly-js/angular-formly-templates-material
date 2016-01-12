@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.13.0...HEAD)
+
+### Added
+
+- (chips) support for templateOptions.disabled (#14) (eea2fcf, f2d2e40)
+- (radio) support for templateOptions.disabled (#13) (e6104ea, c04f63d)
+
 ## [0.13.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.12.0...v0.13.0)
 
 ### Added
