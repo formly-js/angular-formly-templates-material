@@ -6,8 +6,15 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Added
 
-- (chips) support for templateOptions.disabled (#14) (eea2fcf, f2d2e40)
-- (radio) support for templateOptions.disabled (#13) (e6104ea, c04f63d)
+- (chips) support for **templateOptions.disabled** (#14) (eea2fcf, f2d2e40)
+- (radio) support for **templateOptions.disabled** (#13) (e6104ea, c04f63d)
+- (checkbox) support for **templateOptions.disabled** (bdbe651, aec4e60)
+- (datepicker) support for **templateOptions.disabled** (41b99d6, 7ee864a)
+- (input) support for **templateOptions.disabled** (2b528c3, 18c819f)
+- (select) support for **templateOptions.disabled** (2bb10e0, 9f76f0e)
+- (slider) support for **templateOptions.disabled** (27d1d2a, f6b5890)
+- (switch) support for **templateOptions.disabled** (7c1865c, 178ac76)
+- (textarea) support for **templateOptions.disabled** (858f9fa, 8a246f5)
 
 ## [0.13.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.12.0...v0.13.0)
 
