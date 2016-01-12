@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/formly-js/angular-formly-templates-material/compare/v0.13.0...HEAD)
+## [0.14.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.13.0...v0.14.0)
 
 ### Added
 
