@@ -8,6 +8,9 @@ export default (formlyConfigProvider) => {
     wrapper: ['label', 'messages', 'inputContainer'],
     defaultOptions: {
       ngModelAttrs: {
+        disabled: {
+          bound: 'ng-disabled'
+        },
         rows: {
           attribute: 'rows'
         },
@@ -21,6 +24,7 @@ export default (formlyConfigProvider) => {
     },
     apiCheck: (check) => ({
       templateOptions: {
+        disabled: check.bool.optional,
         rows: check.number.optional,
         cols: check.number.optional,
         grow: check.bool.optional
