@@ -1,5 +1,6 @@
 <md-radio-group ng-model="model[options.key]">
     <md-radio-button
+            ng-class="to.className"
             ng-repeat="option in to.options"
             ng-disabled="to.disabled"
             ng-value="option[to.valueProp || 'value']">
