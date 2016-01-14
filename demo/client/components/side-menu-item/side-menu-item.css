@@ -1,0 +1,11 @@
+side-menu ul.side-menu > li.opened {
+  background: #432677;
+}
+
+side-menu ul.side-menu > li {
+  border-bottom: 1px solid #673AB7;
+}
+
+side-menu ul.side-menu > li:last-child {
+  border-bottom: 0 none;
+}

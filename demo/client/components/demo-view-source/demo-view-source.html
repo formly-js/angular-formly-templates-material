@@ -1,0 +1,38 @@
+<h3 class="md-headline purple-headline">Scope</h3>
+<md-tabs md-dynamic-height md-border-bottom>
+  <md-tab label="{{::item.label}}" ng-repeat="item in vm.sources">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="item.source | json"></div>
+    </md-content>
+  </md-tab>
+  <!-- fields definition -->
+  <!--md-tab label="Fields definition">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="vm.fieldsCopy | json"></div>
+    </md-content>
+  </md-tab-->
+  <!-- fields -->
+  <!--md-tab label="Fields">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="vm.fields | json"></div>
+    </md-content>
+  </md-tab-->
+  <!-- model -->
+  <!--md-tab label="Model">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="vm.model | json"></div>
+    </md-content>
+  </md-tab-->
+  <!-- form -->
+  <!--md-tab label="Form">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="vm.form | json"></div>
+    </md-content>
+  </md-tab-->
+  <!-- options -->
+  <!--md-tab label="Options">
+    <md-content class="md-padding">
+      <div hljs hljs-language="json" hljs-source="vm.options | json"></div>
+    </md-content>
+  </md-tab-->
+</md-tabs>

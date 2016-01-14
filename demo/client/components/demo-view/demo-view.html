@@ -1,0 +1,13 @@
+<div layout="column" layout-gt-md="row" layout-padding>
+
+  <h3 class="md-headline purple-headline" layout="row" layout-align="center center">
+    <span flex>Example</span>
+    <md-button ng-if="vm.api" href="{{vm.api}}" target="_blank">Go to API</md-button>
+  </h3>
+
+  <demo-view-form flex fields="vm.fields" model="vm.model" options="vm.options" form="vm.form">
+  </demo-view-form>
+
+  <demo-view-source flex fields="vm.fields" model="vm.model" options="vm.options" form="vm.form">
+  </demo-view-source>
+</div>

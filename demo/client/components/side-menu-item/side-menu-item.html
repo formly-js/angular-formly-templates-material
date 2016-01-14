@@ -1,0 +1,23 @@
+<li>
+  <!-- menu heading -->
+  <menu-heading
+    name="::vm.section.name"
+    ng-if="vm.section.type === 'heading'">
+  </menu-heading>
+
+  <!-- menu link -->
+  <menu-link
+    section-name="::vm.section.name"
+    section-id="::vm.section.id"
+    ng-if="vm.section.type === 'link'">
+  </menu-link>
+
+  <!-- menu toggle -->
+  <menu-toggle
+    section-name="::vm.section.name"
+    section-children="::vm.section.children"
+    on-open="vm.onOpen()"
+    on-close="vm.onClose()"
+    ng-if="vm.section.type === 'toggle'">
+  </menu-toggle>
+</li>

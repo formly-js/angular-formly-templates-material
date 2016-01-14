@@ -1,3 +1,28 @@
-<div>
-  <formly-form fields="vm.fields"></formly-form>
+<div layout="row" layout-fill>
+  <md-sidenav class="md-sidenav-left md-whiteframe-z1" id="demo-sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+    <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools">
+        <h3>
+          <span>formlyMaterial</span>
+        </h3>
+      </div>
+    </md-toolbar>
+    <md-content role="navigation" id="demo-sidenav-content">
+      <side-menu menu="vm.menu"></side-menu>
+    </md-content>
+  </md-sidenav>
+  <md-content flex>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button hide-gt-sm" ng-click="vm.toggleMenu()" aria-label="Settings">
+          <md-icon md-svg-icon="navigation:ic_menu_24px"></md-icon>
+        </md-button>
+        <h2>
+          <span>Demo</span>
+        </h2>
+      </div>
+    </md-toolbar>
+    <ui-view></ui-view>
+  </md-content>
+
 </div>

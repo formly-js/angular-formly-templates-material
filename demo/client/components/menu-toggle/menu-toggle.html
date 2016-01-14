@@ -1,0 +1,8 @@
+<md-button class="menu-toggle" ng-click="vm.toggle()">
+  {{::vm.sectionName}}
+</md-button>
+<ul ng-show="vm.isOpen()">
+  <li ng-repeat="child in ::vm.sectionChildren">
+    <menu-link section-name="::child.name" section-id="::child.id"></menu-link>
+  </li>
+</ul>
