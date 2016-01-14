@@ -1,7 +1,8 @@
 const { SetModule } = angular2now;
 
 SetModule('demo').run(['Examples', 'Menu', (Examples, Menu) => {
-  Examples.set('textarea', 'types', {
+  // set example
+  Examples.set('textarea', {
     fields: [{
       key: 'text',
       type: 'textarea',
@@ -11,5 +12,6 @@ SetModule('demo').run(['Examples', 'Menu', (Examples, Menu) => {
     }]
   }, 'types/textarea.md');
 
+  // add menu item to types
   Menu.addChild('types', 'textarea');
 }]);
