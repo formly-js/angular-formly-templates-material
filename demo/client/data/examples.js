@@ -11,17 +11,16 @@ class Examples {
   }
 
   /**
-   * Add example
+   * Add new example
    *
-   * @param {String} id
-   * @param {String} section
-   * @param {Object}
+   * @param {String} id  unique value for state `id` parameter
+   * @param {Object} options  formly configuration
+   * @param {String} api  it can be an absolute url or just `types/input.md` (see docs local variable)
    */
-  set(id, section, { fields, model, options }, api) {
+  set(id, { fields, model, options }, api) {
     const docs = 'https://github.com/formly-js/angular-formly-templates-material/blob/master/docs/';
 
     this.examples.set(id, {
-      section,
       api: (typeof api === 'string' && !api.match('^http')) ? docs + api : api,
       formly: {
         fields,
@@ -31,6 +30,12 @@ class Examples {
     });
   }
 
+  /**
+   * Get example
+   *
+   * @param  {String} id example's identifier
+   * @return {Object}    example's data with API url and formly configuration
+   */
   get(id) {
     return this.examples.get(id);
   }
