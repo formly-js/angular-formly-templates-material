@@ -87,6 +87,8 @@ class Menu {
       name,
       id: id || name
     });
+
+    found.children = _.sortBy(found.children, 'name');
   }
 
   /**
