@@ -18,17 +18,17 @@ class DemoViewSourceComponent {
     // make copy of fields
     this.fieldsInits = angular.copy(this.fields);
 
-    this.add(this.fieldsInits, 'Initial fields');
-    this.add(this.fields, 'Fields');
-    this.add(this.model, 'Model');
-    this.add(this.form, 'Form');
-    this.add(this.options, 'Options');
+    this.add('fieldsInits', 'Initial fields');
+    this.add('fields', 'Fields');
+    this.add('model', 'Model');
+    this.add('form', 'Form');
+    this.add('options', 'Options');
   }
 
-  add(source, label) {
+  add(key, label) {
     this.sources.push({
       label,
-      source
+      key
     });
   }
 }
