@@ -26,6 +26,7 @@ Material Design Templates for [Angular-Formly](http://angular-formly.com). Moder
 
 - [Install](#install)
 - [Getting Started](#getting-started)
+- [Demo](#demo)
 - [Requests?](#requests)
 - [Requirements](#requirements)
 - [Components](#components)
@@ -60,6 +61,10 @@ angular.module('myAppName', [
     'formlyMaterial'
   ])
 ```
+
+## Demo
+
+Visit [formly-material.meteor.com](http://formly-material.meteor.com/demo/input)
 
 ## Requests?
 
