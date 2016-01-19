@@ -33,7 +33,7 @@ ejson@1.0.7
 es5-shim@4.1.14
 fastclick@1.0.7
 formly:angular-formly@7.3.9_3
-formly:angular-formly-templates-material@0.12.0
+formly:angular-formly-templates-material@0.14.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
