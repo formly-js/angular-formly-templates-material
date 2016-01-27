@@ -101,6 +101,15 @@ describe('formlyMaterial - select type', () => {
     expect(element.attr('multiple')).toBeDefined();
   });
 
+  it('should not add multiple directive when does not equal true', () => {
+    compile({
+      templateOptions: {
+        multiple: false
+      }
+    });
+    expect(element.attr('multiple')).toBeUndefined();
+  });
+
   it('should be able to bind md-on-close', () => {
     compile();
     expect(element.attr('md-on-close')).toBe(`options.templateOptions['onClose']`);

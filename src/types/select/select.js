@@ -1,4 +1,5 @@
 import template from './select.html';
+import { ngModelAttrsManipulator } from './../../helpers';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.setType({
@@ -12,9 +13,6 @@ export default (formlyConfigProvider) => {
       ngModelAttrs: {
         disabled: {
           bound: 'ng-disabled'
-        },
-        multiple: {
-          bound: 'multiple'
         },
         onClose: {
           bound: 'md-on-close'
@@ -35,5 +33,12 @@ export default (formlyConfigProvider) => {
         onOpen: check.func.optional
       }
     })
+  });
+
+  formlyConfigProvider.templateManipulators.preWrapper.push((tpl, options) => {
+    const to = options.templateOptions || {};
+    // adds multiple only when:
+    // templateOptions.multiple equals true
+    return to.multiple === true ? ngModelAttrsManipulator(tpl, options, 'multiple') : tpl;
   });
 };
