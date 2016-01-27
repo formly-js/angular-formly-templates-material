@@ -1,7 +1,7 @@
 import {
   ngModelAttrsManipulator
 }
-from './../helpers/index.js';
+from './../helpers';
 
 export default (formlyConfigProvider) => {
   formlyConfigProvider.templateManipulators.preWrapper.push((template, options) => {
