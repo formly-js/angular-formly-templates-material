@@ -26,7 +26,7 @@ describe('formlyMaterial - className manipulator', () => {
       }
     }, options)];
 
-    const form = $compile(testUtils.getFormTemplate())($scope);
+    const form = $compile(angular.element(testUtils.getFormTemplate()))($scope);
 
     $scope.$digest();
     element = form.find('[ng-model]');
@@ -44,8 +44,6 @@ describe('formlyMaterial - className manipulator', () => {
       $compile = _$compile_;
       $rootScope = _$rootScope_;
     });
-
-    compile();
   });
 
   it('should be able to add ng-class directive', () => {

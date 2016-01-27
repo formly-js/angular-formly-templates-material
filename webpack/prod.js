@@ -1,16 +1,11 @@
 var webpack = require('webpack');
-var build = require('./build')('prod');
-var pkg = require('../package.json');
 
-module.exports = {
-    entry: build.entry,
-    output: build.output(),
-    devtool: 'source-map',
-    module: {
-        loaders: build.loaders()
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.BannerPlugin(pkg.name + " JavaScript Library v" + pkg.version + " | MIT | built with ♥ by " + pkg.author)
-    ]
-};
+module.exports = require('./common')({
+  output: {
+    filename: '[name].min.js'
+  },
+  devtool: 'source-map',
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ]
+});
