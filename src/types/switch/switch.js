@@ -16,7 +16,8 @@ export default (formlyConfigProvider) => {
     },
     apiCheck: (check) => ({
       templateOptions: {
-        disabled: check.bool.optional
+        disabled: check.bool.optional,
+        theme: check.string.optional
       }
     })
   });

@@ -11,10 +11,12 @@ describe('formlyMaterial - slider type', () => {
   let form;
   let element;
   let elementScope;
+  const theme = 'custom';
   const fieldConfig = {
     key: 'testField',
     type: 'slider',
     templateOptions: {
+      theme,
       label: 'test field',
       disabled: true,
       min: 1,
@@ -54,6 +56,10 @@ describe('formlyMaterial - slider type', () => {
 
   it('should be md-slider element', () => {
     expect(element[0].nodeName).toBe('MD-SLIDER');
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should support min option', () => {

@@ -30,7 +30,8 @@ export default (formlyConfigProvider) => {
         labelProp: check.string.optional,
         valueProp: check.string.optional,
         onClose: check.func.optional,
-        onOpen: check.func.optional
+        onOpen: check.func.optional,
+        theme: check.string.optional
       }
     })
   });

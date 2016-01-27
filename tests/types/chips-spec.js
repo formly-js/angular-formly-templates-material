@@ -11,6 +11,7 @@ describe('formlyMaterial - chips type', () => {
   let element;
   let field;
   let fieldScope;
+  const theme = 'custom';
 
   function onAdd() {
     return true;
@@ -36,6 +37,7 @@ describe('formlyMaterial - chips type', () => {
         onAdd,
         onRemove,
         onSelect,
+        theme,
         label: 'test field',
         placeholder: '+tags',
         secondaryPlaceholder: 'Add tag',
@@ -74,6 +76,10 @@ describe('formlyMaterial - chips type', () => {
 
   it('should have placeholder', () => {
     expect(element.attr('placeholder')).toBe(field.templateOptions.placeholder);
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should have secondary placeholder', () => {

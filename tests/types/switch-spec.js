@@ -11,6 +11,7 @@ describe('formlyMaterial - switch type', () => {
   let element;
   let elementScope;
   let field;
+  const theme = 'custom';
 
   //
   // helpers
@@ -22,6 +23,7 @@ describe('formlyMaterial - switch type', () => {
       key: 'testField',
       type: 'switch',
       templateOptions: {
+        theme,
         label: 'test field',
         disabled: true
       }
@@ -52,6 +54,10 @@ describe('formlyMaterial - switch type', () => {
 
   it('should be md-switch element', () => {
     expect(element[0].nodeName).toBe('MD-SWITCH');
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should have label', () => {

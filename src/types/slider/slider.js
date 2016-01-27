@@ -33,7 +33,8 @@ export default (formlyConfigProvider) => {
         min: check.number.optional,
         max: check.number.optional,
         step: check.number.optional,
-        discrete: check.bool.optional
+        discrete: check.bool.optional,
+        theme: check.string.optional
       }
     })
   });

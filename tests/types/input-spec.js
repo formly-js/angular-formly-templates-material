@@ -12,6 +12,7 @@ describe('formlyMaterial - input type', () => {
   let form;
   let element;
   let field;
+  const theme = 'custom';
 
   //
   // helpers
@@ -23,6 +24,7 @@ describe('formlyMaterial - input type', () => {
       key: 'testField',
       type: 'input',
       templateOptions: {
+        theme,
         disabled: true,
         type: 'email',
         label: 'test field'
@@ -59,6 +61,10 @@ describe('formlyMaterial - input type', () => {
 
     it('should have proper type attribute', () => {
       expect(element.attr('type')).toBe(field.templateOptions.type);
+    });
+
+    it('should have proper theme when defined', () => {
+      expect(element.parent().is(`.md-${theme}-theme`)).toBe(true);
     });
 
     it('should have messages wrapper', () => {

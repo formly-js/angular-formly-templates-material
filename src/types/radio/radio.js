@@ -9,7 +9,8 @@ export default (formlyConfigProvider) => {
       templateOptions: {
         options: check.arrayOf(check.object),
         labelProp: check.string.optional,
-        valueProp: check.string.optional
+        valueProp: check.string.optional,
+        theme: check.string.optional
       }
     })
   });

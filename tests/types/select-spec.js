@@ -15,6 +15,7 @@ describe('formlyMaterial - select type', () => {
   let element;
   let elementScope;
   let field;
+  const theme = 'custom';
 
   //
   // helpers
@@ -26,6 +27,7 @@ describe('formlyMaterial - select type', () => {
       key: 'testField',
       type: 'select',
       templateOptions: {
+        theme,
         label: 'test field',
         multiple: true,
         onClose: () => true,
@@ -99,6 +101,11 @@ describe('formlyMaterial - select type', () => {
   it('should be able to pick multiple options', () => {
     compile();
     expect(element.attr('multiple')).toBeDefined();
+  });
+
+  it('should have proper theme when defined', () => {
+    compile();
+    expect(element.is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should not add multiple directive when does not equal true', () => {

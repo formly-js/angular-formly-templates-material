@@ -13,6 +13,7 @@ describe('formlyMaterial - textarea type', () => {
   let element;
   let elementScope;
   let field;
+  const theme = 'custom';
 
   //
   // helpers
@@ -24,6 +25,7 @@ describe('formlyMaterial - textarea type', () => {
       key: 'testField',
       type: 'textarea',
       templateOptions: {
+        theme,
         label: 'test field',
         disabled: true,
         rows: 5,
@@ -66,6 +68,10 @@ describe('formlyMaterial - textarea type', () => {
 
     expect(label.length).toBe(1);
     expect(label.html()).toContain(field.templateOptions.label);
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.parent().is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should not auto grow', () => {

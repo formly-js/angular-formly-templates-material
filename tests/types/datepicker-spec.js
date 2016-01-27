@@ -11,6 +11,7 @@ describe('formlyMaterial - datepicker type', () => {
   let form;
   let element;
   let elementScope;
+  const theme = 'custom';
   const minDate = new Date(2015, 10, 19);
   const maxDate = new Date(2015, 11, 20);
   const filterDate = () => true;
@@ -28,6 +29,7 @@ describe('formlyMaterial - datepicker type', () => {
         minDate,
         maxDate,
         filterDate,
+        theme,
         disabled: true,
         label: 'test field',
         placeholder: 'Pick a date'
@@ -61,6 +63,10 @@ describe('formlyMaterial - datepicker type', () => {
 
   it('should have messages', () => {
     expect(form.find('[ng-messages]').length).toBe(1);
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.attr('md-theme')).toBe(theme);
   });
 
   it('should have min date', () => {

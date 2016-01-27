@@ -39,7 +39,8 @@ export default (formlyConfigProvider) => {
         deleteHint: check.string.optional,
         onAdd: check.func.optional,
         onRemove: check.func.optional,
-        onSelect: check.func.optional
+        onSelect: check.func.optional,
+        theme: check.string.optional
       }
     })
   });

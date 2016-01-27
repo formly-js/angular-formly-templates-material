@@ -27,7 +27,8 @@ export default (formlyConfigProvider) => {
         disabled: check.bool.optional,
         rows: check.number.optional,
         cols: check.number.optional,
-        grow: check.bool.optional
+        grow: check.bool.optional,
+        theme: check.string.optional
       }
     })
   });

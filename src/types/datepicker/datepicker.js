@@ -33,7 +33,8 @@ export default (formlyConfigProvider) => {
         placeholder: check.string.optional,
         minDate: check.instanceOf(Date).optional,
         maxDate: check.instanceOf(Date).optional,
-        filterDate: check.func.optional
+        filterDate: check.func.optional,
+        theme: check.string.optional
       }
     })
   });

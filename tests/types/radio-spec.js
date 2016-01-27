@@ -13,6 +13,7 @@ describe('formlyMaterial - radio type', () => {
   let element;
   let optionsElements;
   let field;
+  const theme = 'custom';
 
   //
   // helpers
@@ -24,6 +25,7 @@ describe('formlyMaterial - radio type', () => {
       key: 'testField',
       type: 'radio',
       templateOptions: {
+        theme,
         label: 'test field',
         options: [{
           name: 'first',
@@ -62,6 +64,11 @@ describe('formlyMaterial - radio type', () => {
   it('should be md-radio-group element', () => {
     compile();
     expect(element[0].nodeName).toBe('MD-RADIO-GROUP');
+  });
+
+  it('should have proper theme when defined', () => {
+    compile();
+    expect(element.is(`.md-${theme}-theme`)).toBe(true);
   });
 
   it('should have options with default properties for name and value', () => {

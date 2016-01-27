@@ -32,7 +32,8 @@ export default (formlyConfigProvider) => {
           pattern: check.oneOfType([
             check.string,
             check.instanceOf(RegExp)
-          ]).optional
+          ]).optional,
+          theme: check.string.optional
         }
       };
     }

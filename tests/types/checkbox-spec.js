@@ -22,6 +22,7 @@ describe('formlyMaterial - checkbox type', () => {
       type: 'checkbox',
       templateOptions: {
         label: 'test field',
+        theme: 'custom',
         disabled: true
       }
     }, options)];
@@ -59,5 +60,9 @@ describe('formlyMaterial - checkbox type', () => {
   it('should be disabled', () => {
     expect(element.attr('ng-disabled')).toBe(`options.templateOptions['disabled']`);
     expect(elementScope.options.templateOptions.disabled).toBe(true);
+  });
+
+  it('should have proper theme when defined', () => {
+    expect(element.is('.md-custom-theme')).toBe(true);
   });
 });
