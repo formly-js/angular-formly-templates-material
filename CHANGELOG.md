@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.14.1](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.0...v0.14.1) - 2016-01-27
+
+### Added
+
+- Demo (formly-material.meteor.com)
+
+### Fixed
+
+- #22
+- #23
+
 ## [0.14.0](https://github.com/formly-js/angular-formly-templates-material/compare/v0.13.0...v0.14.0)
 
 ### Added

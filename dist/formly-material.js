@@ -1,4 +1,4 @@
-/*! angular-formly-material v0.14.0 | MIT | built with ♥ by Kamil Kisiela <mys.sterowiec@gmail.com> */
+/*! angular-formly-material v0.14.1 | MIT | built with ♥ by Kamil Kisiela <mys.sterowiec@gmail.com> */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("angular"));
@@ -69,11 +69,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _runs2 = _interopRequireDefault(_runs);
 
-	var _wrappers = __webpack_require__(6);
+	var _wrappers = __webpack_require__(5);
 
 	var _wrappers2 = _interopRequireDefault(_wrappers);
 
-	var _types = __webpack_require__(15);
+	var _types = __webpack_require__(14);
 
 	var _types2 = _interopRequireDefault(_types);
 
@@ -114,13 +114,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _className2 = _interopRequireDefault(_className);
 
-	var _theme = __webpack_require__(5);
-
-	var _theme2 = _interopRequireDefault(_theme);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = [_className2.default, _theme2.default];
+	exports.default = [_className2.default];
 
 /***/ },
 /* 3 */
@@ -132,12 +128,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _index = __webpack_require__(4);
+	var _helpers = __webpack_require__(4);
 
 	exports.default = function (formlyConfigProvider) {
 	  // add only step attribute because min and max are both built-in
 	  formlyConfigProvider.extras.fieldTransform.push(function (fields) {
-	    return (0, _index.ngModelAttrsTransformer)(fields, function (field) {
+	    return (0, _helpers.ngModelAttrsTransformer)(fields, function (field) {
 	      return field.templateOptions && typeof field.templateOptions.className !== 'undefined';
 	    }, 'className', {
 	      bound: 'ng-class'
@@ -251,18 +247,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _index = __webpack_require__(4);
+	var _inputContainer = __webpack_require__(6);
 
-	exports.default = function (formlyConfigProvider) {
-	  formlyConfigProvider.templateManipulators.preWrapper.push(function (template, options) {
-	    // adds md-theme only when:
-	    // templateOptions.theme is defined
-	    if (typeof options.templateOptions.theme !== 'undefined') {
-	      return (0, _index.ngModelAttrsManipulator)(template, options, 'md-theme', options.templateOptions.theme);
-	    }
-	    return template;
-	  });
-	};
+	var _inputContainer2 = _interopRequireDefault(_inputContainer);
+
+	var _label = __webpack_require__(8);
+
+	var _label2 = _interopRequireDefault(_label);
+
+	var _messages = __webpack_require__(10);
+
+	var _messages2 = _interopRequireDefault(_messages);
+
+	var _divider = __webpack_require__(12);
+
+	var _divider2 = _interopRequireDefault(_divider);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [_inputContainer2.default, _label2.default, _messages2.default, _divider2.default];
 
 /***/ },
 /* 6 */
@@ -278,36 +281,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _inputContainer2 = _interopRequireDefault(_inputContainer);
 
-	var _label = __webpack_require__(9);
-
-	var _label2 = _interopRequireDefault(_label);
-
-	var _messages = __webpack_require__(11);
-
-	var _messages2 = _interopRequireDefault(_messages);
-
-	var _divider = __webpack_require__(13);
-
-	var _divider2 = _interopRequireDefault(_divider);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [_inputContainer2.default, _label2.default, _messages2.default, _divider2.default];
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _inputContainer = __webpack_require__(8);
-
-	var _inputContainer2 = _interopRequireDefault(_inputContainer);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function (formlyConfigProvider) {
@@ -318,13 +291,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-input-container>\r\n    <formly-transclude></formly-transclude>\r\n</md-input-container>";
+	module.exports = "<md-input-container md-theme=\"{{to.theme}}\">\n    <formly-transclude></formly-transclude>\n</md-input-container>\n";
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -333,7 +306,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _label = __webpack_require__(10);
+	var _label = __webpack_require__(9);
 
 	var _label2 = _interopRequireDefault(_label);
 
@@ -354,13 +327,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = "<label for=\"{{id}}\" ng-style=\"['input', 'textarea', 'select'].indexOf(options.type) === -1 && {'font-size':'12px', 'color': 'rgb(117, 117, 117)'}\">\r\n  {{to.label}}\r\n</label>\r\n<formly-transclude></formly-transclude>\r\n";
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -369,7 +342,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _messages = __webpack_require__(12);
+	var _messages = __webpack_require__(11);
 
 	var _messages2 = _interopRequireDefault(_messages);
 
@@ -383,13 +356,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = "<formly-transclude></formly-transclude>\r\n<div ng-messages=\"fc.$error\" ng-show=\"showError\">\r\n    <div ng-repeat=\"(name, message) in ::options.validation.messages\"\r\n         ng-message-exp=\"name\">\r\n        {{message(fc.$viewValue, fc.$modelValue, this)}}\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -398,7 +371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _divider = __webpack_require__(14);
+	var _divider = __webpack_require__(13);
 
 	var _divider2 = _interopRequireDefault(_divider);
 
@@ -419,10 +392,60 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-divider ng-if=\"to.divider === 'before'\"></md-divider>\r\n<formly-transclude></formly-transclude>\r\n<md-divider ng-if=\"to.divider !== 'before'\"></md-divider>\r\n";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _checkbox = __webpack_require__(15);
+
+	var _checkbox2 = _interopRequireDefault(_checkbox);
+
+	var _chips = __webpack_require__(17);
+
+	var _chips2 = _interopRequireDefault(_chips);
+
+	var _datepicker = __webpack_require__(19);
+
+	var _datepicker2 = _interopRequireDefault(_datepicker);
+
+	var _input = __webpack_require__(21);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _radio = __webpack_require__(23);
+
+	var _radio2 = _interopRequireDefault(_radio);
+
+	var _select = __webpack_require__(25);
+
+	var _select2 = _interopRequireDefault(_select);
+
+	var _slider = __webpack_require__(27);
+
+	var _slider2 = _interopRequireDefault(_slider);
+
+	var _switch = __webpack_require__(29);
+
+	var _switch2 = _interopRequireDefault(_switch);
+
+	var _textarea = __webpack_require__(31);
+
+	var _textarea2 = _interopRequireDefault(_textarea);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [_checkbox2.default, _chips2.default, _datepicker2.default, _input2.default, _radio2.default, _select2.default, _slider2.default, _switch2.default, _textarea2.default];
 
 /***/ },
 /* 15 */
@@ -435,56 +458,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	var _checkbox = __webpack_require__(16);
-
-	var _checkbox2 = _interopRequireDefault(_checkbox);
-
-	var _chips = __webpack_require__(18);
-
-	var _chips2 = _interopRequireDefault(_chips);
-
-	var _datepicker = __webpack_require__(20);
-
-	var _datepicker2 = _interopRequireDefault(_datepicker);
-
-	var _input = __webpack_require__(22);
-
-	var _input2 = _interopRequireDefault(_input);
-
-	var _radio = __webpack_require__(24);
-
-	var _radio2 = _interopRequireDefault(_radio);
-
-	var _select = __webpack_require__(26);
-
-	var _select2 = _interopRequireDefault(_select);
-
-	var _slider = __webpack_require__(28);
-
-	var _slider2 = _interopRequireDefault(_slider);
-
-	var _switch = __webpack_require__(30);
-
-	var _switch2 = _interopRequireDefault(_switch);
-
-	var _textarea = __webpack_require__(32);
-
-	var _textarea2 = _interopRequireDefault(_textarea);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [_checkbox2.default, _chips2.default, _datepicker2.default, _input2.default, _radio2.default, _select2.default, _slider2.default, _switch2.default, _textarea2.default];
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _checkbox = __webpack_require__(17);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -504,7 +477,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    apiCheck: function apiCheck(check) {
 	      return {
 	        templateOptions: {
-	          disabled: check.bool.optional
+	          disabled: check.bool.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -512,13 +486,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\r\n    <md-checkbox ng-model=\"model[options.key]\">\r\n        {{to.label}}\r\n    </md-checkbox>\r\n</div>";
+	module.exports = "<div>\n    <md-checkbox ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\">\n        {{to.label}}\n    </md-checkbox>\n</div>\n";
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -527,7 +501,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _chips = __webpack_require__(19);
+	var _chips = __webpack_require__(18);
 
 	var _chips2 = _interopRequireDefault(_chips);
 
@@ -573,7 +547,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          deleteHint: check.string.optional,
 	          onAdd: check.func.optional,
 	          onRemove: check.func.optional,
-	          onSelect: check.func.optional
+	          onSelect: check.func.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -581,13 +556,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-chips ng-model=\"model[options.key]\" readonly=\"to.disabled\"></md-chips>\r\n";
+	module.exports = "<md-chips ng-model=\"model[options.key]\" readonly=\"to.disabled\" md-theme=\"{{to.theme}}\"></md-chips>\n";
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -596,7 +571,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _datepicker = __webpack_require__(21);
+	var _datepicker = __webpack_require__(20);
 
 	var _datepicker2 = _interopRequireDefault(_datepicker);
 
@@ -636,7 +611,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          placeholder: check.string.optional,
 	          minDate: check.instanceOf(Date).optional,
 	          maxDate: check.instanceOf(Date).optional,
-	          filterDate: check.func.optional
+	          filterDate: check.func.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -644,13 +620,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\r\n    <md-datepicker ng-model=\"model[options.key]\"></md-datepicker>\r\n</div>";
+	module.exports = "<div>\n    <md-datepicker ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\"></md-datepicker>\n</div>\n";
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -659,7 +635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _input = __webpack_require__(23);
+	var _input = __webpack_require__(22);
 
 	var _input2 = _interopRequireDefault(_input);
 
@@ -695,7 +671,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          disabled: check.bool.optional,
 	          type: check.string,
 	          step: check.number.optional,
-	          pattern: check.oneOfType([check.string, check.instanceOf(RegExp)]).optional
+	          pattern: check.oneOfType([check.string, check.instanceOf(RegExp)]).optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -712,13 +689,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
 	module.exports = "<input ng-model=\"model[options.key]\">";
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -727,7 +704,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _radio = __webpack_require__(25);
+	var _radio = __webpack_require__(24);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
@@ -743,7 +720,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        templateOptions: {
 	          options: check.arrayOf(check.object),
 	          labelProp: check.string.optional,
-	          valueProp: check.string.optional
+	          valueProp: check.string.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -751,13 +729,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-radio-group ng-model=\"model[options.key]\">\r\n    <md-radio-button\r\n            ng-repeat=\"option in to.options\"\r\n            ng-disabled=\"to.disabled\"\r\n            ng-value=\"option[to.valueProp || 'value']\">\r\n            {{option[to.labelProp || 'name']}}\r\n    </md-radio-button>\r\n</md-radio-group>\r\n";
+	module.exports = "<md-radio-group ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\">\n    <md-radio-button\n            ng-repeat=\"option in to.options\"\n            ng-disabled=\"to.disabled\"\n            ng-value=\"option[to.valueProp || 'value']\">\n            {{option[to.labelProp || 'name']}}\n    </md-radio-button>\n</md-radio-group>\n";
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -766,9 +744,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _select = __webpack_require__(27);
+	var _select = __webpack_require__(26);
 
 	var _select2 = _interopRequireDefault(_select);
+
+	var _helpers = __webpack_require__(4);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -784,9 +764,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      ngModelAttrs: {
 	        disabled: {
 	          bound: 'ng-disabled'
-	        },
-	        multiple: {
-	          bound: 'multiple'
 	        },
 	        onClose: {
 	          bound: 'md-on-close'
@@ -805,21 +782,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	          labelProp: check.string.optional,
 	          valueProp: check.string.optional,
 	          onClose: check.func.optional,
-	          onOpen: check.func.optional
+	          onOpen: check.func.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
 	  });
+
+	  formlyConfigProvider.templateManipulators.preWrapper.push(function (tpl, options) {
+	    var to = options.templateOptions || {};
+	    // adds multiple only when:
+	    // templateOptions.multiple equals true
+	    return to.multiple === true ? (0, _helpers.ngModelAttrsManipulator)(tpl, options, 'multiple') : tpl;
+	  });
 	};
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-select ng-model=\"model[options.key]\">\r\n    <md-option ng-repeat=\"option in to.options\" ng-value=\"option[to.valueProp || 'value']\">\r\n        {{ option[to.labelProp || 'name'] }}\r\n    </md-option>\r\n</md-select>";
+	module.exports = "<md-select ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\">\n    <md-option ng-repeat=\"option in to.options\" ng-value=\"option[to.valueProp || 'value']\">\n        {{ option[to.labelProp || 'name'] }}\n    </md-option>\n</md-select>\n";
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -828,7 +813,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _slider = __webpack_require__(29);
+	var _slider = __webpack_require__(28);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -868,7 +853,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          min: check.number.optional,
 	          max: check.number.optional,
 	          step: check.number.optional,
-	          discrete: check.bool.optional
+	          discrete: check.bool.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -876,13 +862,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-slider ng-model=\"model[options.key]\"></md-slider>";
+	module.exports = "<md-slider ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\"></md-slider>\n";
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -891,7 +877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _switch = __webpack_require__(31);
+	var _switch = __webpack_require__(30);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
@@ -914,7 +900,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    apiCheck: function apiCheck(check) {
 	      return {
 	        templateOptions: {
-	          disabled: check.bool.optional
+	          disabled: check.bool.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -922,13 +909,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-switch ng-model=\"model[options.key]\">\r\n    {{to.label}}\r\n</md-switch>";
+	module.exports = "<md-switch ng-model=\"model[options.key]\" md-theme=\"{{to.theme}}\">\n    {{to.label}}\n</md-switch>\n";
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -937,7 +924,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _textarea = __webpack_require__(33);
+	var _textarea = __webpack_require__(32);
 
 	var _textarea2 = _interopRequireDefault(_textarea);
 
@@ -972,7 +959,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          disabled: check.bool.optional,
 	          rows: check.number.optional,
 	          cols: check.number.optional,
-	          grow: check.bool.optional
+	          grow: check.bool.optional,
+	          theme: check.string.optional
 	        }
 	      };
 	    }
@@ -988,7 +976,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<textarea ng-model=\"model[options.key]\"></textarea>";
