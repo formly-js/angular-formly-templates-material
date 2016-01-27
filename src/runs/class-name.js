@@ -1,4 +1,4 @@
-import { ngModelAttrsTransformer } from './../helpers/index.js';
+import { ngModelAttrsTransformer } from './../helpers';
 
 export default (formlyConfigProvider) => {
   // add only step attribute because min and max are both built-in
