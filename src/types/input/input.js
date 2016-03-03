@@ -43,6 +43,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.extras.fieldTransform.push((fields) => {
     return ngModelAttrsTransformer(fields, (field) => (
       field.type === 'input' &&
+      field.templateOptions &&
       field.templateOptions.type === 'number'
     ), 'step', {
       attribute: 'step'

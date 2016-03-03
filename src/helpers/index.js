@@ -69,7 +69,7 @@ export function ngModelAttrsTransformer(fields, condition, name, settings) {
         field.ngModelAttrs = {};
       }
 
-      if (typeof field.templateOptions[name] !== 'undefined') {
+      if (field.templateOptions && typeof field.templateOptions[name] !== 'undefined') {
         field.ngModelAttrs[name] = settings;
       }
     }

@@ -36,6 +36,7 @@ export default (formlyConfigProvider) => {
   formlyConfigProvider.extras.fieldTransform.push((fields) => {
     return ngModelAttrsTransformer(fields, (field) => (
       field.type === 'textarea' &&
+      field.templateOptions &&
       field.templateOptions.grow === false
     ), 'grow', {
       attribute: 'md-no-autogrow'
