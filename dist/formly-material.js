@@ -1,4 +1,4 @@
-/*! angular-formly-material v0.14.1 | MIT | built with ♥ by Kamil Kisiela <mys.sterowiec@gmail.com> */
+/*! angular-formly-material v0.14.2 | MIT | built with ♥ by Kamil Kisiela <mys.sterowiec@gmail.com> */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("angular"));
@@ -228,7 +228,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        field.ngModelAttrs = {};
 	      }
 
-	      if (typeof field.templateOptions[name] !== 'undefined') {
+	      if (field.templateOptions && typeof field.templateOptions[name] !== 'undefined') {
 	        field.ngModelAttrs[name] = settings;
 	      }
 	    }
@@ -330,7 +330,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<label for=\"{{id}}\" ng-style=\"['input', 'textarea', 'select'].indexOf(options.type) === -1 && {'font-size':'12px', 'color': 'rgb(117, 117, 117)'}\">\r\n  {{to.label}}\r\n</label>\r\n<formly-transclude></formly-transclude>\r\n";
+	module.exports = "<label for=\"{{id}}\" ng-style=\"['input', 'textarea', 'select'].indexOf(options.type) === -1 && {'font-size':'12px', 'color': 'rgb(117, 117, 117)', 'padding-left': '3px'}\">\n  {{to.label}}\n</label>\n<formly-transclude></formly-transclude>\n";
 
 /***/ },
 /* 10 */
@@ -359,7 +359,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<formly-transclude></formly-transclude>\r\n<div ng-messages=\"fc.$error\" ng-show=\"showError\">\r\n    <div ng-repeat=\"(name, message) in ::options.validation.messages\"\r\n         ng-message-exp=\"name\">\r\n        {{message(fc.$viewValue, fc.$modelValue, this)}}\r\n    </div>\r\n</div>\r\n";
+	module.exports = "<formly-transclude></formly-transclude>\n<div ng-messages=\"fc.$error\" ng-show=\"showError\">\n    <div ng-repeat=\"(name, message) in ::options.validation.messages\"\n         ng-message-exp=\"name\">\n        {{message(fc.$viewValue, fc.$modelValue, this)}}\n    </div>\n</div>\n";
 
 /***/ },
 /* 12 */
@@ -395,7 +395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-divider ng-if=\"to.divider === 'before'\"></md-divider>\r\n<formly-transclude></formly-transclude>\r\n<md-divider ng-if=\"to.divider !== 'before'\"></md-divider>\r\n";
+	module.exports = "<md-divider ng-if=\"to.divider === 'before'\"></md-divider>\n<formly-transclude></formly-transclude>\n<md-divider ng-if=\"to.divider !== 'before'\"></md-divider>\n";
 
 /***/ },
 /* 14 */
@@ -681,7 +681,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // add only step attribute because min and max are both built-in
 	  formlyConfigProvider.extras.fieldTransform.push(function (fields) {
 	    return (0, _helpers.ngModelAttrsTransformer)(fields, function (field) {
-	      return field.type === 'input' && field.templateOptions.type === 'number';
+	      return field.type === 'input' && field.templateOptions && field.templateOptions.type === 'number';
 	    }, 'step', {
 	      attribute: 'step'
 	    });
@@ -968,7 +968,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  formlyConfigProvider.extras.fieldTransform.push(function (fields) {
 	    return (0, _helpers.ngModelAttrsTransformer)(fields, function (field) {
-	      return field.type === 'textarea' && field.templateOptions.grow === false;
+	      return field.type === 'textarea' && field.templateOptions && field.templateOptions.grow === false;
 	    }, 'grow', {
 	      attribute: 'md-no-autogrow'
 	    });

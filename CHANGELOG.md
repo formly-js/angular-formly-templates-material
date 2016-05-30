@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.14.1](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.1...v0.14.2) - 2016-05-30
+
+### Added
+
+- Support for higher versions of angular (#34)
+
+### Fixed
+
+- (label) missing left padding (#29)
+- assumption of existence of `templateOptions` (#32)
+
 ## [0.14.1](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.0...v0.14.1) - 2016-01-27
 
 ### Added
