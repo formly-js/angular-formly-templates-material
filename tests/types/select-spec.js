@@ -17,6 +17,13 @@ describe('formlyMaterial - select type', () => {
   let field;
   const theme = 'custom';
 
+  function onClose($modelValue, $inputValue, scope, $event) {
+    return true;
+  }
+
+  function onOpen($modelValue, $inputValue, scope, $event) {
+    return true;
+  }
   //
   // helpers
   //
@@ -30,8 +37,8 @@ describe('formlyMaterial - select type', () => {
         theme,
         label: 'test field',
         multiple: true,
-        onClose: () => true,
-        onOpen: () => true,
+        onClose: onClose,
+        onOpen: onOpen,
         options: [{
           name: 'first',
           nameUp: 'FIRST',
@@ -119,12 +126,14 @@ describe('formlyMaterial - select type', () => {
 
   it('should be able to bind md-on-close', () => {
     compile();
-    expect(element.attr('md-on-close')).toBe(`options.templateOptions['onClose']`);
+    expect(element.attr('md-on-close')).toBe(`options.templateOptions['onClose'](model[options.key], options, this, $event)`);
+    expect(elementScope.options.templateOptions.onClose).toBe(onClose);
   });
 
   it('should be able to bind md-on-open', () => {
     compile();
-    expect(element.attr('md-on-open')).toBe(`options.templateOptions['onOpen']`);
+    expect(element.attr('md-on-open')).toBe(`options.templateOptions['onOpen'](model[options.key], options, this, $event)`);
+    expect(elementScope.options.templateOptions.onOpen).toBe(onOpen);
   });
 
   it('should be able to be disabled', () => {

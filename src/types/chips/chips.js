@@ -21,13 +21,13 @@ export default (formlyConfigProvider) => {
           attribute: 'delete-hint'
         },
         onAdd: {
-          bound: 'md-on-add'
+          statement: 'md-on-add'
         },
         onRemove: {
-          bound: 'md-on-remove'
+          statement: 'md-on-remove'
         },
         onSelect: {
-          bound: 'md-on-select'
+          statement: 'md-on-select'
         }
       }
     },
