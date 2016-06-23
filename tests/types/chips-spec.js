@@ -13,15 +13,15 @@ describe('formlyMaterial - chips type', () => {
   let fieldScope;
   const theme = 'custom';
 
-  function onAdd() {
+  function onAdd($modelValue, $inputValue, scope, $event) {
     return true;
   }
 
-  function onRemove() {
+  function onRemove($modelValue, $inputValue, scope, $event) {
     return true;
   }
 
-  function onSelect() {
+  function onSelect($modelValue, $inputValue, scope, $event) {
     return true;
   }
   //
@@ -95,17 +95,17 @@ describe('formlyMaterial - chips type', () => {
   });
 
   it('should have onAdd callback', () => {
-    expect(element.attr('md-on-add')).toBe(`options.templateOptions['onAdd']`);
+    expect(element.attr('md-on-add')).toBe(`options.templateOptions['onAdd'](model[options.key], options, this, $event)`);
     expect(fieldScope.options.templateOptions.onAdd).toBe(onAdd);
   });
 
   it('should have onRemove callback', () => {
-    expect(element.attr('md-on-remove')).toBe(`options.templateOptions['onRemove']`);
+    expect(element.attr('md-on-remove')).toBe(`options.templateOptions['onRemove'](model[options.key], options, this, $event)`);
     expect(fieldScope.options.templateOptions.onRemove).toBe(onRemove);
   });
 
   it('should have onSelect callback', () => {
-    expect(element.attr('md-on-select')).toBe(`options.templateOptions['onSelect']`);
+    expect(element.attr('md-on-select')).toBe(`options.templateOptions['onSelect'](model[options.key], options, this, $event)`);
     expect(fieldScope.options.templateOptions.onSelect).toBe(onSelect);
   });
 

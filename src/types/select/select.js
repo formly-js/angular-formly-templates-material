@@ -15,10 +15,10 @@ export default (formlyConfigProvider) => {
           bound: 'ng-disabled'
         },
         onClose: {
-          bound: 'md-on-close'
+          statement: 'md-on-close'
         },
         onOpen: {
-          bound: 'md-on-open'
+          statement: 'md-on-open'
         }
       }
     },
