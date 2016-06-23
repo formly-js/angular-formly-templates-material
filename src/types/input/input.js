@@ -15,6 +15,11 @@ export default (formlyConfigProvider) => {
         mdMaxlength: {
           bound: 'md-maxlength'
         },
+        // XXX angular-formly#8042d2a so we want to keep it compatible
+        // with angular-formly releases before that commit
+        step: {
+          attribute: 'step'
+        },
         disabled: {
           bound: 'ng-disabled'
         },
@@ -37,16 +42,5 @@ export default (formlyConfigProvider) => {
         }
       };
     }
-  });
-
-  // add only step attribute because min and max are both built-in
-  formlyConfigProvider.extras.fieldTransform.push((fields) => {
-    return ngModelAttrsTransformer(fields, (field) => (
-      field.type === 'input' &&
-      field.templateOptions &&
-      field.templateOptions.type === 'number'
-    ), 'step', {
-      attribute: 'step'
-    });
   });
 };

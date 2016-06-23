@@ -118,7 +118,9 @@ describe('formlyMaterial - input type', () => {
 
   describe('number type specific', () => {
     describe('step attribute', () => {
-      it('should not be available on non number type', () => {
+      // XXX BE instead of NOT BE because `step` attr is now fully supported
+      // angular-formly#8042d2a
+      it('should BE available on non number type', () => {
         compile({
           templateOptions: {
             type: 'text',
@@ -126,7 +128,7 @@ describe('formlyMaterial - input type', () => {
           }
         });
 
-        expect(element.attr('step')).toBeUndefined();
+        expect(parseInt(element.attr('step'))).toBe(field.templateOptions.step);
       });
 
       it('should be available on number type', () => {
