@@ -17,11 +17,11 @@ describe('formlyMaterial - select type', () => {
   let field;
   const theme = 'custom';
 
-  function onClose($modelValue, $inputValue, scope, $event) {
+  function onClose(/* $modelValue, $inputValue, scope, $event */) {
     return true;
   }
 
-  function onOpen($modelValue, $inputValue, scope, $event) {
+  function onOpen(/* $modelValue, $inputValue, scope, $event */) {
     return true;
   }
   //
@@ -37,8 +37,8 @@ describe('formlyMaterial - select type', () => {
         theme,
         label: 'test field',
         multiple: true,
-        onClose: onClose,
-        onOpen: onOpen,
+        onClose,
+        onOpen,
         options: [{
           name: 'first',
           nameUp: 'FIRST',

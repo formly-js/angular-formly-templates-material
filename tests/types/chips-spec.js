@@ -13,15 +13,15 @@ describe('formlyMaterial - chips type', () => {
   let fieldScope;
   const theme = 'custom';
 
-  function onAdd($modelValue, $inputValue, scope, $event) {
+  function onAdd(/* $modelValue, $inputValue, scope, $event */) {
     return true;
   }
 
-  function onRemove($modelValue, $inputValue, scope, $event) {
+  function onRemove(/* $modelValue, $inputValue, scope, $event */) {
     return true;
   }
 
-  function onSelect($modelValue, $inputValue, scope, $event) {
+  function onSelect(/* $modelValue, $inputValue, scope, $event */) {
     return true;
   }
   //

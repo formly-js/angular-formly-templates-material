@@ -128,7 +128,7 @@ describe('formlyMaterial - input type', () => {
           }
         });
 
-        expect(parseInt(element.attr('step'))).toBe(field.templateOptions.step);
+        expect(parseInt(element.attr('step'), 10)).toBe(field.templateOptions.step);
       });
 
       it('should be available on number type', () => {
