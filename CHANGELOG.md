@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.14.1](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.1...v0.14.2) - 2016-05-30
+## [0.14.3](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.2...v0.14.3) - 2016-06-23
+
+### Added
+
+- Allow to add step attribute on every field (6bc6989)
+
+### Fixed
+
+- (chips, select) Bind callback functions by using statement (#45)
+
+## [0.14.2](https://github.com/formly-js/angular-formly-templates-material/compare/v0.14.1...v0.14.2) - 2016-05-30
 
 ### Added
 
