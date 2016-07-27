@@ -1,5 +1,29 @@
 <md-select ng-model="model[options.key]" md-theme="{{to.theme}}">
-    <md-option ng-repeat="option in to.options" ng-value="option[to.valueProp || 'value']">
-        {{ option[to.labelProp || 'name'] }}
+    <!-- If you want to add group to options set first item label -->
+    <md-optgroup
+          ng-if="to.options[0].label"
+          ng-repeat="($groupIndex, group) in to.options"
+          class="{{to.options[$groupIndex].className}}"
+          label="{{to.options[$groupIndex].label}}">
+          <md-option
+                ng-repeat="($optionIndex, option) in group.options"
+                class="{{to.options[$groupIndex].options[$optionIndex].className}}"
+                ng-disabled="to.options[$groupIndex].options[$optionIndex].disabled"
+                ng-click="to.options[$groupIndex].options[$optionIndex].ngClick(options, model)"
+                ng-class="to.options[$groupIndex].options[$optionIndex].ngClass(options, model)"
+                ng-value="to.options[$groupIndex].options[$optionIndex].value" >
+                {{to.options[$groupIndex].options[$optionIndex].name}}
+          </md-option>
+    </md-optgroup>
+
+    <md-option
+        ng-if="!to.options[0].label"
+        ng-repeat="($index, option) in to.options"
+        class="{{to.options[$index].className}}"
+        ng-disabled="to.options[$index].disabled"
+        ng-class="to.options[$index].ngClass(options, model)"
+        ng-click="to.options[$index].ngClick(options, model)"
+        ng-value="to.options[$index].value">
+          {{to.options[$index].name}}
     </md-option>
 </md-select>
