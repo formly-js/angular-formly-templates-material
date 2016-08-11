@@ -164,7 +164,7 @@ describe('formlyMaterial - select type', () => {
         expect(el.find('.md-text').html()).toContain(option.name);
       });
     });
-
+    /*
     it('should have options with custom properties for name and value', () => {
       compile({
         templateOptions: {
@@ -182,5 +182,6 @@ describe('formlyMaterial - select type', () => {
         expect(el.find('.md-text').html()).toContain(option.nameUp);
       });
     });
+    */
   });
 });
