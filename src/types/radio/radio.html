@@ -3,7 +3,7 @@
         ng-repeat="option in to.options track by $index"
         aria-label="{{to.options[$index].ariaLabel}}"
         class="{{to.options[$index].className}}"
-        ng-disabled="(to.options[$index].disabled) || to.disabled"
+        ng-disabled="to.options[$index].disabled || to.disabled"
         ng-value="to.options[$index].value">
         {{to.options[$index].name}}
     </md-radio-button>
