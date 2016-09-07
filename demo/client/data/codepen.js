@@ -18,17 +18,17 @@ class Codepen {
     // const example = this.Examples.get(exampleId);
     const data = {
       css_external: [
-        '//npmcdn.com/angular-material@1.0.0/angular-material.min.css'
+        '//unpkg.com/angular-material@1.0.0/angular-material.min.css'
       ].join(';'),
       js_external: [
         '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js',
-        '//npmcdn.com/angular-animate@1.4.8/angular-animate.min.js',
-        '//npmcdn.com/angular-aria@1.4.8/angular-aria.min.js',
-        '//npmcdn.com/angular-material@latest/angular-material.min.js',
-        '//npmcdn.com/angular-messages@1.4.8/angular-messages.min.js',
-        '//npmcdn.com/api-check@latest/dist/api-check.js',
-        '//npmcdn.com/angular-formly@latest/dist/formly.js',
-        '//npmcdn.com/angular-formly-material@latest/dist/formly-material.js'
+        '//unpkg.com/angular-animate@1.4.8/angular-animate.min.js',
+        '//unpkg.com/angular-aria@1.4.8/angular-aria.min.js',
+        '//unpkg.com/angular-material@latest/angular-material.min.js',
+        '//unpkg.com/angular-messages@1.4.8/angular-messages.min.js',
+        '//unpkg.com/api-check@latest/dist/api-check.js',
+        '//unpkg.com/angular-formly@latest/dist/formly.js',
+        '//unpkg.com/angular-formly-material@latest/dist/formly-material.js'
       ].join(';'),
       html: this._getHTML().trim()
     };
