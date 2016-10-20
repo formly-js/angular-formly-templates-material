@@ -947,6 +947,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        cols: {
 	          attribute: 'cols'
+	        },
+	        maxlength: {
+	          attribute: 'md-maxlength'
 	        }
 	      },
 	      templateOptions: {
