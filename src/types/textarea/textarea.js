@@ -16,6 +16,9 @@ export default (formlyConfigProvider) => {
         },
         cols: {
           attribute: 'cols'
+        },
+        maxlength: {
+          attribute: 'md-maxlength'
         }
       },
       templateOptions: {
