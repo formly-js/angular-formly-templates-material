@@ -14,7 +14,7 @@ Example
   templateOptions: {
     type: "text",
     label: "First name",
-    pattern: "[a-zA-Z]+"
+    pattern: "[a-zA-Z]+",
     theme: "custom"
   }
 }
